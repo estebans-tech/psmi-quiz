@@ -35,10 +35,8 @@ function backToStart() { store.$reset(); router.push('/') }
   <main class="min-h-screen bg-gray-50">
     <header class="bg-white border-b sticky top-0 z-10">
       <div class="mx-auto max-w-5xl px-4 py-4 flex items-center justify-between">
-        <button @click="backToStart" class="text-sm underline hover:no-underline">
-          Back to start
-        </button>
-        <div class="text-sm text-gray-600">Mode: Study</div>
+        <h1 class="text-lg font-semibold">Scrum PSM I — Quiz</h1>
+        <span class="text-sm text-gray-600">Mode: Study</span>
       </div>
     </header>
 

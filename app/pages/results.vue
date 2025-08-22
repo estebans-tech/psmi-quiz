@@ -3,6 +3,7 @@
     <header class="bg-white border-b">
       <div class="mx-auto max-w-5xl px-4 py-4 flex items-center justify-between">
         <h1 class="text-lg font-semibold">Scrum PSM I - Results</h1>
+        <!-- 🔁 Back to start med reset -->
         <button @click="backToStart" class="text-sm underline hover:no-underline">
           Back to start
         </button>
@@ -58,7 +59,7 @@
         </div>
 
         <div class="mt-8">
-          <NuxtLink to="/" class="underline">Back to start</NuxtLink>
+          <button class="underline" @click="backToStart">Back to start</button>
         </div>
       </template>
     </section>

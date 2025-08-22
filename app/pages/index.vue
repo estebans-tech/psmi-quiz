@@ -12,7 +12,7 @@ function start() {
 <template>
   <main class="min-h-screen grid place-items-center bg-gray-50">
     <div class="bg-white shadow rounded-2xl p-6 w-full max-w-md space-y-4">
-      <h1 class="text-xl font-semibold">PSM I Trainer</h1>
+      <h1 class="text-xl font-semibold">Scrum PSMI - Trainer</h1>
       <p class="text-sm text-gray-600">
         Practice Professional Scrum Master (PSM I) questions. Questions are shuffled on start.
       </p>
