@@ -1,0 +1,267 @@
+[
+    {
+      "id": "q-theory-001",
+      "type": "single",
+      "prompt": "True or False: Scrum recommends using only those Scrum components and rules which suit most for a particular project.",
+      "options": [
+        { "id": "a", "text": "True", "explanation": "" },
+        { "id": "b", "text": "False", "explanation": "" }
+      ],
+      "correct": ["b"],
+      "explanation": "Each component within the Scrum framework serves a specific purpose and is essential to Scrum’s success and usage.",
+      "source": "Scrum Guide 2020 — Product Owner",
+      "shuffle": true,
+      "version": 1
+    },
+    {
+      "id": "q-theory-002",
+      "type": "single",
+      "prompt": "True or False: Scrum recommends using only those Scrum components and rules which suit most for a particular project.",
+      "options": [
+        { "id": "a", "text": "Respect", "explanation": "" },
+        { "id": "b", "text": "Commitment", "explanation": "" },
+        { "id": "c", "text": "Courage", "explanation": "" },
+        { "id": "d", "text": "Focus", "explanation": "" },
+        { "id": "e", "text": "Openness", "explanation": "" },
+        { "id": "f", "text": "All answers", "explanation": "" }
+      ],
+      "correct": ["f"],
+      "explanation": "The Scrum Team members learn and explore the values as they work with the Scrum events and artifacts. When these values are embodied by the Scrum Team and the people they work with, the empirical Scrum pillars of transparency, inspection, and adaptation come to life building trust.",
+      "source": "Scrum Guide 2020 — Product Owner",
+      "shuffle": true,
+      "version": 1
+    },
+    {
+      "id": "q-theory-003",
+      "type": "single",
+      "prompt": "True or False: Scrum is not a process or technique.",
+      "options": [
+        { "id": "a", "text": "True", "explanation": "" },
+        { "id": "b", "text": "False", "explanation": "" }
+      ],
+      "correct": ["a"],
+      "explanation": "Various processes, techniques and methods can be employed within the framework. Scrum wraps around existing practices or renders them unnecessary.",
+      "source": "Scrum Guide 2020 — Product Owner",
+      "shuffle": true,
+      "version": 1
+    },
+    {
+      "id": "q-theory-004",
+      "type": "single",
+      "prompt": "True or False: The emergent process and work of the Scrum Team must only be visible to those performing the work.",
+      "options": [
+        { "id": "a", "text": "True", "explanation": "" },
+        { "id": "b", "text": "False", "explanation": "" }
+      ],
+      "correct": ["b"],
+      "explanation": "The emergent process and work must be visible to those performing the work as well as those receiving the work.",
+      "source": "Scrum Guide 2020 — Product Owner",
+      "shuffle": true,
+      "version": 1
+    },
+    {
+      "id": "q-theory-005",
+      "type": "multi",
+      "prompt": "What is the foundation of Scrum? Choose the best two answers.",
+      "options": [
+        { "id": "a", "text": "Waterfall", "explanation": "" },
+        { "id": "b", "text": "Constraint Theory", "explanation": "" },
+        { "id": "c", "text": "Top-Down Management", "explanation": "" },
+        { "id": "d", "text": "Lean Thinking", "explanation": "" },
+        { "id": "e", "text": "Empiricism", "explanation": "" }
+      ],
+      "correct": ["d", "e"],
+      "explanation": "The emergent process and work must be visible to those performing the work as well as those receiving the work.",
+      "source": "Scrum Guide 2020 — Product Owner",
+      "shuffle": true,
+      "version": 1
+    },
+    {
+      "id": "q-theory-006",
+      "type": "single",
+      "prompt": "During the agile journey of an organization, what are the impacts of changing the Scrum terminology to fit existing terminology of the organization? Choose the best answer.",
+      "options": [
+        { "id": "a", "text": "All answers apply. ", "explanation": "" },
+        { "id": "b", "text": "Little change may happen if the organization doesn't adopt a new terminology.", "explanation": "" },
+        { "id": "c", "text": "Lack of understanding on changes may occur and the benefits of Scrum may be lost.", "explanation": "" },
+        { "id": "d", "text": "Less anxious feelings in Management.", "explanation": "" }
+      ],
+      "correct": ["a"],
+      "explanation": "Scrum relies on transparency. This also means that a common language must be shared by those performing the work as well as those receiving the work. Scrum exists only in its entirety and that includes a common and consistent terminology.",
+      "source": "Scrum Guide 2020 — Product Owner",
+      "shuffle": true,
+      "version": 1
+    },
+    {
+      "id": "q-theory-007",
+      "type": "multi",
+      "prompt": "True or False: Scrum is not a process or technique.",
+      "options": [
+        { "id": "a", "text": "True", "explanation": "" },
+        { "id": "b", "text": "False", "explanation": "" }
+      ],
+      "correct": ["a"],
+      "explanation": "Various processes, techniques and methods can be employed within the framework. Scrum wraps around existing practices or renders them unnecessary.",
+      "source": "Scrum Guide 2020 — Product Owner",
+      "shuffle": true,
+      "version": 1
+    },
+    {
+      "id": "q-theory-008",
+      "type": "single",
+      "prompt": "True or False: The emergent process and work of the Scrum Team must only be visible to those performing the work.",
+      "options": [
+        { "id": "a", "text": "True", "explanation": "" },
+        { "id": "b", "text": "False", "explanation": "" }
+      ],
+      "correct": ["b"],
+      "explanation": "The emergent process and work must be visible to those performing the work as well as those receiving the work.",
+      "source": "Scrum Guide 2020 — Product Owner",
+      "shuffle": true,
+      "version": 1
+    },
+    {
+      "id": "q-theory-009",
+      "type": "multi",
+      "prompt": "What is the foundation of Scrum? Choose the best two answers.",
+      "options": [
+        { "id": "a", "text": "Waterfall", "explanation": "" },
+        { "id": "b", "text": "Empiricism", "explanation": "" },
+        { "id": "c", "text": "Constraint Theory", "explanation": "" },
+        { "id": "d", "text": "Lean Thinking", "explanation": "" },
+        { "id": "e", "text": "Top-Down Management", "explanation": "" },
+        { "id": "f", "text": "Lean Thinking", "explanation": "" }
+      ],
+      "correct": ["b", "d"],
+      "explanation": "The Scrum Guide 2020 states on p.3: 'Scrum is founded on empiricism and lean thinking. Empiricism asserts that knowledge comes from experience and making decisions based on what is observed. Lean thinking reduces waste and focuses on the essentials.'",
+      "source": "Scrum Guide 2020 — Product Owner",
+      "shuffle": true,
+      "version": 1
+    },
+    {
+      "id": "q-theory-010",
+      "type": "single",
+      "prompt": "During the agile journey of an organization, what are the impacts of changing the Scrum terminology to fit existing terminology of the organization? Choose the best answer.",
+      "options": [
+        { "id": "a", "text": "All answers apply. ", "explanation": "" },
+        { "id": "b", "text": "Little change may happen if the organization doesn't adopt a new terminology.", "explanation": "" },
+        { "id": "c", "text": "Lack of understanding on changes may occur and the benefits of Scrum may be lost.", "explanation": "" },
+        { "id": "d", "text": "Less anxious feelings in Management.", "explanation": "" }
+      ],
+      "correct": ["a"],
+      "explanation": "Scrum relies on transparency. This also means that a common language must be shared by those performing the work as well as those receiving the work. Scrum exists only in its entirety and that includes a common and consistent terminology.",
+      "source": "Scrum Guide 2020 — Product Owner",
+      "shuffle": true,
+      "version": 1
+    },
+    {
+      "id": "q-theory-011",
+      "type": "single",
+      "prompt": "During the agile journey of an organization, what are the impacts of changing the Scrum terminology to fit existing terminology of the organization? Choose the best answer.",
+      "options": [
+        { "id": "a", "text": "Little change may happen if the organization doesn't adopt a new terminology.", "explanation": "" },
+        { "id": "b", "text": "Lack of understanding on changes may occur and the benefits of Scrum may be lost.", "explanation": "" },
+        { "id": "c", "text": "Less anxious feelings in Management.", "explanation": "" },
+        { "id": "d", "text": "All answers apply. ", "explanation": "" }
+      ],
+      "correct": ["a"],
+      "explanation": "During the agile journey of an organization, what are the impacts of changing the Scrum terminology to fit existing terminology of the organization? Choose the best answer.",
+      "source": "Scrum Guide 2020 — Product Owner",
+      "shuffle": true,
+      "version": 1
+    },
+    {
+      "id": "q-theory-012",
+      "type": "multi",
+      "prompt": "Scrum requires a Scrum Master to foster an environment where: Choose the best three answers.",
+      "options": [
+        { "id": "a", "text": "Management prescribes the workload in each Sprint for the Scrum Team", "explanation": "" },
+        { "id": "b", "text": "A Product Owner orders the work for a complex problem into a Product Backlog", "explanation": "" },
+        { "id": "c", "text": "Velocity is constantly growing the ensure the highest possible value is delivered each Sprint", "explanation": "" },
+        { "id": "d", "text": "The Scrum Team always guarantees the forecast that is has committed to in the Sprint Planning", "explanation": "" },
+        { "id": "e", "text": "The Scrum Team turns a selection of the work into an Increment of value during a Sprint", "explanation": "" },
+        { "id": "f", "text": "The Scrum Team and its stakeholders inspect the results and adjust for the next Sprint", "explanation": "" }
+      ],
+      "correct": ["b", "e", "f"],
+      "explanation": "The Scrum Guide 2020 states on p.3:",
+      "source": "Scrum Guide 2020 — page 3",
+      "shuffle": true,
+      "version": 1
+    },
+    {
+        "id": "q-events-001",
+        "type": "single",
+        "prompt": "Who is accountable for maximizing the value of the product?",
+        "options": [
+          { "id": "a", "text": "The Product Owner", "explanation": "Owns the Product Goal and orders the Product Backlog to maximize value." },
+          { "id": "b", "text": "The Scrum Master", "explanation": "Enables Scrum effectiveness; not accountable for product value." },
+          { "id": "c", "text": "Developers", "explanation": "Create usable Increments; not accountable for maximizing product value." }
+        ],
+        "correct": ["a"],
+        "explanation": "The Product Owner is accountable for maximizing product value.",
+        "source": "Scrum Guide 2020 — Product Owner",
+        "shuffle": true,
+        "version": 1
+      },
+      {
+        "id": "q-events-002",
+        "type": "multi",
+        "prompt": "Select all statements that describe the Sprint Review.",
+        "options": [
+          { "id": "a", "text": "A collaborative working session with stakeholders.", "explanation": "Stakeholders and the Scrum Team inspect the Increment together." },
+          { "id": "b", "text": "A status meeting for the Scrum Master.", "explanation": "The event focuses on the product; Scrum Masters do not collect status here." },
+          { "id": "c", "text": "An opportunity to adapt the Product Backlog.", "explanation": "Feedback often leads to changes in the Product Backlog ordering and items." },
+          { "id": "d", "text": "A gate to appraise individual performance.", "explanation": "Scrum does not use the Sprint Review for individual appraisal." }
+        ],
+        "correct": ["a", "c"],
+        "explanation": "The Sprint Review inspects the Increment with stakeholders and may trigger Product Backlog adaptation.",
+        "source": "Scrum Guide 2020 — Events / Sprint Review",
+        "shuffle": true,
+        "version": 1
+      },
+      {
+        "id": "q-roles-001",
+        "type": "single",
+        "prompt": "What is the timebox of the Daily Scrum?",
+        "options": [
+          { "id": "a", "text": "15 minutes", "explanation": "The Daily Scrum is a 15-minute event for the Developers." },
+          { "id": "b", "text": "30 minutes", "explanation": "Too long; the Scrum Guide specifies 15 minutes." },
+          { "id": "c", "text": "It depends on Sprint length", "explanation": "The Daily Scrum is always 15 minutes regardless of Sprint length." }
+        ],
+        "correct": ["a"],
+        "explanation": "The Daily Scrum is timeboxed to 15 minutes.",
+        "source": "Scrum Guide 2020 — Events / Daily Scrum",
+        "shuffle": true,
+        "version": 1
+      },
+      {
+        "id": "q-roles-002",
+        "type": "multi",
+        "prompt": "Which are Scrum accountabilities?",
+        "options": [
+          { "id": "a", "text": "Product Owner", "explanation": "Accountable for maximizing value and the Product Goal." },
+          { "id": "b", "text": "Scrum Master", "explanation": "Accountable for the Scrum Team’s effectiveness." },
+          { "id": "c", "text": "Developers", "explanation": "Accountable for creating a usable Increment each Sprint." },
+          { "id": "d", "text": "Project Manager", "explanation": "Not a Scrum accountability as defined in the Scrum Guide." }
+        ],
+        "correct": ["a", "b", "c"],
+        "explanation": "Scrum defines three accountabilities: Product Owner, Scrum Master, and Developers.",
+        "source": "Scrum Guide 2020 — Accountabilities",
+        "shuffle": true,
+        "version": 1
+      },
+      {
+        "id": "q-roles-003",
+        "type": "single",
+        "prompt": "True or False: Scrum has a role called `Project Manager`.",
+        "options": [
+          { "id": "a", "text": "True", "explanation": "A" },
+          { "id": "b", "text": "False", "explanation": "B" }
+        ],
+        "correct": ["b"],
+        "explanation": "Scrum defines three accountabilities: Product Owner, Scrum Master, and Developers.",
+        "source": "Scrum Guide 2020 — Accountabilities",
+        "shuffle": true,
+        "version": 1
+      }
+    ]
