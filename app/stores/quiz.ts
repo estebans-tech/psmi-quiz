@@ -1,108 +1,133 @@
-import { defineStore } from 'pinia';
-import type { Question } from '~/types/question';
-import { isCorrect } from '~/utils/scoring';
-import { loadQuestions } from '~/services/questionLoader';
+import { defineStore } from 'pinia'
+import type { Question } from '~/types/question'
+import { mulberry32, shuffle } from '~/utils/rng'
+import { isExactMatch } from '~/utils/scoring'
+import { $fetch } from 'ofetch'
 
-type Selections = Record<string, string[]>;
-type Flags = Record<string, boolean>;
+type Selections = Record<string, string[]>
+type FlagMap = Record<string, boolean>
 
 export const useQuizStore = defineStore('quiz', {
   state: () => ({
     questions: [] as Question[],
     index: 0,
-    selections: {} as Selections, // qId -> selected option ids
-    checked: {} as Flags,         // qId -> user pressed "Check"
-    revealed: {} as Flags,        // qId -> user pressed "Show Answer"
-    finished: false
+    selections: {} as Selections,
+    checked: {} as FlagMap,
+    revealed: {} as FlagMap,
+    finished: false,
+    loading: false,
+    error: null as string | null
   }),
 
   getters: {
-    currentQuestion(state): Question | undefined {
-      return state.questions[state.index];
+    currentQuestion(state): Question | null {
+      return state.questions[state.index] ?? null
     },
-    // computed correctness for any question id
-    isCorrectById: (state) => (qId: string): boolean => {
-      const q = state.questions.find(q => q.id === qId);
-      if (!q) return false;
-      const sel = state.selections[qId] ?? [];
-      return isCorrect(q, sel);
-    },
+  
+    // ✅ används av Results-sidan (KPI och filter)
     summary(state) {
-      const correctIds: string[] = [];
-      const incorrectIds: string[] = [];
+      const total = state.questions.length
+      const correctIds: string[] = []
+      const incorrectIds: string[] = []
+    
       for (const q of state.questions) {
-        const sel = state.selections[q.id] ?? [];
-        (isCorrect(q, sel) ? correctIds : incorrectIds).push(q.id);
+        const sel = state.selections[q.id] || []
+        if (sel.length === 0) continue
+        if (isExactMatch(sel, q.correct)) correctIds.push(q.id)
+        else incorrectIds.push(q.id)
       }
-      return {
-        total: state.questions.length,
-        correctIds,
-        incorrectIds
-      };
+    
+      const answered = correctIds.length + incorrectIds.length
+      const correct = correctIds.length
+      const incorrect = incorrectIds.length
+      const remaining = total - answered
+      const percent = total ? Math.round((correct / total) * 100) : 0
+    
+      return { total, answered, correct, incorrect, remaining, percent, correctIds, incorrectIds }
     }
   },
 
   actions: {
-    async startSession(opts?: { shuffleQuestions?: boolean }) {
-      const bank = await loadQuestions();
-      this.questions = opts?.shuffleQuestions ? shuffle(bank) : bank;
-      this.index = 0;
-      this.selections = {};
-      this.checked = {};
-      this.revealed = {};
-      this.finished = false;
+    async startSession(opts?: { seed?: number | string; lang?: string }) {
+      this.loading = true
+      this.error = null
+      try {
+        const lang = (opts?.lang || 'en').toLowerCase()
+        // Hämta frågorna från server-API (Nuxt/Nitro)
+        const raw = await $fetch<Question[]>(`/api/questions?lang=${encodeURIComponent(lang)}`)
+
+        // Välj RNG: seeded i tester om seed skickas, annars Math.random
+        let rng = Math.random
+        if (opts?.seed !== undefined && String(opts.seed).trim() !== '') {
+          rng = mulberry32(opts.seed!)
+        }
+
+        // Alltid shuffle
+        this.questions = shuffle(raw, rng)
+
+        // Nollställ state
+        this.index = 0
+        this.selections = {}
+        this.checked = {}
+        this.revealed = {}
+        this.finished = false
+      } catch (e: any) {
+        // Spara fel så UI kan visa
+        console.error('Failed to start session:', e)
+        this.error = e?.message || 'Network or server error'
+        throw e
+      } finally {
+        this.loading = false
+      }
+    },
+
+    next() {
+      if (this.index < this.questions.length - 1) this.index++
+    },
+    prev() {
+      if (this.index > 0) this.index--
     },
 
     selectOption(qId: string, optionId: string) {
-      const q = this.questions.find(x => x.id === qId);
-      if (!q) return;
-    
-      const sel = this.selections[qId] ?? [];
-    
-      if (q.type === 'single') {
-        this.selections[qId] = [optionId];
-      } else {
-        const i = sel.indexOf(optionId);
-        this.selections[qId] = i === -1 ? [...sel, optionId] : sel.filter(x => x !== optionId);
-      }
-    
-      // ✅ resetta status varje gång valet ändras
-      this.checked[qId] = false;
-    
-      // (valfritt) göm svaret igen om användaren ändrar valet
-      // this.revealed[qId] = false;
+      const q = this.questions.find(x => x.id === qId)
+      if (!q) return
+
+      const prev = this.selections[qId] ?? []
+      this.selections[qId] = q.type === 'single'
+        ? [optionId]
+        : (prev.includes(optionId) ? prev.filter(x => x !== optionId) : [...prev, optionId])
+
+      // Nollställ status vid ändring
+      this.checked[qId] = false
+      // Vi låter revealed vara oförändrat (policy nu). Vill du dölja auto? avkommentera:
+      // this.revealed[qId] = false
     },
 
     check(qId: string) {
       const sel = this.selections[qId] ?? []
-      if (sel.length === 0) return // gör ingenting om inget är valt
+      if (sel.length === 0) return
       this.checked[qId] = true
     },
 
     reveal(qId: string) {
-      this.revealed[qId] = !this.revealed[qId];  // toggle
-    },
-
-    next() {
-      if (this.index < this.questions.length - 1) this.index += 1;
-    },
-
-    prev() {
-      if (this.index > 0) this.index -= 1;
+      this.revealed[qId] = !this.revealed[qId]
     },
 
     finish() {
-      this.finished = true;
+      this.finished = true
+      this.index = Math.min(this.index, this.questions.length - 1)
+    },
+
+    $reset() {
+      // explicit reset (används av “Back to start”)
+      this.questions = []
+      this.index = 0
+      this.selections = {}
+      this.checked = {}
+      this.revealed = {}
+      this.finished = false
+      this.loading = false
+      this.error = null
     }
   }
-});
-
-// Local utility to shuffle arrays without leaking outside the store
-function shuffle<T>(arr: T[]): T[] {
-  const a = arr.slice();
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j]!, a[i]!];
-  }
-  return a;
-}
+})
