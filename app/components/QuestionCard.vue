@@ -50,7 +50,7 @@ watch(
       return
     }
     if (revealed !== prevRevealed) {
-      liveMsg.value = revealed ? 'Answer shown.' : 'Answer hidden.'
+      liveMsg.value = revealed ? 'Explanation shown.' : 'Explanation hidden.'
     }
   }
 )
@@ -107,26 +107,13 @@ const explRegionId = computed(() => props.explanationsId ?? (props.question ? `e
             :input-type="question.type === 'single' ? 'radio' : 'checkbox'"
             :selected="selectedIds?.includes(opt.id) || false"
             :is-correct="correctSet.has(opt.id)"
-            :show-solution="revealed"
+            :show-solution="false"
             @toggle="() => $emit('select', opt.id)"
             @choose="() => $emit('select', opt.id)"
           />
         </li>
       </ul>
 
-      <!-- Förklaringsregion som knappen styr -->
-      <div
-        v-if="revealed && (question?.explanation ?? '').trim().length > 0"
-        :id="explRegionId"
-        role="region"
-        :aria-labelledby="explLabelId"
-        class="mt-3"
-      >
-        <h2 :id="explLabelId" class="sr-only">Answer explanation</h2>
-        <p class="text-sm text-gray-700">
-          {{ question!.explanation }}
-        </p>
-      </div>
 
       <!-- Statusrad (Correct/Incorrect/No selection) -->
       <div class="mt-3">
@@ -139,6 +126,20 @@ const explRegionId = computed(() => props.explanationsId ?? (props.question ? `e
           <span v-else class="inline-flex items-center rounded-full px-2 py-0.5 bg-gray-100 text-gray-800">
             No selection
           </span>
+        </p>
+      </div>
+
+      <!-- Förklaringsregion som knappen styr -->
+      <div
+        v-if="revealed && (question?.explanation ?? '').trim().length > 0"
+        :id="explRegionId"
+        role="region"
+        :aria-labelledby="explLabelId"
+        class="mt-3"
+      >
+        <h2 :id="explLabelId" class="sr-only">Answer explanation</h2>
+        <p class="text-sm text-gray-700">
+          {{ question!.explanation }}
         </p>
       </div>
     </fieldset>
