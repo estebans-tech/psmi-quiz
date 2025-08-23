@@ -9,9 +9,8 @@
     />
     <div class="flex-1">
       <div
-        class="font-normal inline-block px-1 rounded"
+        class="font-normal inline-block px-1 rounded ring-0 ring-offset-0"
         :class="{
-          // Visa facit-färgning endast när man avslöjat svaret
           'ring-2 ring-emerald-500': showSolution && isCorrect,
           'ring-2 ring-rose-500': showSolution && selected && !isCorrect
         }"
@@ -41,7 +40,7 @@ const props = withDefaults(defineProps<{
   name: undefined
 })
 
-const emit = defineEmits<{ (e: 'toggle'): void; (e: 'choose'): void }>()
+const emit = defineEmits<{ (e: 'toggle'): void }>()
 
 function onChange() { emit('toggle') }
 </script>
