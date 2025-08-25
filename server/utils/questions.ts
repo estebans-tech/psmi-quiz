@@ -2,7 +2,7 @@ import { readFile } from 'node:fs/promises'
 import { join } from 'node:path'
 
 
-export const ALLOWED_CATEGORIES = ['theory','values','team','events','artifacts', 'roles'] as const
+export const ALLOWED_CATEGORIES = ['theory','values','team','events','artifacts', 'roles', 'empiricism'] as const
 export type Category = typeof ALLOWED_CATEGORIES[number]
 
 export interface QuestionOption { id: string; text: string }

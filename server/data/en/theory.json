@@ -1,164 +1,334 @@
 [
-    {
-        "id": "q-theory-001",
-        "type": "single",
-        "prompt": "True or False: Scrum recommends using only those Scrum components and rules which suit most for a particular project.",
-        "options": [
-          { "id": "a", "text": "True", "explanation": "" },
-          { "id": "b", "text": "False", "explanation": "" }
-        ],
-        "correct": ["b"],
-        "explanation": "Each component within the Scrum framework serves a specific purpose and is essential to Scrum’s success and usage.",
-        "source": "Scrum Guide 2020 — Product Owner",
-        "shuffle": true,
-        "lockOptionOrder": true,
-        "version": 1
-      },
-      {
-        "id": "q-theory-002",
-        "type": "single",
-        "prompt": "True or False: Scrum recommends using only those Scrum components and rules which suit most for a particular project.",
-        "options": [
-          { "id": "a", "text": "Respect", "explanation": "" },
-          { "id": "b", "text": "Commitment", "explanation": "" },
-          { "id": "c", "text": "Courage", "explanation": "" },
-          { "id": "d", "text": "Focus", "explanation": "" },
-          { "id": "e", "text": "Openness", "explanation": "" },
-          { "id": "f", "text": "All answers", "explanation": "" }
-        ],
-        "correct": ["f"],
-        "explanation": "The Scrum Team members learn and explore the values as they work with the Scrum events and artifacts. When these values are embodied by the Scrum Team and the people they work with, the empirical Scrum pillars of transparency, inspection, and adaptation come to life building trust.",
-        "source": "Scrum Guide 2020 — Product Owner",
-        "shuffle": true,
-        "version": 1
-      },
-      {
-        "id": "q-theory-003",
-        "type": "single",
-        "prompt": "True or False: Scrum is not a process or technique.",
-        "options": [
-          { "id": "a", "text": "True", "explanation": "" },
-          { "id": "b", "text": "False", "explanation": "" }
-        ],
-        "correct": ["a"],
-        "explanation": "Various processes, techniques and methods can be employed within the framework. Scrum wraps around existing practices or renders them unnecessary.",
-        "source": "Scrum Guide 2020 — Product Owner",
-        "shuffle": true,
-        "lockOptionOrder": true,
-        "version": 1
-      },
-      {
-        "id": "q-theory-004",
-        "type": "single",
-        "prompt": "True or False: The emergent process and work of the Scrum Team must only be visible to those performing the work.",
-        "options": [
-          { "id": "a", "text": "True", "explanation": "" },
-          { "id": "b", "text": "False", "explanation": "" }
-        ],
-        "correct": ["b"],
-        "explanation": "The emergent process and work must be visible to those performing the work as well as those receiving the work.",
-        "source": "Scrum Guide 2020 — Product Owner",
-        "shuffle": true,
-        "lockOptionOrder": true,
-        "version": 1
-      },
-      {
-        "id": "q-theory-005",
-        "type": "multi",
-        "prompt": "What is the foundation of Scrum? Choose the best two answers.",
-        "options": [
-          { "id": "a", "text": "Waterfall", "explanation": "" },
-          { "id": "b", "text": "Constraint Theory", "explanation": "" },
-          { "id": "c", "text": "Top-Down Management", "explanation": "" },
-          { "id": "d", "text": "Lean Thinking", "explanation": "" },
-          { "id": "e", "text": "Empiricism", "explanation": "" }
-        ],
-        "correct": ["d", "e"],
-        "explanation": "The emergent process and work must be visible to those performing the work as well as those receiving the work.",
-        "source": "Scrum Guide 2020 — Product Owner",
-        "shuffle": true,
-        "version": 1
-      },
-      {
-        "id": "q-theory-006",
-        "type": "single",
-        "prompt": "During the agile journey of an organization, what are the impacts of changing the Scrum terminology to fit existing terminology of the organization? Choose the best answer.",
-        "options": [
-          { "id": "a", "text": "All answers apply. ", "explanation": "" },
-          { "id": "b", "text": "Little change may happen if the organization doesn't adopt a new terminology.", "explanation": "" },
-          { "id": "c", "text": "Lack of understanding on changes may occur and the benefits of Scrum may be lost.", "explanation": "" },
-          { "id": "d", "text": "Less anxious feelings in Management.", "explanation": "" }
-        ],
-        "correct": ["a"],
-        "explanation": "Scrum relies on transparency. This also means that a common language must be shared by those performing the work as well as those receiving the work. Scrum exists only in its entirety and that includes a common and consistent terminology.",
-        "source": "Scrum Guide 2020 — Product Owner",
-        "shuffle": true,
-        "version": 1
-      },
-      {
-        "id": "q-theory-008",
-        "type": "single",
-        "prompt": "True or False: The emergent process and work of the Scrum Team must only be visible to those performing the work.",
-        "options": [
-          { "id": "a", "text": "True", "explanation": "" },
-          { "id": "b", "text": "False", "explanation": "" }
-        ],
-        "correct": ["b"],
-        "explanation": "The emergent process and work must be visible to those performing the work as well as those receiving the work.",
-        "source": "Scrum Guide 2020 — Product Owner",
-        "shuffle": true,
-        "lockOptionOrder": true,
-        "version": 1
-      },
-      {
-        "id": "q-theory-009",
-        "type": "multi",
-        "prompt": "What is the foundation of Scrum? Choose the best two answers.",
-        "options": [
-          { "id": "a", "text": "Waterfall", "explanation": "" },
-          { "id": "b", "text": "Empiricism", "explanation": "" },
-          { "id": "c", "text": "Constraint Theory", "explanation": "" },
-          { "id": "d", "text": "Lean Thinking", "explanation": "" },
-          { "id": "e", "text": "Top-Down Management", "explanation": "" }
-        ],
-        "correct": ["b", "d"],
-        "explanation": "The Scrum Guide 2020 states on p.3: 'Scrum is founded on empiricism and lean thinking. Empiricism asserts that knowledge comes from experience and making decisions based on what is observed. Lean thinking reduces waste and focuses on the essentials.'",
-        "source": "Scrum Guide 2020 — Product Owner",
-        "shuffle": true,
-        "version": 1
-      },
-      {
-        "id": "q-theory-010",
-        "type": "single",
-        "prompt": "During the agile journey of an organization, what are the impacts of changing the Scrum terminology to fit existing terminology of the organization? Choose the best answer.",
-        "options": [
-          { "id": "a", "text": "All answers apply. ", "explanation": "" },
-          { "id": "b", "text": "Little change may happen if the organization doesn't adopt a new terminology.", "explanation": "" },
-          { "id": "c", "text": "Lack of understanding on changes may occur and the benefits of Scrum may be lost.", "explanation": "" },
-          { "id": "d", "text": "Less anxious feelings in Management.", "explanation": "" }
-        ],
-        "correct": ["a"],
-        "explanation": "Scrum relies on transparency. This also means that a common language must be shared by those performing the work as well as those receiving the work. Scrum exists only in its entirety and that includes a common and consistent terminology.",
-        "source": "Scrum Guide 2020 — Product Owner",
-        "shuffle": true,
-        "version": 1
-      },
-      {
-        "id": "q-theory-012",
-        "type": "multi",
-        "prompt": "Scrum requires a Scrum Master to foster an environment where: Choose the best three answers.",
-        "options": [
-          { "id": "a", "text": "Management prescribes the workload in each Sprint for the Scrum Team", "explanation": "" },
-          { "id": "b", "text": "A Product Owner orders the work for a complex problem into a Product Backlog", "explanation": "" },
-          { "id": "c", "text": "Velocity is constantly growing the ensure the highest possible value is delivered each Sprint", "explanation": "" },
-          { "id": "d", "text": "The Scrum Team always guarantees the forecast that is has committed to in the Sprint Planning", "explanation": "" },
-          { "id": "e", "text": "The Scrum Team turns a selection of the work into an Increment of value during a Sprint", "explanation": "" },
-          { "id": "f", "text": "The Scrum Team and its stakeholders inspect the results and adjust for the next Sprint", "explanation": "" }
-        ],
-        "correct": ["b", "e", "f"],
-        "explanation": "The Scrum Guide 2020 states on p.3:",
-        "source": "Scrum Guide 2020 — page 3",
-        "shuffle": true,
-        "version": 1
-      }
+  {
+    "id": "q-theory-001",
+    "type": "single",
+    "prompt": "True or False: Empiricism asserts that knowledge comes from experience and making decisions based on what is known.",
+    "options": [
+      { "id": "A", "text": "False." },
+      { "id": "B", "text": "True." }
+    ],
+    "correct": ["B"],
+    "explanation": "Empiricism asserts that knowledge comes from experience and making decisions based on what is known. Scrum employs an iterative, incremental approach to optimize predictability and control risk.",
+    "source": "Scrum Guide 2020, Scrum Theory (p.3).",
+    "version": 1,
+    "lockOptionOrder": true
+  },
+  {
+    "id": "q-theory-002",
+    "type": "single",
+    "prompt": "True or False: Scrum combines five formal events for inspection and adaptation.",
+    "options": [
+      { "id": "A", "text": "True." },
+      { "id": "B", "text": "False." }
+    ],
+    "correct": ["B"],
+    "explanation": "False. Scrum combines four formal events for inspection and adaptation within a containing event, the Sprint: Sprint Planning, Daily Scrum, Sprint Review, Sprint Retrospective. The Sprint as an event serves as a container for the four other events. This is an important distinction to keep in mind.",
+    "source": "Scrum Guide 2020, Scrum Theory (p.3) and Scrum Events (p.7).",
+    "version": 1,
+    "lockOptionOrder": true
+  },
+  {
+    "id": "q-theory-003",
+    "type": "single",
+    "prompt": "What is the role of management in Scrum? Choose the best answer.",
+    "options": [
+      { "id": "A", "text": "To identify and remove people that aren't working hard enough." },
+      { "id": "B", "text": "To continually monitor staffing levels of the Scrum Team." },
+      { "id": "C", "text": "To monitor the Scrum Team's productivity." },
+      { "id": "D", "text": "To facilitate Scrum Teams with insights and resources that help them improve." }
+    ],
+    "correct": ["D"],
+    "explanation": "Management has no active role in the actual product development through Scrum. However, management external to the Scrum Team is incredibly important in setting the vision and strategy to guide the overall direction of the organization.",
+    "version": 1
+  },
+  {
+    "id": "q-theory-004",
+    "type": "single",
+    "prompt": "True or False: Scrum can be applied to all projects.",
+    "options": [
+      { "id": "A", "text": "True." },
+      { "id": "B", "text": "False." }
+    ],
+    "correct": ["B"],
+    "explanation": "If your problem is not complex or there is no need to adapt or more is known than unknown, Scrum is not suitable as a framework.",
+    "source": "Scrum Guide 2020, Scrum Definition (p.3: “…adaptive solutions for complex problems.”).",
+    "version": 1,
+    "lockOptionOrder": true
+  },
+  {
+    "id": "q-theory-005",
+    "type": "multi",
+    "prompt": "Which Scrum Values are exhibited by NOT building Product Backlog items that have low business value? Choose the best three answers.",
+    "options": [
+      { "id": "A", "text": "Time to Market" },
+      { "id": "B", "text": "Earned Value" },
+      { "id": "C", "text": "Employee Satisfaction" },
+      { "id": "D", "text": "Respect." },
+      { "id": "E", "text": "Focus." },
+      { "id": "F", "text": "Courage" }
+    ],
+    "correct": ["D", "E", "F"],
+    "explanation": "Successful use of Scrum depends on people becoming more proficient in living five values: Commitment, Focus, Openness, Respect, and Courage.",
+    "source": "Scrum Guide 2020, Scrum Values (p.4–5).",
+    "version": 1
+  },
+  {
+    "id": "q-theory-006",
+    "type": "single",
+    "prompt": "True or False: Scrum is a methodology that explains in detail how to create value incrementally?",
+    "options": [
+      { "id": "A", "text": "False." },
+      { "id": "B", "text": "True." }
+    ],
+    "correct": ["A"],
+    "explanation": "Scrum is NOT a methodology. It is a framework and as such purposefully incomplete, only defining the parts required to implement Scrum theory. Rather than provide people with detailed instructions, the rules of Scrum guide their relationships and interactions.",
+    "source": "Scrum Guide 2020, Scrum Definition (p.3).",
+    "version": 1,
+    "lockOptionOrder": true
+  },
+  {
+    "id": "q-theory-007",
+    "type": "single",
+    "prompt": "True or False: Developer only refers to such people engaging in software development.",
+    "options": [
+      { "id": "A", "text": "True." },
+      { "id": "B", "text": "False." }
+    ],
+    "correct": ["B"],
+    "explanation": "This is false. If you get value from Scrum, consider yourself included. The term 'Developer' refers to any complex work that is performed regardless of the domain in which the work is performed.",
+    "source": "Scrum Guide 2020 (p.1: inclusive use of “developers”).",
+    "version": 1,
+    "lockOptionOrder": true
+  },
+  {
+    "id": "q-theory-008",
+    "type": "multi",
+    "prompt": "Select the five Scrum Values. Choose all that apply.",
+    "options": [
+      { "id": "A", "text": "Courage" },
+      { "id": "B", "text": "Respect" },
+      { "id": "C", "text": "Commitment" },
+      { "id": "D", "text": "Effectiveness" },
+      { "id": "E", "text": "Openness" },
+      { "id": "F", "text": "Agility" },
+      { "id": "G", "text": "Self-organization" },
+      { "id": "H", "text": "Focus" },
+      { "id": "I", "text": "Availability" }
+    ],
+    "correct": ["A", "B", "C", "E", "H"],
+    "source": "Scrum Guide 2020, Scrum Values (p.4–5).",
+    "version": 1
+  },
+  {
+    "id": "q-theory-009",
+    "type": "single",
+    "prompt": "One of the Scrum Pillars is: Choose the best answer.",
+    "options": [
+      { "id": "A", "text": "Planning" },
+      { "id": "B", "text": "Openness" },
+      { "id": "C", "text": "Respect" },
+      { "id": "D", "text": "Adaptation" },
+      { "id": "E", "text": "Agility" },
+      { "id": "F", "text": "Availability" }
+    ],
+    "correct": ["D"],
+    "source": "Scrum Guide 2020, Scrum Theory – Pillars (p.3–4).",
+    "version": 1
+  },
+  {
+    "id": "q-theory-010",
+    "type": "single",
+    "prompt": "The three pillars of empiricism are: Choose the best answer.",
+    "options": [
+      { "id": "A", "text": "Transparency, Inspection, Adaptation" },
+      { "id": "B", "text": "Planning, Demonstration, Retrospective" },
+      { "id": "C", "text": "Respect for People, Kaizen, Eliminating Waste" },
+      { "id": "D", "text": "Adapt, Adopt, Improve" },
+      { "id": "E", "text": "Transparency, Eliminating Waste, Kaizen" },
+      { "id": "F", "text": "Planning, Inspection, Adaptation" }
+    ],
+    "correct": ["A"],
+    "explanation": "Three pillars uphold every implementation of empirical process control: transparency, inspection, and adaptation.",
+    "source": "Scrum Guide 2020, Scrum Theory – Pillars (p.3–4).",
+    "version": 1
+  },
+  {
+    "id": "q-theory-011",
+    "type": "single",
+    "prompt": "Which statement best describes Scrum? Choose the best answer.",
+    "options": [
+      { "id": "A", "text": "A complete methodology that defines how to develop products." },
+      { "id": "B", "text": "Scrum is a lightweight framework that helps people, teams and organizations generate value through adaptive solutions for complex problems." },
+      { "id": "C", "text": "A cookbook that defines best practices for product development." },
+      { "id": "D", "text": "A defined and predictive process that conforms to the principles of Scientific Management." }
+    ],
+    "correct": ["B"],
+    "source": "Scrum Guide 2020, Scrum Definition (p.3).",
+    "version": 1
+  },
+  {
+    "id": "q-theory-012",
+    "type": "single",
+    "prompt": "True or False: Scrum allows the change of the core design of the framework.",
+    "options": [
+      { "id": "A", "text": "True" },
+      { "id": "B", "text": "False" }
+    ],
+    "correct": ["B"],
+    "source": "Scrum Guide 2020 (p.1: changing core design covers up problems; p.13: “Scrum is… immutable”).",
+    "version": 1,
+    "lockOptionOrder": true
+  },
+  {
+    "id": "q-theory-013",
+    "type": "multi",
+    "prompt": "Which of the following is true about Scrum? Choose the best three answers.",
+    "options": [
+      { "id": "A", "text": "Scrum is like traditional processes but with self-management to replace Project Managers." },
+      { "id": "B", "text": "Scrum is a methodology, where you can pick and choose which parts of Scrum you think will work for your environment." },
+      { "id": "C", "text": "Each element of the Scrum framework serves a specific purpose that is essential to the overall value and results realized with Scrum." },
+      { "id": "D", "text": "Scrum is based on empiricism and lean thinking." },
+      { "id": "E", "text": "Scrum is a lightweight framework." }
+    ],
+    "correct": ["C", "D", "E"],
+    "source": "Scrum Guide 2020 (p.1: each element serves a specific purpose; p.3: empiricism & lean thinking; p.3: lightweight framework).",
+    "version": 1
+  },
+  {
+    "id": "q-theory-014",
+    "type": "multi",
+    "prompt": "Scrum requires a Scrum Master to foster an environment where: Choose the best three answers.",
+    "options": [
+      { "id": "A", "text": "Management prescribes the workload in each Sprint for the Scrum Team" },
+      { "id": "B", "text": "Velocity is constantly growing to ensure the highest possible value is delivered each Sprint." },
+      { "id": "C", "text": "The Scrum Team always guarantees the forecast that it has committed to in the Sprint Planning." },
+      { "id": "D", "text": "A Product Owner orders the work for a complex problem into a Product Backlog." },
+      { "id": "E", "text": "The Scrum Team and its stakeholders inspect the results and adjust for the next Sprint." },
+      { "id": "F", "text": "The Scrum Team turns a selection of the work into an Increment of value during a Sprint." }
+    ],
+    "correct": ["D", "E", "F"],
+    "source": "Scrum Guide 2020, Scrum Definition – “In a nutshell…” bullets (p.3).",
+    "version": 1
+  },
+  {
+    "id": "q-theory-015",
+    "type": "multi",
+    "prompt": "Scrum requires a Scrum Master to foster an environment where: Choose the best three answers.",
+    "options": [
+      { "id": "A", "text": "Management prescribes the workload in each Sprint for the Scrum Team" },
+      { "id": "B", "text": "A Product Owner orders the work for a complex problem into a Product Backlog." },
+      { "id": "C", "text": "Velocity is constantly growing to ensure the highest possible value is delivered each Sprint." },
+      { "id": "D", "text": "The Scrum Team always guarantees the forecast that it has committed to in the Sprint Planning." },
+      { "id": "E", "text": "The Scrum Team turns a selection of the work into an Increment of value during a Sprint." },
+      { "id": "F", "text": "The Scrum Team and its stakeholders inspect the results and adjust for the next Sprint." }
+    ],
+    "correct": ["B", "E", "F"],
+    "explanation": "This is stated on page 3 of the Scrum Guide.",
+    "source": "Scrum Guide 2020, Scrum Definition – “In a nutshell…” bullets (p.3).",
+    "version": 1
+  },
+  {
+    "id": "q-theory-016",
+    "type": "single",
+    "prompt": "During the agile journey of an organization, what are the impacts of changing the Scrum terminology to fit existing terminology of the organization? Choose the best answer.",
+    "options": [
+      { "id": "A", "text": "Little change may happen if the organization doesn't adopt a new terminology." },
+      { "id": "B", "text": "Lack of understanding on changes may occur and the benefits of Scrum may be lost." },
+      { "id": "C", "text": "Less anxious feelings in Management." },
+      { "id": "D", "text": "All answers apply." }
+    ],
+    "correct": ["D"],
+    "source": "Scrum Guide 2020 (p.13: Scrum is immutable; p.3–4: transparency/pillars).",
+    "version": 1
+  },
+  {
+    "id": "q-theory-017",
+    "type": "single",
+    "prompt": "During the agile journey of an organization, what are the impacts of changing the Scrum terminology to fit existing terminology of the organization? Choose the best answer.",
+    "options": [
+      { "id": "A", "text": "All answers apply." },
+      { "id": "B", "text": "Little change may happen if the organization doesn't adopt a new terminology." },
+      { "id": "C", "text": "Lack of understanding on changes may occur and the benefits of Scrum may be lost." },
+      { "id": "D", "text": "Less anxious feelings in Management." }
+    ],
+    "correct": ["A"],
+    "explanation": "Scrum relies on transparency. This also means that a common language must be shared by those performing the work as well as those receiving the work. Scrum exists only in its entirety and that includes a common and consistent terminology.",
+    "source": "Scrum Guide 2020 (p.13: Scrum is immutable; p.3–4: transparency).",
+    "version": 1
+  },
+  {
+    "id": "q-theory-018",
+    "type": "multi",
+    "prompt": "What is the foundation of Scrum? Choose the best two answers.",
+    "options": [
+      { "id": "A", "text": "Waterfall" },
+      { "id": "B", "text": "Constraint Theory" },
+      { "id": "C", "text": "Top-Down Management" },
+      { "id": "D", "text": "Lean Thinking" },
+      { "id": "E", "text": "Empiricism" }
+    ],
+    "correct": ["D", "E"],
+    "explanation": "The Scrum Guide 2020 states on p.3: \"Scrum is founded on empiricism and lean thinking. Empiricism asserts that knowledge comes from experience and making decisions based on what is observed. Lean thinking reduces waste and focuses on the essentials.\"",
+    "source": "Scrum Guide 2020, Scrum Theory (p.3).",
+    "version": 1
+  },
+  {
+    "id": "q-theory-019",
+    "type": "single",
+    "prompt": "True or False: The emergent process and work of the Scrum Team must only be visible to those performing the work.",
+    "options": [
+      { "id": "A", "text": "True" },
+      { "id": "B", "text": "False" }
+    ],
+    "correct": ["B"],
+    "explanation": "The emergent process and work must be visible to those performing the work as well as those receiving the work.",
+    "source": "Scrum Guide 2020, Transparency (p.3–4).",
+    "version": 1,
+    "lockOptionOrder": true
+  },
+  {
+    "id": "q-theory-020",
+    "type": "single",
+    "prompt": "True or False: Scrum is not a process or technique.",
+    "options": [
+      { "id": "A", "text": "False" },
+      { "id": "B", "text": "True" }
+    ],
+    "correct": ["B"],
+    "explanation": "Various processes, techniques and methods can be employed within the framework. Scrum wraps around existing practices or renders them unnecessary.",
+    "source": "Scrum Guide 2020, Scrum Definition (p.3).",
+    "version": 1,
+    "lockOptionOrder": true
+  },
+  {
+    "id": "q-theory-021",
+    "type": "single",
+    "prompt": "True or False: Scrum recommends using only those Scrum components and rules which suit most for a particular project.",
+    "options": [
+      { "id": "A", "text": "True" },
+      { "id": "B", "text": "False" }
+    ],
+    "correct": ["B"],
+    "explanation": "Each component within the Scrum framework serves a specific purpose and is essential to Scrum’s success and usage.",
+    "source": "Scrum Guide 2020 (p.13: “Scrum … is immutable.”; p.1: changing core design covers up problems).",
+    "version": 1,
+    "lockOptionOrder": true
+  },
+  {
+    "id": "q-theory-022",
+    "type": "single",
+    "prompt": "Which Scrum Value is affected by a lack of trust in the Scrum Team? Choose the best answer.",
+    "options": [
+      { "id": "A", "text": "Respect" },
+      { "id": "B", "text": "Commitment" },
+      { "id": "C", "text": "Courage" },
+      { "id": "D", "text": "Focus" },
+      { "id": "E", "text": "Openness" },
+      { "id": "F", "text": "All answers" }
+    ],
+    "correct": ["F"],
+    "explanation": "The Scrum Team members learn and explore the values as they work with the Scrum events and artifacts. When these values are embodied by the Scrum Team and the people they work with, the empirical Scrum pillars of transparency, inspection, and adaptation come to life building trust.",
+    "source": "Scrum Guide 2020, Scrum Values (p.4–5).",
+    "version": 1
+  }
 ]
