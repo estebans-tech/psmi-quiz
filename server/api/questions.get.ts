@@ -1,22 +1,23 @@
-import { readFile } from 'node:fs/promises'
-import { join } from 'node:path'
 import { defineEventHandler, getQuery, setResponseStatus } from 'h3'
+import { loadQuestions } from '../utils/questions'
 
 /**
  * GET /api/questions?lang=en
  * Server-only: läser JSON från server-filsystemet och returnerar som array.
  * OBS: Ingen auth → alla som anropar endpointen får frågorna.
  */
+
 export default defineEventHandler(async (event) => {
-  const { lang = 'en' } = getQuery(event) as { lang?: string }
-  const filePath = join(process.cwd(), 'server', 'data', String(lang), 'core.json')
+  const q = getQuery(event)
+  const lang = typeof q.lang === 'string' ? q.lang : undefined
+  const filter = q.filter as string | string[] | undefined
 
   try {
-    const json = await readFile(filePath, 'utf-8')
-    const questions = JSON.parse(json)
-    return questions
+    const data = await loadQuestions(lang, filter)
+    return data
   } catch (err: any) {
+    console.error('[questions] Failed to load:', err?.message || err)
     setResponseStatus(event, 500)
-    return { error: `Failed to load questions for lang="${lang}": ${err?.message || 'unknown error'}` }
+    return { error: 'Failed to load questions' }
   }
 })
