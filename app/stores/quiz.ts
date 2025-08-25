@@ -1,11 +1,13 @@
+import { $fetch } from 'ofetch'
 import { defineStore } from 'pinia'
 import type { Question } from '~/types/question'
 import { mulberry32, shuffle } from '~/utils/rng'
 import { isExactMatch } from '~/utils/scoring'
-import { $fetch } from 'ofetch'
+import { orderOptions } from '~/utils/options'
 
 type Selections = Record<string, string[]>
 type FlagMap = Record<string, boolean>
+type AnswersMap = Record<string, string[]>
 
 export const useQuizStore = defineStore('quiz', {
   state: () => ({
@@ -16,13 +18,16 @@ export const useQuizStore = defineStore('quiz', {
     revealed: {} as FlagMap,
     finished: false,
     loading: false,
-    error: null as string | null
+    error: null as string | null,
+    answersById: {} as AnswersMap, // <-- tydlig, typad källa för svaren
   }),
 
   getters: {
     currentQuestion(state): Question | null {
       return state.questions[state.index] ?? null
     },
+    getSelectedByQuestionId: (state) => (qid: string): string[] =>
+      state.answersById[qid] ?? [],
   
     // ✅ används av Results-sidan (KPI och filter)
     summary(state) {
@@ -63,7 +68,11 @@ export const useQuizStore = defineStore('quiz', {
         }
 
         // Alltid shuffle
-        this.questions = shuffle(raw, rng)
+        const shuffled = shuffle(raw, rng)
+        this.questions = shuffled.map(q => ({
+          ...q,
+          options: orderOptions(q, rng) // ✅ respekterar lockOptionOrder
+        }))
 
         // Nollställ state
         this.index = 0
@@ -79,6 +88,14 @@ export const useQuizStore = defineStore('quiz', {
       } finally {
         this.loading = false
       }
+    },
+    setAnswer(qid: string, optionIds: string[]) {
+      // håll ordningen stabil, ta bort dubbletter
+      const unique = Array.from(new Set(optionIds))
+      this.answersById[qid] = unique
+    },
+    resetAnswers() {
+      this.answersById = {}
     },
 
     next() {

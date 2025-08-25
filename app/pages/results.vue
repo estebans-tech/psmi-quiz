@@ -20,15 +20,15 @@
       <template v-else>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
           <div class="rounded-2xl bg-white shadow p-4">
-            <div class="text-2xl font-semibold text-emerald-600">{{ summary.correct }}</div>
+            <div class="text-2xl font-semibold text-emerald-600">{{ correctCount }}</div>
             <div class="text-sm text-gray-500">Correct</div>
           </div>
           <div class="rounded-2xl bg-white shadow p-4">
-            <div class="text-2xl font-semibold text-rose-600">{{ summary.incorrect }}</div>
+            <div class="text-2xl font-semibold text-rose-600">{{ incorrectCount }}</div>
             <div class="text-sm text-gray-500">Incorrect</div>
           </div>
           <div class="rounded-2xl bg-white shadow p-4">
-            <div class="text-2xl font-semibold">{{ summary.total }}</div>
+            <div class="text-2xl font-semibold">{{ totalCount }}</div>
             <div class="text-sm text-gray-500">Total</div>
           </div>
         </div>
@@ -55,6 +55,7 @@
         </div>
 
         <div class="mt-6">
+          <!-- Resultatlistan lämnas orörd, får props i samma shape -->
           <ResultsList :questions="questions" :selections="selections" :filter="filter" />
         </div>
 
@@ -67,17 +68,43 @@
 </template>
 
 <script setup lang="ts">
+import { useRouter } from 'nuxt/app'
 import { ref, computed } from 'vue'
 import { useQuizStore } from '~/stores/quiz'
+// import ResultsList from '~/components/ResultsList.vue' // behövs bara om auto-import är av
+
+import type { Question } from '~/types/question'
 
 type Filter = 'all' | 'correct' | 'incorrect'
 const filter = ref<Filter>('all')
 
 const store = useQuizStore()
-const router = useRouter() // Nuxt auto-import – funkar utan explicit import
-const questions = computed(() => store.questions)
-const selections = computed(() => store.selections)
-const summary = computed(() => store.summary)
+const router = useRouter() // Nuxt auto-import
+
+const questions = computed(() => store.questions as Question[])
+// Se till att selections alltid är en Record<string, string[]>
+const selections = computed<Record<string, string[]>>(
+  () => (store.selections ?? {}) as Record<string, string[]>
+)
+
+// Binär korrekthet: exakt mängd (MSQ) eller enda korrekta (MCQ)
+function isQuestionCorrect(q: Question, selected: string[]): boolean {
+  const chosen = new Set(selected ?? [])
+  const correct = new Set(q.correct ?? [])
+  if (chosen.size !== correct.size) return false
+  for (const id of chosen) if (!correct.has(id)) return false
+  return true
+}
+
+// 🔢 Summering här i sidan (PSM-logik: obesvarade räknas som fel)
+const totalCount = computed(() => questions.value.length)
+const correctCount = computed(() =>
+  questions.value.reduce((acc, q) => {
+    const sel = selections.value[q.id] ?? []
+    return acc + (isQuestionCorrect(q, sel) ? 1 : 0)
+  }, 0)
+)
+const incorrectCount = computed(() => totalCount.value - correctCount.value)
 
 function backToStart() {
   store.$reset()

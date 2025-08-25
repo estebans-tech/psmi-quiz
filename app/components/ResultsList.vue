@@ -1,52 +1,54 @@
-<template>
-  <div class="space-y-4">
-    <article v-for="q in filtered" :key="q.id" class="rounded-2xl bg-white shadow p-4">
-      <h3 class="font-medium">{{ q.prompt }}</h3>
-
-      <div class="mt-2 grid grid-cols-1 md:grid-cols-3 gap-3">
-        <div>
-          <div class="text-xs uppercase text-gray-500">Your selection</div>
-          <div class="break-words">{{ (selections[q.id] || []).join(', ') || '—' }}</div>
-        </div>
-        <div>
-          <div class="text-xs uppercase text-gray-500">Correct</div>
-          <div class="break-words">{{ q.correct.join(', ') }}</div>
-        </div>
-        <div>
-          <div class="text-xs uppercase text-gray-500">Explanation</div>
-          <p class="mt-1 text-sm text-gray-700">
-            {{ q.explanation || '—' }}
-          </p>
-        </div>
-      </div>
-    </article>
-  </div>
-</template>
-
 <script setup lang="ts">
 import { computed } from 'vue'
+import ResultCard from '~/components/ResultCard.vue'
 import type { Question } from '~/types/question'
-import { isExactMatch } from '~/utils/scoring'
 
 type Filter = 'all' | 'correct' | 'incorrect'
+type SelectionsMap = Record<string, string[]> // samma shape som store.selections
 
-const props = withDefaults(defineProps<{
-  questions?: Question[]
-  selections?: Record<string, string[]>
-  filter?: Filter
-}>(), {
-  questions: () => [],
-  selections: () => ({}),
-  filter: 'all'
-})
+const props = defineProps<{
+  questions: Question[]
+  selections: SelectionsMap
+  filter: Filter
+}>()
 
-const filtered = computed(() => {
-  const qs = props.questions
-  if (props.filter === 'all') return qs
-  return qs.filter(q => {
-    const sel = props.selections[q.id] || []
-    const ok = isExactMatch(sel, q.correct)
-    return props.filter === 'correct' ? ok : !ok
+function isQuestionCorrect(q: Question, selected: string[]): boolean {
+  // exakt mängd-jämförelse (binärt rätt/fel)
+  const chosen = new Set(selected ?? [])
+  const correct = new Set(q.correct ?? [])
+  if (chosen.size !== correct.size) return false
+  for (const id of chosen) if (!correct.has(id)) return false
+  return true
+}
+
+// Bygg rader i EXAKT den ordning frågorna kom (ingen sortering)
+const rows = computed(() =>
+  (props.questions ?? []).map(q => {
+    const selected = props.selections?.[q.id] ?? []
+    return {
+      question: q,
+      answer: { questionId: q.id, selectedOptionIds: selected },
+      correct: isQuestionCorrect(q, selected),
+    }
   })
+)
+
+// Filtrera på frågenivå (all/correct/incorrect)
+const filteredRows = computed(() => {
+  if (props.filter === 'correct') return rows.value.filter(r => r.correct)
+  if (props.filter === 'incorrect') return rows.value.filter(r => !r.correct)
+  return rows.value
 })
 </script>
+
+<template>
+  <!-- Rendera listan av kort – ResultCard har redan ARIA för alternativen -->
+  <div class="space-y-6">
+    <ResultCard
+      v-for="r in filteredRows"
+      :key="r.question.id"
+      :question="r.question"
+      :answer="r.answer"
+    />
+  </div>
+</template>

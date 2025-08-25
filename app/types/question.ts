@@ -1,4 +1,5 @@
 export type QuestionType = 'single' | 'multi';
+export type QType = 'mcq' | 'msq';
 
 export interface QuestionOption {
   id: string;
@@ -16,4 +17,11 @@ export interface Question {
   source?: string;
   shuffle?: boolean; // if true, shuffle options on load
   version: number;   // e.g., 1
+  /** true = keep JSON order (no shuffle), false/undefined = shuffle */
+  lockOptionOrder?: boolean
+}
+
+export interface UserAnswer {
+  questionId: string;
+  selectedOptionIds: string[];   // de alternativ användaren valde
 }
