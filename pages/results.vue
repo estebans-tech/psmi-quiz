@@ -3,10 +3,21 @@
     <header class="bg-white border-b">
       <div class="mx-auto max-w-5xl px-4 py-4 flex items-center justify-between">
         <h1 class="text-lg font-semibold">Scrum PSM I - Results</h1>
-        <!-- 🔁 Back to start med reset -->
-        <button class="text-sm underline hover:no-underline" @click="backToStart">
-          Back to start
-        </button>
+        <div class="flex items-center gap-3">
+          <!-- 🔁 Repeat med samma setup (döljs om ingen lastConfig) -->
+          <NuxtLink
+            v-if="repeatTo"
+            :to="repeatTo"
+            class="text-sm underline hover:no-underline"
+          >
+            Repeat
+          </NuxtLink>
+
+          <!-- 🔙 Back to start med reset -->
+          <button class="text-sm underline hover:no-underline" @click="backToStart">
+            Back to start
+          </button>
+        </div>
       </div>
     </header>
 
@@ -55,7 +66,6 @@
         </div>
 
         <div class="mt-6">
-          <!-- Resultatlistan lämnas orörd, får props i samma shape -->
           <ResultsList :questions="questions" :selections="selections" :filter="filter" />
         </div>
 
@@ -71,23 +81,29 @@
 import { useRouter } from 'nuxt/app'
 import { ref, computed } from 'vue'
 import { useQuizStore } from '~/stores/quiz'
-// import ResultsList from '~/components/ResultsList.vue' // behövs bara om auto-import är av
-
 import type { Question } from '~/types/question'
 
 type Filter = 'all' | 'correct' | 'incorrect'
 const filter = ref<Filter>('all')
 
 const store = useQuizStore()
-const router = useRouter() // Nuxt auto-import
+const router = useRouter()
 
 const questions = computed(() => store.questions as Question[])
-// Se till att selections alltid är en Record<string, string[]>
 const selections = computed<Record<string, string[]>>(
   () => (store.selections ?? {}) as Record<string, string[]>
 )
 
-// Binär korrekthet: exakt mängd (MSQ) eller enda korrekta (MCQ)
+// 🔁 Repeat-länk byggd från lastConfig (döljs om saknas)
+const repeatTo = computed(() => {
+  const cfg = store.lastConfig
+  if (!cfg) return null
+  const q: Record<string, any> = { lang: cfg.lang, filter: cfg.filter, max: cfg.max }
+  if (cfg.seed !== undefined && String(cfg.seed).trim() !== '') q.seed = String(cfg.seed)
+  return { path: '/quiz', query: q }
+})
+
+// Binär korrekthet (obesvarade räknas som fel här)
 function isQuestionCorrect(q: Question, selected: string[]): boolean {
   const chosen = new Set(selected ?? [])
   const correct = new Set(q.correct ?? [])
@@ -96,7 +112,6 @@ function isQuestionCorrect(q: Question, selected: string[]): boolean {
   return true
 }
 
-// 🔢 Summering här i sidan (PSM-logik: obesvarade räknas som fel)
 const totalCount = computed(() => questions.value.length)
 const correctCount = computed(() =>
   questions.value.reduce((acc, q) => {

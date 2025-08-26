@@ -16,6 +16,8 @@ type StartConfig = {
   max?: number         // "upp till" detta antal
   seed?: number | string
 }
+type Prefs = { lang: string; filter: string; max: number; seed?: string | number }
+const PREFS_KEY = 'quiz.prefs'
 
 export const useQuizStore = defineStore('quiz', {
   state: () => ({
@@ -64,6 +66,22 @@ export const useQuizStore = defineStore('quiz', {
   },
 
   actions: {
+    readPrefs(): Prefs | null {
+      if (typeof localStorage === 'undefined') return null
+      try {
+        const raw = localStorage.getItem(PREFS_KEY)
+        if (!raw) return null
+        const p = JSON.parse(raw) as Prefs
+        if (!p || typeof p !== 'object') return null
+        if (!p.lang || !p.filter || typeof p.max !== 'number') return null
+        return p
+      } catch { return null }
+    },
+    // ✅ Nytt: spara prefs
+    savePrefs(p: Prefs) {
+      if (typeof localStorage === 'undefined') return
+      try { localStorage.setItem(PREFS_KEY, JSON.stringify(p)) } catch {}
+    },
     /**
      * Starta session baserat på query-parametrar i /quiz:
      *   /quiz?lang=en&filter=all&max=60&seed=123
@@ -92,39 +110,34 @@ export const useQuizStore = defineStore('quiz', {
       this.error = null
       try {
         const lang   = (opts?.lang || 'en').toLowerCase()
-        const filter = (opts?.filter ?? 'all') // 'all' eller csv: 'events,roles'
+        const filter = (opts?.filter ?? 'all')
         const max    = typeof opts?.max === 'number' && opts!.max > 0 ? Math.floor(opts!.max) : 60
-
-        // 1) Hämta serverfiltrerade frågor (Nuxt/Nitro API)
-        const raw = await $fetch<Question[]>('/api/questions', {
-          params: { lang, filter }
-        })
-
-        // 2) Välj RNG: seeded i tester om seed skickas, annars Math.random
+  
+        const raw = await $fetch<Question[]>('/api/questions', { params: { lang, filter } })
+  
         let rng = Math.random
         if (opts?.seed !== undefined && String(opts.seed).trim() !== '') {
           rng = mulberry32(opts.seed!)
         }
-
-        // 3) Alltid shuffle (frågor + options per fråga)
+  
         const shuffled = shuffle(raw, rng).map(q => ({
           ...q,
-          options: orderOptions(q, rng) // ✅ respekterar lockOptionOrder
+          options: orderOptions(q, rng)
         }))
-
-        // 4) "Upp till max"
+  
         const take = Math.min(shuffled.length, max)
         this.questions = shuffled.slice(0, take)
-
-        // 5) Nollställ interaktionsstate
+  
         this.index = 0
         this.selections = {}
         this.checked = {}
         this.revealed = {}
         this.finished = false
-
-        // 6) Spara config för UI/diagnostik
+  
         this.lastConfig = { lang, filter, max, seed: opts?.seed }
+  
+        // ✅ Spara prefs för Repeat/Start
+        this.savePrefs(this.lastConfig)
       } catch (e: any) {
         console.error('Failed to start session:', e)
         this.error = e?.message || 'Network or server error'

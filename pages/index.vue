@@ -1,49 +1,51 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
+import { useQuizStore } from '~/stores/quiz'
+import { ALLOWED_CATEGORIES, type Category, isCategory } from '~/constants/categories'
 
 const router = useRouter()
+const store = useQuizStore()
 
-// Tillgängliga kategorier i UI (kan bytas mot import från utils om du vill)
-import { ALLOWED_CATEGORIES, type Category } from '~/constants/categories'
-
-// Använd direkt – vi muterar inte listan:
 const allCats = ALLOWED_CATEGORIES
 type Cat = Category
 
-// Lokal UI-state (markup-first, ingen koppling till store här)
-const selectedCats = ref<('all' | Cat)[]>(['all'])           // “All” som förval
+const selectedCats = ref<('all' | Cat)[]>(['all'])
 const maxOptions = [20, 30, 60, 80, 100, 120] as const
-const selectedMax = ref<(typeof maxOptions)[number]>(60)     // 60 som förval
+const selectedMax = ref<(typeof maxOptions)[number]>(60)
 
 const isAll = computed(() => selectedCats.value.includes('all'))
-const effectiveCats = computed<Cat[]>(
-  () => isAll.value ? [...allCats] : (selectedCats.value as Cat[])
-)
+const effectiveCats = computed<Cat[]>(() => isAll.value ? [...allCats] : (selectedCats.value as Cat[]))
 
-// Behåller båda handlers: toggleAll + toggleCat
-function toggleAll(checked: boolean) {
-  if (checked) {
-    selectedCats.value = ['all']
-  } else {
-    // Avmarkerar “All” → lämna tomt tills användaren väljer något specifikt
-    selectedCats.value = []
-  }
-}
+function toggleAll(checked: boolean) { selectedCats.value = checked ? ['all'] : [] }
 function toggleCat(cat: Cat, checked: boolean) {
-  const set = new Set(selectedCats.value)
-  set.delete('all') // “All” är ömsesidigt exklusiv
-  if (checked) set.add(cat)
-  else set.delete(cat)
+  const set = new Set(selectedCats.value); set.delete('all')
+  if (checked) set.add(cat); else set.delete(cat)
   selectedCats.value = Array.from(set) as any
 }
 
-// Uppdaterad start – skickar parametrar till /quiz (store kan läsa route.query)
+// ✅ Läs prefs och förifyll
+onMounted(() => {
+  const prefs = store.readPrefs?.()
+  if (!prefs) return
+  // max
+  if (maxOptions.includes(prefs.max as any)) selectedMax.value = prefs.max as any
+  // filter
+  if (prefs.filter === 'all') {
+    selectedCats.value = ['all']
+  } else {
+    const cats = (prefs.filter || '')
+      .split(',')
+      .map(s => s.trim().toLowerCase())
+      .filter(isCategory) as Cat[]
+    if (cats.length) selectedCats.value = cats
+  }
+})
+
 function start() {
-  const lang = 'en' // byt när du lägger språkval
+  const lang = 'en'
   const filter = isAll.value ? 'all' : effectiveCats.value.join(',')
   const max = String(selectedMax.value)
-
   router.push({ path: '/quiz', query: { lang, filter, max } })
 }
 </script>

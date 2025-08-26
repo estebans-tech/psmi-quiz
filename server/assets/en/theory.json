@@ -212,23 +212,6 @@
   },
   {
     "id": "q-theory-015",
-    "type": "multi",
-    "prompt": "Scrum requires a Scrum Master to foster an environment where: Choose the best three answers.",
-    "options": [
-      { "id": "A", "text": "Management prescribes the workload in each Sprint for the Scrum Team" },
-      { "id": "B", "text": "A Product Owner orders the work for a complex problem into a Product Backlog." },
-      { "id": "C", "text": "Velocity is constantly growing to ensure the highest possible value is delivered each Sprint." },
-      { "id": "D", "text": "The Scrum Team always guarantees the forecast that it has committed to in the Sprint Planning." },
-      { "id": "E", "text": "The Scrum Team turns a selection of the work into an Increment of value during a Sprint." },
-      { "id": "F", "text": "The Scrum Team and its stakeholders inspect the results and adjust for the next Sprint." }
-    ],
-    "correct": ["B", "E", "F"],
-    "explanation": "This is stated on page 3 of the Scrum Guide.",
-    "source": "Scrum Guide 2020, Scrum Definition – “In a nutshell…” bullets (p.3).",
-    "version": 1
-  },
-  {
-    "id": "q-theory-016",
     "type": "single",
     "prompt": "During the agile journey of an organization, what are the impacts of changing the Scrum terminology to fit existing terminology of the organization? Choose the best answer.",
     "options": [
@@ -242,22 +225,7 @@
     "version": 1
   },
   {
-    "id": "q-theory-017",
-    "type": "single",
-    "prompt": "During the agile journey of an organization, what are the impacts of changing the Scrum terminology to fit existing terminology of the organization? Choose the best answer.",
-    "options": [
-      { "id": "A", "text": "All answers apply." },
-      { "id": "B", "text": "Little change may happen if the organization doesn't adopt a new terminology." },
-      { "id": "C", "text": "Lack of understanding on changes may occur and the benefits of Scrum may be lost." },
-      { "id": "D", "text": "Less anxious feelings in Management." }
-    ],
-    "correct": ["A"],
-    "explanation": "Scrum relies on transparency. This also means that a common language must be shared by those performing the work as well as those receiving the work. Scrum exists only in its entirety and that includes a common and consistent terminology.",
-    "source": "Scrum Guide 2020 (p.13: Scrum is immutable; p.3–4: transparency).",
-    "version": 1
-  },
-  {
-    "id": "q-theory-018",
+    "id": "q-theory-016",
     "type": "multi",
     "prompt": "What is the foundation of Scrum? Choose the best two answers.",
     "options": [
@@ -273,7 +241,7 @@
     "version": 1
   },
   {
-    "id": "q-theory-019",
+    "id": "q-theory-017",
     "type": "single",
     "prompt": "True or False: The emergent process and work of the Scrum Team must only be visible to those performing the work.",
     "options": [
@@ -287,7 +255,7 @@
     "lockOptionOrder": true
   },
   {
-    "id": "q-theory-020",
+    "id": "q-theory-018",
     "type": "single",
     "prompt": "True or False: Scrum is not a process or technique.",
     "options": [
@@ -301,7 +269,7 @@
     "lockOptionOrder": true
   },
   {
-    "id": "q-theory-021",
+    "id": "q-theory-019",
     "type": "single",
     "prompt": "True or False: Scrum recommends using only those Scrum components and rules which suit most for a particular project.",
     "options": [
@@ -315,7 +283,7 @@
     "lockOptionOrder": true
   },
   {
-    "id": "q-theory-022",
+    "id": "q-theory-020",
     "type": "single",
     "prompt": "Which Scrum Value is affected by a lack of trust in the Scrum Team? Choose the best answer.",
     "options": [
