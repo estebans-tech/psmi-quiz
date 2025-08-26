@@ -2,9 +2,10 @@
   "extends": "./.nuxt/tsconfig.json",
   "compilerOptions": {
     "baseUrl": ".",
-    "paths": {
-      "~/*": ["app/*"],
-      "@/*": ["app/*"]
+    "paths": { 
+      "~/*": ["app/*"], 
+      "@/*": ["app/*"],
+      "~/server/*": ["server/*"]
     },
     "moduleResolution": "bundler",
     "jsx": "preserve",
@@ -12,15 +13,20 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "types": ["vite/client", "vitest", "node"]
+    "types": ["vite/client", "vitest", "node", "nuxt"]
   },
   "include": [
+    ".nuxt/**/*.d.ts",
+    ".nuxt/**/*.ts",
+    "nuxt.config.ts",
     "app/**/*.ts",
     "app/**/*.tsx",
     "app/**/*.vue",
-    "app/**/*.d.ts",
+    "server/**/*.ts",
+    "server/**/*.d.ts",
     "tests/**/*.ts",
-    "tests/**/*.tsx"
+    "tests/**/*.tsx",
+    "types/**/*.d.ts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["dist", ".output", "node_modules"]
 }

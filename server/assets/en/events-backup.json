@@ -1,0 +1,33 @@
+[
+    {
+        "id": "q-events-001",
+        "type": "single",
+        "prompt": "Who is accountable for maximizing the value of the product?",
+        "options": [
+          { "id": "a", "text": "The Product Owner", "explanation": "Owns the Product Goal and orders the Product Backlog to maximize value." },
+          { "id": "b", "text": "The Scrum Master", "explanation": "Enables Scrum effectiveness; not accountable for product value." },
+          { "id": "c", "text": "Developers", "explanation": "Create usable Increments; not accountable for maximizing product value." }
+        ],
+        "correct": ["a"],
+        "explanation": "The Product Owner is accountable for maximizing product value.",
+        "source": "Scrum Guide 2020 — Product Owner",
+        "shuffle": true,
+        "version": 1
+      },
+      {
+        "id": "q-events-002",
+        "type": "multi",
+        "prompt": "Select all statements that describe the Sprint Review.",
+        "options": [
+          { "id": "a", "text": "A collaborative working session with stakeholders.", "explanation": "Stakeholders and the Scrum Team inspect the Increment together." },
+          { "id": "b", "text": "A status meeting for the Scrum Master.", "explanation": "The event focuses on the product; Scrum Masters do not collect status here." },
+          { "id": "c", "text": "An opportunity to adapt the Product Backlog.", "explanation": "Feedback often leads to changes in the Product Backlog ordering and items." },
+          { "id": "d", "text": "A gate to appraise individual performance.", "explanation": "Scrum does not use the Sprint Review for individual appraisal." }
+        ],
+        "correct": ["a", "c"],
+        "explanation": "The Sprint Review inspects the Increment with stakeholders and may trigger Product Backlog adaptation.",
+        "source": "Scrum Guide 2020 — Events / Sprint Review",
+        "shuffle": true,
+        "version": 1
+      }
+]

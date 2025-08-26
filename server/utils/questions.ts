@@ -44,19 +44,40 @@ export function parseFilter(raw?: string | string[]): Category[] {
 
 /** Ladda en kategori-fil. Saknas fil => [] och varning. Parsefel => kastas (500). */
 export async function loadCategoryFile(lang: 'en', cat: Category): Promise<QuestionOut[]> {
-  const filePath = join(process.cwd(), 'server', 'data', lang, `${cat}.json`)
+  const key = `${lang}/${cat}.json`
+
+  // 1) Försök läsa via Nitro server assets (Netlify-kompatibelt)
   try {
-    const json = await readFile(filePath, 'utf-8')
-    const arr = JSON.parse(json) as Question[]
-    return arr.map(q => ({ ...q, category: cat }))
-  } catch (err: any) {
-    if (err?.code === 'ENOENT') {
-      console.warn(`[questions] Missing file for category "${cat}" at ${filePath} — skipping.`)
-      return []
+    const storage = useStorage<'raw'>('assets:server') // basename i nuxt.config.ts
+    const raw = await storage.getItemRaw(key)             // Buffer | null
+    if (raw) {
+      const arr = JSON.parse(raw.toString('utf-8')) as Question[]
+      return arr.map(q => ({ ...q, category: cat }))
     }
-    // Riktigt parse/IO-fel: bubbla upp så handlern svarar 500.
-    throw err
+  } catch (e) {
+    // Om det här kastar är det troligen ett packningsproblem; vi faller vidare.
+    console.warn(`[questions] assets read failed for ${key}:`, (e as any)?.message ?? e)
   }
+
+  // 2) DEV-fallback: lokalt via fs (hjälper nuxt dev/preview)
+  // if (process.dev) {
+  //   const filePath = join(process.cwd(), 'server', 'data', lang, `${cat}.json`)
+  //   try {
+  //     const json = await readFile(filePath, 'utf-8')
+  //     const arr = JSON.parse(json) as Question[]
+  //     return arr.map(q => ({ ...q, category: cat }))
+  //   } catch (err: any) {
+  //     if (err?.code === 'ENOENT') {
+  //       console.warn(`[questions] Missing file for category "${cat}" at ${filePath} — skipping.`)
+  //       return []
+  //     }
+  //     throw err
+  //   }
+  // }
+
+  // 3) I prod (Netlify): om vi kom hit returnerar vi tomt och loggar nyckeln
+  console.warn(`[questions] No asset found for key "${key}" (check nitro.serverAssets baseName/dir).`)
+  return []
 }
 
 /** Huvud-API för routern: returnerar sammanslagen lista (ingen server-shuffle). */

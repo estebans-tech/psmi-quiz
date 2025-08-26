@@ -23,3 +23,4 @@ describe('selection resets checked status', () => {
     expect(Boolean(s.checked['q1'])).toBe(false)
   })
 })
+

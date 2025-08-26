@@ -1,12 +1,6 @@
 import { defineEventHandler, getQuery, setResponseStatus } from 'h3'
 import { loadQuestions } from '../utils/questions'
 
-/**
- * GET /api/questions?lang=en
- * Server-only: läser JSON från server-filsystemet och returnerar som array.
- * OBS: Ingen auth → alla som anropar endpointen får frågorna.
- */
-
 export default defineEventHandler(async (event) => {
   const q = getQuery(event)
   const lang = typeof q.lang === 'string' ? q.lang : undefined

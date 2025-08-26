@@ -1,9 +1,6 @@
-# netlify.toml (lägg i repo-roten)
 [build]
   command = "npm run build"
   publish = "dist"
 
 [build.environment]
   NODE_VERSION = "20"
-  # Om du använder pnpm:
-  # PNPM_FLAGS = "--shamefully-hoist"
