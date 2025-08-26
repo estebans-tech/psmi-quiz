@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue'
+import { computed, ref, watch, nextTick } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import { useQuizStore } from '~/stores/quiz'
 
@@ -72,16 +72,27 @@ function onCheck() {
   if ((store.selections[q.value.id] ?? []).length === 0) return
   store.check(q.value.id)
 }
-function onReveal() {
+
+async function onReveal() {
   if (!q.value) return
+  const wasOpen = !!store.revealed[q.value.id]
   store.reveal(q.value.id)
+  const nowOpen = !wasOpen
+  if (nowOpen) {
+    await nextTick()
+    const id = `explanations-${q.value.id}`
+    const el = document.getElementById(id) as HTMLElement | null
+    el?.focus()
+  }
 }
+
 function goPrev() { store.prev() }
 function goNext() { store.next() }
 function finishAndGoResults() {
   store.finish()
   router.push('/results')
 }
+
 </script>
 
 <template>

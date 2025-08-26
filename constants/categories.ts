@@ -1,5 +1,5 @@
 //export const ALLOWED_CATEGORIES = ['theory','values','team','events','artifacts', 'roles', 'empiricism'] as const
-export const ALLOWED_CATEGORIES = ['theory', 'team','events'] as const
+export const ALLOWED_CATEGORIES = ['theory', 'team','events', 'scrum-org'] as const
 
 export type Category = (typeof ALLOWED_CATEGORIES)[number]
 

@@ -3,6 +3,7 @@ import { ref, computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { useQuizStore } from '~/stores/quiz'
 import { ALLOWED_CATEGORIES, type Category, isCategory } from '~/constants/categories'
+import { MAX_OPTIONS, DEFAULT_MAX, type MaxOption, MAX_SET } from '~/constants/quiz'
 
 const router = useRouter()
 const store = useQuizStore()
@@ -11,8 +12,8 @@ const allCats = ALLOWED_CATEGORIES
 type Cat = Category
 
 const selectedCats = ref<('all' | Cat)[]>(['all'])
-const maxOptions = [20, 30, 60, 80, 100, 120] as const
-const selectedMax = ref<(typeof maxOptions)[number]>(60)
+const maxOptions = MAX_OPTIONS
+const selectedMax = ref<MaxOption>(DEFAULT_MAX)
 
 const isAll = computed(() => selectedCats.value.includes('all'))
 const effectiveCats = computed<Cat[]>(() => isAll.value ? [...allCats] : (selectedCats.value as Cat[]))
@@ -29,7 +30,7 @@ onMounted(() => {
   const prefs = store.readPrefs?.()
   if (!prefs) return
   // max
-  if (maxOptions.includes(prefs.max as any)) selectedMax.value = prefs.max as any
+  if (MAX_SET.has(Number(prefs.max))) selectedMax.value = prefs.max as MaxOption
   // filter
   if (prefs.filter === 'all') {
     selectedCats.value = ['all']

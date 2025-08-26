@@ -5,6 +5,7 @@ import type { Question } from '~/types/question'
 import { mulberry32, shuffle } from '~/utils/rng'
 import { isExactMatch } from '~/utils/scoring'
 import { orderOptions } from '~/utils/options'
+import { DEFAULT_MAX, normalizeMax } from '~/constants/quiz'
 
 type Selections = Record<string, string[]>
 type FlagMap = Record<string, boolean>
@@ -111,7 +112,7 @@ export const useQuizStore = defineStore('quiz', {
       try {
         const lang   = (opts?.lang || 'en').toLowerCase()
         const filter = (opts?.filter ?? 'all')
-        const max    = typeof opts?.max === 'number' && opts!.max > 0 ? Math.floor(opts!.max) : 60
+        const max = normalizeMax(opts?.max ?? DEFAULT_MAX)
   
         const raw = await $fetch<Question[]>('/api/questions', { params: { lang, filter } })
   

@@ -119,10 +119,9 @@ class="space-y-4"
 
 
       <!-- Statusrad (Correct/Incorrect/No selection) -->
-      <div class="mt-3">
+      <div class="mt-3" role="status" aria-live="polite">
         <p v-if="checked" class="text-sm">
-          <span
-v-if="hasSelection"
+          <span v-if="hasSelection"
                 class="inline-flex items-center rounded-full px-2 py-0.5"
                 :class="isCurrentCorrect ? 'bg-emerald-100 text-emerald-800' : 'bg-rose-100 text-rose-800'">
             {{ isCurrentCorrect ? 'Correct' : 'Incorrect' }}
@@ -139,6 +138,7 @@ v-if="hasSelection"
         :id="explRegionId"
         role="region"
         :aria-labelledby="explLabelId"
+        tabindex="-1"
         class="mt-3"
       >
         <h2 :id="explLabelId" class="sr-only">Answer explanation</h2>
