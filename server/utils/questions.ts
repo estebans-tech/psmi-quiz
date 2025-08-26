@@ -1,5 +1,4 @@
-export const ALLOWED_CATEGORIES = ['theory','values','team','events','artifacts', 'roles', 'empiricism'] as const
-export type Category = typeof ALLOWED_CATEGORIES[number]
+import { ALLOWED_CATEGORIES, type Category, isCategory } from '~/constants/categories'
 
 export interface QuestionOption { id: string; text: string }
 export interface Question {
@@ -29,12 +28,14 @@ export function parseFilter(raw?: string | string[]): Category[] {
   if (!raw) return [...ALLOWED_CATEGORIES]
   const str = Array.isArray(raw) ? raw.join(',') : raw
   const tokens = str.split(',').map(s => s.trim().toLowerCase()).filter(Boolean)
+
   if (tokens.length === 0 || tokens.includes('all')) return [...ALLOWED_CATEGORIES]
 
   const uniq = Array.from(new Set(tokens))
-  const known = uniq.filter(t => (ALLOWED_CATEGORIES as readonly string[]).includes(t))
-  const unknown = uniq.filter(t => !known.includes(t))
+  const known = uniq.filter(isCategory)                // ✅ typesafe
+  const unknown = uniq.filter(t => !isCategory(t))
   if (unknown.length) console.warn('[questions] Ignored unknown filters:', unknown)
+
   return (known.length ? known : [...ALLOWED_CATEGORIES]) as Category[]
 }
 
@@ -55,23 +56,7 @@ export async function loadCategoryFile(lang: 'en', cat: Category): Promise<Quest
     console.warn(`[questions] assets read failed for ${key}:`, (e as any)?.message ?? e)
   }
 
-  // 2) DEV-fallback: lokalt via fs (hjälper nuxt dev/preview)
-  // if (process.dev) {
-  //   const filePath = join(process.cwd(), 'server', 'data', lang, `${cat}.json`)
-  //   try {
-  //     const json = await readFile(filePath, 'utf-8')
-  //     const arr = JSON.parse(json) as Question[]
-  //     return arr.map(q => ({ ...q, category: cat }))
-  //   } catch (err: any) {
-  //     if (err?.code === 'ENOENT') {
-  //       console.warn(`[questions] Missing file for category "${cat}" at ${filePath} — skipping.`)
-  //       return []
-  //     }
-  //     throw err
-  //   }
-  // }
-
-  // 3) I prod (Netlify): om vi kom hit returnerar vi tomt och loggar nyckeln
+  // 2) I prod (Netlify): om vi kom hit returnerar vi tomt och loggar nyckeln
   console.warn(`[questions] No asset found for key "${key}" (check nitro.serverAssets baseName/dir).`)
   return []
 }

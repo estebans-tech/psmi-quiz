@@ -65,7 +65,7 @@ const explRegionId = computed(() => props.explanationsId ?? (props.question ? `e
   <div class="rounded-2xl bg-white shadow p-6">
     <!-- Card header -->
     <div class="mb-3 flex items-center justify-between">
-      <span class="text-xs font-medium uppercase tracking-wide text-gray-500">Question</span>
+      <span class="text-xs font-medium uppercase tracking-wide">Question</span>
       <div class="flex items-center gap-3">
         <!-- Visuellt vill vi oftast visa position (3/10) oavsett ariaMode -->
         <span class="text-xs font-medium tabular-nums" aria-hidden="true">
@@ -89,7 +89,7 @@ class="absolute inset-y-0 left-0 rounded-full bg-green-600 transition-[width] du
     <fieldset
 class="space-y-4"
       :aria-describedby="question?.type === 'multi' ? hintId : undefined">
-      <legend class="text-base md:text-md font-medium">
+      <legend class="text-base md:text-md font-light text-slate-700">
         {{ question?.prompt || 'Question prompt goes here…' }}
       </legend>
 
