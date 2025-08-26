@@ -1,328 +1,295 @@
 [
-    {
-      "id": "q-events-001",
-      "type": "single",
-      "prompt": "What does it mean to say that an event has a timebox? Choose the best answer.",
-      "options": [
-        { "id": "A", "text": "The event must happen at a set time." },
-        { "id": "B", "text": "The event must take at least a minimum amount of time." },
-        { "id": "C", "text": "The event must happen by a given time." },
-        { "id": "D", "text": "The event can take no more than a maximum amount of time." }
-      ],
-      "correct": ["D"],
-      "explanation": "All events in Scrum are fixed length events, such that every event has a maximum duration. This provides focus and consistency.",
-      "source": "Scrum Guide 2020 — Events: timeboxes (fixed maximum duration).",
-      "version": 1
-    },
-    {
-      "id": "q-events-002",
-      "type": "single",
-      "prompt": "What does it mean to say that an event has a timebox? Choose the best answer.",
-      "options": [
-        { "id": "A", "text": "The event must happen by a given time." },
-        { "id": "B", "text": "The event can take no more than a maximum amount of time." },
-        { "id": "C", "text": "The event must happen at a set time." },
-        { "id": "D", "text": "The event must take at least a minimum amount of time." }
-      ],
-      "correct": ["B"],
-      "explanation": "All events in Scrum are fixed length events, such that every event has a maximum duration. This provides focus and consistency.",
-      "source": "Scrum Guide 2020 — Events: timeboxes (fixed maximum duration).",
-      "version": 1
-    },
-    {
-      "id": "q-events-003",
-      "type": "multi",
-      "prompt": "Which of the following are feedback loops in Scrum? Choose the best three answers.",
-      "options": [
-        { "id": "A", "text": "Sprint Retrospective" },
-        { "id": "B", "text": "Daily Scrum" },
-        { "id": "C", "text": "Sprint Review" },
-        { "id": "D", "text": "Release planning" }
-      ],
-      "correct": ["A", "B", "C"],
-      "explanation": "Each event in Scrum is a formal opportunity to inspect and adapt something. Release Planning is not a prescribed event in Scrum.",
-      "source": "Scrum Guide 2020 — Events: formal inspect-and-adapt opportunities.",
-      "version": 1
-    },
-    {
-      "id": "q-events-004",
-      "type": "single",
-      "prompt": "Which statement best describes the Sprint Review? Choose the best answer.",
-      "options": [
-        { "id": "A", "text": "It is a demo at the end of the Sprint for everyone in the organization to provide feedback on the work done." },
-        { "id": "B", "text": "It is used to congratulate the Scrum Team if it did what it committed to doing, or to punish the Scrum Team if it failed to meet its commitments." },
-        { "id": "C", "text": "It is a review of the team's activities during the Sprint." },
-        { "id": "D", "text": "It is when the Scrum Team and Stakeholders inspect the outcome of the Sprint and figure out what to do in the upcoming Sprint." }
-      ],
-      "correct": ["D"],
-      "explanation": "Every event in Scrum, besides the Sprint which is a container for the other events, is an opportunity to inspect and adapt.",
-      "source": "Scrum Guide 2020 — Sprint Review: inspect the outcome and determine next steps.",
-      "version": 1
-    },
-    {
-      "id": "q-events-005",
-      "type": "single",
-      "prompt": "Which outcome of Sprint Planning provides the Scrum Team with a single objective for the Sprint? Choose the best answer.",
-      "options": [
-        { "id": "A", "text": "The Sprint Goal" },
-        { "id": "B", "text": "The Release plan" },
-        { "id": "C", "text": "The Sprint Backlog" },
-        { "id": "D", "text": "Sprint review minutes" }
-      ],
-      "correct": ["A"],
-      "explanation": "The Sprint Goal provides guidance to the Scrum Team on why it is building the Increment. It is created during Sprint Planning and placed in the Sprint Backlog.",
-      "source": "Scrum Guide 2020 — Sprint Planning: Sprint Goal (single objective).",
-      "version": 1
-    },
-    {
-      "id": "q-events-006",
-      "type": "single",
-      "prompt": "The timebox for a Daily Scrum is? Choose the best answer.",
-      "options": [
-        { "id": "A", "text": "Two minutes per person." },
-        { "id": "B", "text": "The same time of day every day." },
-        { "id": "C", "text": "15 minutes for a 4 week sprint. For shorter Sprints it is usually shorter." },
-        { "id": "D", "text": "15 minutes." },
-        { "id": "E", "text": "4 hours." }
-      ],
-      "correct": ["D"],
-      "explanation": "The Daily Scrum is a 15-minute event for the Developers of the Scrum Team. The Daily Scrum is held every working day of the Sprint.",
-      "source": "Scrum Guide 2020 — Daily Scrum: 15-minute timebox.",
-      "version": 1
-    },
-    {
-      "id": "q-events-007",
-      "type": "single",
-      "prompt": "Please select the option that does NOT adhere to the purpose of Sprint Retrospective. Choose the best answer.",
-      "options": [
-        { "id": "A", "text": "Inspecting the Definition of Done." },
-        { "id": "B", "text": "Inspect how the product increment satisfies the Product Backlog items." },
-        { "id": "C", "text": "Plan ways to increase quality and effectiveness." },
-        { "id": "D", "text": "Discussing what went well during the Sprint." }
-      ],
-      "correct": ["B"],
-      "explanation": "During the Sprint Retrospective the Scrum Team inspects how the last Sprint went with regards to individuals, interactions, processes, tools, and their Definition of Done. The purpose of the Sprint Review is to inspect the outcome of the Sprint and determine future adaptations.",
-      "source": "Scrum Guide 2020 — Sprint Retrospective (purpose) vs Sprint Review (purpose).",
-      "version": 1
-    },
-    {
-      "id": "q-events-008",
-      "type": "single",
-      "prompt": "When is a Sprint over? Choose the best answer.",
-      "options": [
-        { "id": "A", "text": "When all Product Backlog items meet their definition of done." },
-        { "id": "B", "text": "When all the tasks are completed." },
-        { "id": "C", "text": "When the timebox expires." },
-        { "id": "D", "text": "When the Product Owner says it is done." }
-      ],
-      "correct": ["C"],
-      "explanation": "All events in Scrum are time-boxed events, such that every event has a maximum duration. Although the Sprint itself is not an inspect-and-adapt opportunity it is timeboxed as well. The maximum length of Sprint cannot exceed one calendar month.",
-      "source": "Scrum Guide 2020 — Sprints: fixed length; one month or less.",
-      "version": 1
-    },
-    {
-      "id": "q-events-009",
-      "type": "single",
-      "prompt": "An abnormal termination of a Sprint is called when? Choose the best answer.",
-      "options": [
-        { "id": "A", "text": "When Sales has an important opportunity." },
-        { "id": "B", "text": "When the Team feels that the work is too hard." },
-        { "id": "C", "text": "When it is clear at the end of a Sprint that everything won't be finished." },
-        { "id": "D", "text": "When the Sprint Goal becomes obsolete." }
-      ],
-      "correct": ["D"],
-      "explanation": "A Sprint can be cancelled before the Sprint time-box is over. A Sprint would be cancelled if the Sprint Goal becomes obsolete. This might occur if the company changes direction or if market or technology conditions change. Only the Product Owner has the authority to cancel the Sprint.",
-      "source": "Scrum Guide 2020 — Cancelling a Sprint (Sprint Goal obsolete; PO authority).",
-      "version": 1
-    },
-    {
-      "id": "q-events-010",
-      "type": "single",
-      "prompt": "During a Sprint Retrospective, for what is the Scrum Master responsible? Choose the best answer.",
-      "options": [
-        { "id": "A", "text": "Prioritizing the resulting action items." },
-        { "id": "B", "text": "Acting as a scribe to capture answers from the Developers." },
-        { "id": "C", "text": "Summarizing and reporting the discussions to management." },
-        { "id": "D", "text": "Participating as a Scrum Team member, and ensuring that the event is positive, productive, and kept within the timebox." }
-      ],
-      "correct": ["D"],
-      "explanation": "The Scrum Master participates as a peer team member in the event from the accountability over the Scrum process.",
-      "source": "Scrum Guide 2020 — Sprint Retrospective & Scrum Master accountability (ensuring event quality/timebox).",
-      "version": 1
-    },
-    {
-      "id": "q-events-011",
-      "type": "single",
-      "prompt": "True or False: An abnormal termination of a Sprint is called when the Developers realize that the work is too hard for their skillset.",
-      "options": [
-        { "id": "A", "text": "True" },
-        { "id": "B", "text": "False" }
-      ],
-      "correct": ["B"],
-      "explanation": "A Sprint would only be cancelled if the Sprint Goal becomes obsolete. Only the Product Owner has the authority to cancel the Sprint, although they may do so under influence from stakeholders, the Developers, or the Scrum Master.",
-      "source": "Scrum Guide 2020 — Cancelling a Sprint (reasons and authority).",
-      "version": 1,
-      "lockOptionOrder": true
-    },
-    {
-      "id": "q-events-012",
-      "type": "single",
-      "prompt": "The timebox for the Sprint Planning is? Choose the best answer.",
-      "options": [
-        { "id": "A", "text": "8 hours for a one-month Sprint. For shorter Sprints the event is usually shorter." },
-        { "id": "B", "text": "Whenever it is done." },
-        { "id": "C", "text": "4 hours" },
-        { "id": "D", "text": "Monthly" }
-      ],
-      "correct": ["A"],
-      "explanation": "Sprint Planning is timeboxed to a maximum of eight hours for a one-month Sprint. For shorter Sprints, the event is usually shorter.",
-      "source": "Scrum Guide 2020 — Sprint Planning: ≤8h for a one-month Sprint.",
-      "version": 1
-    },
-    {
-      "id": "q-events-013",
-      "type": "multi",
-      "prompt": "Which of the following is NOT a timeboxed event in Scrum? Choose all that apply.",
-      "options": [
-        { "id": "A", "text": "Sprint Retrospective" },
-        { "id": "B", "text": "Sprint Planning" },
-        { "id": "C", "text": "Sprint Testing" },
-        { "id": "D", "text": "Release Testing" },
-        { "id": "E", "text": "Daily Scrum" },
-        { "id": "F", "text": "Sprint 0" },
-        { "id": "G", "text": "Release Retrospective" }
-      ],
-      "correct": ["C", "D", "F", "G"],
-      "explanation": "Sprints contain the Sprint Planning, Daily Scrums, the Sprint Review, and the Sprint Retrospective. All events are time-boxed events, such that every event has a maximum duration.",
-      "source": "Scrum Guide 2020 — Events list and timeboxes (no Sprint 0, no Release Testing/Retrospective).",
-      "version": 1
-    },
-    {
-      "id": "q-events-014",
-      "type": "single",
-      "prompt": "When does the second Sprint start? Choose the best answer.",
-      "options": [
-        { "id": "A", "text": "After the Product Backlog for the second Sprint has been selected" },
-        { "id": "B", "text": "Immediately after the first Sprint" },
-        { "id": "C", "text": "Once the architectural changes for the second Sprint have been approved by the senior architect" },
-        { "id": "D", "text": "After the customer completes acceptance testing of the first Sprint." }
-      ],
-      "correct": ["B"],
-      "explanation": "A new Sprint starts immediately after the conclusion of the previous Sprint. There are no intermediate gaps between Sprints.",
-      "source": "Scrum Guide 2020 — Sprints: a new Sprint starts immediately after the previous ends.",
-      "version": 1
-    },
-    {
-      "id": "q-events-015",
-      "type": "single",
-      "prompt": "The maximum length of the Sprint Review (it’s timebox) is: Choose the best answer.",
-      "options": [
-        { "id": "A", "text": "4 hours and longer as needed" },
-        { "id": "B", "text": "As long as needed." },
-        { "id": "C", "text": "1 day." },
-        { "id": "D", "text": "4 hours for a one-month Sprint. For shorter Sprints the event is usually shorter." },
-        { "id": "E", "text": "2 hours" }
-      ],
-      "correct": ["D"],
-      "explanation": "The Sprint Review is the second to last event of the Sprint and is timeboxed to a maximum of four hours for a one-month Sprint. For shorter Sprints, the event is usually shorter.",
-      "source": "Scrum Guide 2020 — Sprint Review: ≤4h for a one-month Sprint.",
-      "version": 1
-    },
-    {
-      "id": "q-events-016",
-      "type": "single",
-      "prompt": "The Sprint Review is mainly an inspect and adapt opportunity for which group? Choose the best answer.",
-      "options": [
-        { "id": "A", "text": "The Development Organization plus the Product Owner representing the Scrum Team." },
-        { "id": "B", "text": "The CEO and the Developers." },
-        { "id": "C", "text": "The Scrum Team and the Stakeholders." },
-        { "id": "D", "text": "The Scrum Team only." }
-      ],
-      "correct": ["C"],
-      "explanation": "During the Sprint Review, the Scrum Team and stakeholders review what was accomplished in the Sprint and what has changed in their environment.",
-      "source": "Scrum Guide 2020 — Sprint Review: participants (Scrum Team and stakeholders).",
-      "version": 1
-    },
-    {
-      "id": "q-events-017",
-      "type": "single",
-      "prompt": "What is true about the maximum length of a Sprint? Choose the best answer.",
-      "options": [
-        { "id": "A", "text": "No more than one calendar month." },
-        { "id": "B", "text": "Not so long that other business events can't be readily synchronized with the development work." },
-        { "id": "C", "text": "Not so long that the risk is unacceptable to the Product Owner." },
-        { "id": "D", "text": "All of these answers are correct." }
-      ],
-      "correct": ["D"],
-      "explanation": "Sprints enable predictability by ensuring inspection and adaptation of progress toward a Product Goal at least every calendar month. When a Sprint’s horizon is too long the Sprint Goal may become invalid, complexity may rise, and risk may increase.",
-      "source": "Scrum Guide 2020 — Sprints: length, risks, synchronization.",
-      "version": 1
-    },
-    {
-      "id": "q-events-018",
-      "type": "single",
-      "prompt": "The Product Owner determines how many Product Backlog items the Scrum Team selects for a Sprint. Choose the best answer.",
-      "options": [
-        { "id": "A", "text": "False" },
-        { "id": "B", "text": "True, according to what was committed to stakeholders" },
-        { "id": "C", "text": "False, capacity and commitment are the project manager’s responsibility" },
-        { "id": "D", "text": "False, the Scrum Master does that" },
-        { "id": "E", "text": "True, but only after confirmation by the resource manager that the Team has enough capacity" },
-        { "id": "F", "text": "True" }
-      ],
-      "correct": ["A"],
-      "explanation": "The number of items selected from the Product Backlog for the Sprint is solely up to the Developers.",
-      "source": "Scrum Guide 2020 — Sprint Planning: Developers select how much can be done this Sprint.",
-      "version": 1
-    },
-    {
-      "id": "q-events-019",
-      "type": "single",
-      "prompt": "The Product Owner determines how many Product Backlog items the Scrum Team selects for a Sprint. Choose the best answer.",
-      "options": [
-        { "id": "A", "text": "False" },
-        { "id": "B", "text": "True, according to what was committed to stakeholders" },
-        { "id": "C", "text": "False, capacity and commitment are the project manager’s responsibility" },
-        { "id": "D", "text": "False, the Scrum Master does that" },
-        { "id": "E", "text": "True, but only after confirmation by the resource manager that the Team has enough capacity" },
-        { "id": "F", "text": "True" }
-      ],
-      "correct": ["A"],
-      "explanation": "The number of items selected from the Product Backlog for the Sprint is solely up to the Developers.",
-      "source": "Scrum Guide 2020 — Sprint Planning: Developers select how much can be done this Sprint.",
-      "version": 1
-    },
-    {
-      "id": "q-events-020",
-      "type": "multi",
-      "prompt": "Which answers best describe the topics covered in Sprint Planning? Choose the best two answers.",
-      "options": [
-        { "id": "A", "text": "Who is on the team and what team member roles will be." },
-        { "id": "B", "text": "Why is the Sprint valuable" },
-        { "id": "C", "text": "What went wrong in the last Sprint and what to do differently this Sprint" },
-        { "id": "D", "text": "How conditions have changed and how the Product Backlog should evolve." },
-        { "id": "E", "text": "What to do and who will do it." },
-        { "id": "F", "text": "What can be done and how to do it." }
-      ],
-      "correct": ["B", "F"],
-      "explanation": "Sprint Planning answers: Why is the Sprint valuable? What can be done this Sprint? How will the chosen work get done?",
-      "source": "Scrum Guide 2020 — Sprint Planning: Why, What, How.",
-      "version": 1
-    },
-    {
-      "id": "q-events-021",
-      "type": "multi",
-      "prompt": "Select the two events in which people outside the Scrum Team are allowed to attend/participate. Choose all that apply.",
-      "options": [
-        { "id": "A", "text": "The Daily Scrum." },
-        { "id": "B", "text": "The Sprint Review." },
-        { "id": "C", "text": "The Sprint Retrospective." },
-        { "id": "D", "text": "The Sprint Planning." }
-      ],
-      "correct": ["B", "D"],
-      "explanation": "The Scrum Team may invite others to Sprint Planning to provide advice; stakeholders participate in the Sprint Review.",
-      "source": "Scrum Guide 2020 — Sprint Planning (may invite others); Sprint Review (stakeholders attend).",
-      "version": 1
-    }
-  ]
-  
+  {
+    "id": "q-events-001",
+    "type": "single",
+    "prompt": "What does it mean to say that an event has a timebox? Choose the best answer.",
+    "options": [
+      { "id": "A", "text": "The event must happen at a set time." },
+      { "id": "B", "text": "The event must take at least a minimum amount of time." },
+      { "id": "C", "text": "The event must happen by a given time." },
+      { "id": "D", "text": "The event can take no more than a maximum amount of time." }
+    ],
+    "correct": ["D"],
+    "explanation": "All events in Scrum are fixed length events, such that every event has a maximum duration. This provides focus and consistency.",
+    "source": "Scrum Guide 2020 — Events: timeboxes (fixed maximum duration).",
+    "version": 1
+  },
+  {
+    "id": "q-events-002",
+    "type": "multi",
+    "prompt": "Which of the following are feedback loops in Scrum? Choose the best three answers.",
+    "options": [
+      { "id": "A", "text": "Sprint Retrospective" },
+      { "id": "B", "text": "Daily Scrum" },
+      { "id": "C", "text": "Sprint Review" },
+      { "id": "D", "text": "Release planning" }
+    ],
+    "correct": ["A", "B", "C"],
+    "explanation": "Each event in Scrum is a formal opportunity to inspect and adapt something. Release Planning is not a prescribed event in Scrum.",
+    "source": "Scrum Guide 2020 — Events: formal inspect-and-adapt opportunities.",
+    "version": 1
+  },
+  {
+    "id": "q-events-003",
+    "type": "single",
+    "prompt": "Which statement best describes the Sprint Review? Choose the best answer.",
+    "options": [
+      { "id": "A", "text": "It is a demo at the end of the Sprint for everyone in the organization to provide feedback on the work done." },
+      { "id": "B", "text": "It is used to congratulate the Scrum Team if it did what it committed to doing, or to punish the Scrum Team if it failed to meet its commitments." },
+      { "id": "C", "text": "It is a review of the team's activities during the Sprint." },
+      { "id": "D", "text": "It is when the Scrum Team and Stakeholders inspect the outcome of the Sprint and figure out what to do in the upcoming Sprint." }
+    ],
+    "correct": ["D"],
+    "explanation": "Every event in Scrum, besides the Sprint which is a container for the other events, is an opportunity to inspect and adapt.",
+    "source": "Scrum Guide 2020 — Sprint Review: inspect the outcome and determine next steps.",
+    "version": 1
+  },
+  {
+    "id": "q-events-004",
+    "type": "single",
+    "prompt": "Which outcome of Sprint Planning provides the Scrum Team with a single objective for the Sprint? Choose the best answer.",
+    "options": [
+      { "id": "A", "text": "The Sprint Goal" },
+      { "id": "B", "text": "The Release plan" },
+      { "id": "C", "text": "The Sprint Backlog" },
+      { "id": "D", "text": "Sprint review minutes" }
+    ],
+    "correct": ["A"],
+    "explanation": "The Sprint Goal provides guidance to the Scrum Team on why it is building the Increment. It is created during Sprint Planning and placed in the Sprint Backlog.",
+    "source": "Scrum Guide 2020 — Sprint Planning: Sprint Goal (single objective).",
+    "version": 1
+  },
+  {
+    "id": "q-events-005",
+    "type": "single",
+    "prompt": "The timebox for a Daily Scrum is? Choose the best answer.",
+    "options": [
+      { "id": "A", "text": "Two minutes per person." },
+      { "id": "B", "text": "The same time of day every day." },
+      { "id": "C", "text": "15 minutes for a 4 week sprint. For shorter Sprints it is usually shorter." },
+      { "id": "D", "text": "15 minutes." },
+      { "id": "E", "text": "4 hours." }
+    ],
+    "correct": ["D"],
+    "explanation": "The Daily Scrum is a 15-minute event for the Developers of the Scrum Team. The Daily Scrum is held every working day of the Sprint.",
+    "source": "Scrum Guide 2020 — Daily Scrum: 15-minute timebox.",
+    "version": 1
+  },
+  {
+    "id": "q-events-006",
+    "type": "single",
+    "prompt": "Please select the option that does NOT adhere to the purpose of Sprint Retrospective. Choose the best answer.",
+    "options": [
+      { "id": "A", "text": "Inspecting the Definition of Done." },
+      { "id": "B", "text": "Inspect how the product increment satisfies the Product Backlog items." },
+      { "id": "C", "text": "Plan ways to increase quality and effectiveness." },
+      { "id": "D", "text": "Discussing what went well during the Sprint." }
+    ],
+    "correct": ["B"],
+    "explanation": "During the Sprint Retrospective the Scrum Team inspects how the last Sprint went with regards to individuals, interactions, processes, tools, and their Definition of Done. The purpose of the Sprint Review is to inspect the outcome of the Sprint and determine future adaptations.",
+    "source": "Scrum Guide 2020 — Sprint Retrospective (purpose) vs Sprint Review (purpose).",
+    "version": 1
+  },
+  {
+    "id": "q-events-007",
+    "type": "single",
+    "prompt": "When is a Sprint over? Choose the best answer.",
+    "options": [
+      { "id": "A", "text": "When all Product Backlog items meet their definition of done." },
+      { "id": "B", "text": "When all the tasks are completed." },
+      { "id": "C", "text": "When the timebox expires." },
+      { "id": "D", "text": "When the Product Owner says it is done." }
+    ],
+    "correct": ["C"],
+    "explanation": "All events in Scrum are time-boxed events, such that every event has a maximum duration. Although the Sprint itself is not an inspect-and-adapt opportunity it is timeboxed as well. The maximum length of Sprint cannot exceed one calendar month.",
+    "source": "Scrum Guide 2020 — Sprints: fixed length; one month or less.",
+    "version": 1
+  },
+  {
+    "id": "q-events-008",
+    "type": "single",
+    "prompt": "An abnormal termination of a Sprint is called when? Choose the best answer.",
+    "options": [
+      { "id": "A", "text": "When Sales has an important opportunity." },
+      { "id": "B", "text": "When the Team feels that the work is too hard." },
+      { "id": "C", "text": "When it is clear at the end of a Sprint that everything won't be finished." },
+      { "id": "D", "text": "When the Sprint Goal becomes obsolete." }
+    ],
+    "correct": ["D"],
+    "explanation": "A Sprint can be cancelled before the Sprint time-box is over. A Sprint would be cancelled if the Sprint Goal becomes obsolete. This might occur if the company changes direction or if market or technology conditions change. Only the Product Owner has the authority to cancel the Sprint.",
+    "source": "Scrum Guide 2020 — Cancelling a Sprint (Sprint Goal obsolete; PO authority).",
+    "version": 1
+  },
+  {
+    "id": "q-events-009",
+    "type": "single",
+    "prompt": "During a Sprint Retrospective, for what is the Scrum Master responsible? Choose the best answer.",
+    "options": [
+      { "id": "A", "text": "Prioritizing the resulting action items." },
+      { "id": "B", "text": "Acting as a scribe to capture answers from the Developers." },
+      { "id": "C", "text": "Summarizing and reporting the discussions to management." },
+      { "id": "D", "text": "Participating as a Scrum Team member, and ensuring that the event is positive, productive, and kept within the timebox." }
+    ],
+    "correct": ["D"],
+    "explanation": "The Scrum Master participates as a peer team member in the event from the accountability over the Scrum process.",
+    "source": "Scrum Guide 2020 — Sprint Retrospective & Scrum Master accountability (ensuring event quality/timebox).",
+    "version": 1
+  },
+  {
+    "id": "q-events-010",
+    "type": "single",
+    "prompt": "True or False: An abnormal termination of a Sprint is called when the Developers realize that the work is too hard for their skillset.",
+    "options": [
+      { "id": "A", "text": "True" },
+      { "id": "B", "text": "False" }
+    ],
+    "correct": ["B"],
+    "explanation": "A Sprint would only be cancelled if the Sprint Goal becomes obsolete. Only the Product Owner has the authority to cancel the Sprint, although they may do so under influence from stakeholders, the Developers, or the Scrum Master.",
+    "source": "Scrum Guide 2020 — Cancelling a Sprint (reasons and authority).",
+    "version": 1,
+    "lockOptionOrder": true
+  },
+  {
+    "id": "q-events-011",
+    "type": "single",
+    "prompt": "The timebox for the Sprint Planning is? Choose the best answer.",
+    "options": [
+      { "id": "A", "text": "8 hours for a one-month Sprint. For shorter Sprints the event is usually shorter." },
+      { "id": "B", "text": "Whenever it is done." },
+      { "id": "C", "text": "4 hours" },
+      { "id": "D", "text": "Monthly" }
+    ],
+    "correct": ["A"],
+    "explanation": "Sprint Planning is timeboxed to a maximum of eight hours for a one-month Sprint. For shorter Sprints, the event is usually shorter.",
+    "source": "Scrum Guide 2020 — Sprint Planning: ≤8h for a one-month Sprint.",
+    "version": 1
+  },
+  {
+    "id": "q-events-012",
+    "type": "multi",
+    "prompt": "Which of the following is NOT a timeboxed event in Scrum? Choose all that apply.",
+    "options": [
+      { "id": "A", "text": "Sprint Retrospective" },
+      { "id": "B", "text": "Sprint Planning" },
+      { "id": "C", "text": "Sprint Testing" },
+      { "id": "D", "text": "Release Testing" },
+      { "id": "E", "text": "Daily Scrum" },
+      { "id": "F", "text": "Sprint 0" },
+      { "id": "G", "text": "Release Retrospective" }
+    ],
+    "correct": ["C", "D", "F", "G"],
+    "explanation": "Sprints contain the Sprint Planning, Daily Scrums, the Sprint Review, and the Sprint Retrospective. All events are time-boxed events, such that every event has a maximum duration.",
+    "source": "Scrum Guide 2020 — Events list and timeboxes (no Sprint 0, no Release Testing/Retrospective).",
+    "version": 1
+  },
+  {
+    "id": "q-events-013",
+    "type": "single",
+    "prompt": "When does the second Sprint start? Choose the best answer.",
+    "options": [
+      { "id": "A", "text": "After the Product Backlog for the second Sprint has been selected" },
+      { "id": "B", "text": "Immediately after the first Sprint" },
+      { "id": "C", "text": "Once the architectural changes for the second Sprint have been approved by the senior architect" },
+      { "id": "D", "text": "After the customer completes acceptance testing of the first Sprint." }
+    ],
+    "correct": ["B"],
+    "explanation": "A new Sprint starts immediately after the conclusion of the previous Sprint. There are no intermediate gaps between Sprints.",
+    "source": "Scrum Guide 2020 — Sprints: a new Sprint starts immediately after the previous ends.",
+    "version": 1
+  },
+  {
+    "id": "q-events-014",
+    "type": "single",
+    "prompt": "The maximum length of the Sprint Review (it’s timebox) is: Choose the best answer.",
+    "options": [
+      { "id": "A", "text": "4 hours and longer as needed" },
+      { "id": "B", "text": "As long as needed." },
+      { "id": "C", "text": "1 day." },
+      { "id": "D", "text": "4 hours for a one-month Sprint. For shorter Sprints the event is usually shorter." },
+      { "id": "E", "text": "2 hours" }
+    ],
+    "correct": ["D"],
+    "explanation": "The Sprint Review is the second to last event of the Sprint and is timeboxed to a maximum of four hours for a one-month Sprint. For shorter Sprints, the event is usually shorter.",
+    "source": "Scrum Guide 2020 — Sprint Review: ≤4h for a one-month Sprint.",
+    "version": 1
+  },
+  {
+    "id": "q-events-015",
+    "type": "single",
+    "prompt": "The Sprint Review is mainly an inspect and adapt opportunity for which group? Choose the best answer.",
+    "options": [
+      { "id": "A", "text": "The Development Organization plus the Product Owner representing the Scrum Team." },
+      { "id": "B", "text": "The CEO and the Developers." },
+      { "id": "C", "text": "The Scrum Team and the Stakeholders." },
+      { "id": "D", "text": "The Scrum Team only." }
+    ],
+    "correct": ["C"],
+    "explanation": "During the Sprint Review, the Scrum Team and stakeholders review what was accomplished in the Sprint and what has changed in their environment.",
+    "source": "Scrum Guide 2020 — Sprint Review: participants (Scrum Team and stakeholders).",
+    "version": 1
+  },
+  {
+    "id": "q-events-016",
+    "type": "single",
+    "prompt": "What is true about the maximum length of a Sprint? Choose the best answer.",
+    "options": [
+      { "id": "A", "text": "No more than one calendar month." },
+      { "id": "B", "text": "Not so long that other business events can't be readily synchronized with the development work." },
+      { "id": "C", "text": "Not so long that the risk is unacceptable to the Product Owner." },
+      { "id": "D", "text": "All of these answers are correct." }
+    ],
+    "correct": ["D"],
+    "explanation": "Sprints enable predictability by ensuring inspection and adaptation of progress toward a Product Goal at least every calendar month. When a Sprint’s horizon is too long the Sprint Goal may become invalid, complexity may rise, and risk may increase.",
+    "source": "Scrum Guide 2020 — Sprints: length, risks, synchronization.",
+    "version": 1
+  },
+  {
+    "id": "q-events-017",
+    "type": "single",
+    "prompt": "The Product Owner determines how many Product Backlog items the Scrum Team selects for a Sprint. Choose the best answer.",
+    "options": [
+      { "id": "A", "text": "False" },
+      { "id": "B", "text": "True, according to what was committed to stakeholders" },
+      { "id": "C", "text": "False, capacity and commitment are the project manager’s responsibility" },
+      { "id": "D", "text": "False, the Scrum Master does that" },
+      { "id": "E", "text": "True, but only after confirmation by the resource manager that the Team has enough capacity" },
+      { "id": "F", "text": "True" }
+    ],
+    "correct": ["A"],
+    "explanation": "The number of items selected from the Product Backlog for the Sprint is solely up to the Developers.",
+    "source": "Scrum Guide 2020 — Sprint Planning: Developers select how much can be done this Sprint.",
+    "version": 1
+  },
+  {
+    "id": "q-events-018",
+    "type": "multi",
+    "prompt": "Which answers best describe the topics covered in Sprint Planning? Choose the best two answers.",
+    "options": [
+      { "id": "A", "text": "Who is on the team and what team member roles will be." },
+      { "id": "B", "text": "Why is the Sprint valuable" },
+      { "id": "C", "text": "What went wrong in the last Sprint and what to do differently this Sprint" },
+      { "id": "D", "text": "How conditions have changed and how the Product Backlog should evolve." },
+      { "id": "E", "text": "What to do and who will do it." },
+      { "id": "F", "text": "What can be done and how to do it." }
+    ],
+    "correct": ["B", "F"],
+    "explanation": "Sprint Planning answers: Why is the Sprint valuable? What can be done this Sprint? How will the chosen work get done?",
+    "source": "Scrum Guide 2020 — Sprint Planning: Why, What, How.",
+    "version": 1
+  },
+  {
+    "id": "q-events-019",
+    "type": "multi",
+    "prompt": "Select the two events in which people outside the Scrum Team are allowed to attend/participate. Choose all that apply.",
+    "options": [
+      { "id": "A", "text": "The Daily Scrum." },
+      { "id": "B", "text": "The Sprint Review." },
+      { "id": "C", "text": "The Sprint Retrospective." },
+      { "id": "D", "text": "The Sprint Planning." }
+    ],
+    "correct": ["B", "D"],
+    "explanation": "The Scrum Team may invite others to Sprint Planning to provide advice; stakeholders participate in the Sprint Review.",
+    "source": "Scrum Guide 2020 — Sprint Planning (may invite others); Sprint Review (stakeholders attend).",
+    "version": 1
+  }
+]
