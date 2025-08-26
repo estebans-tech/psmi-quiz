@@ -41,7 +41,7 @@ export function validateQuestion(q: Question): void {
 
   // (valfritt) mjuk varning om frågan saknar question.explanation
   if (!q.explanation || q.explanation.trim() === '') {
-    // eslint-disable-next-line no-console
+     
     console.warn(`[question ${q.id}] has no question-level explanation.`);
   }
 }

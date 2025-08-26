@@ -78,10 +78,10 @@ const isQuestionCorrect = computed(() => {
 
             <!-- Per-option explanation: alltid synlig (kan vara tom) -->
             <div
-              class="text-sm text-gray-600 mt-1 min-h-[1.25rem]"
               :id="explanationId(opt.id)"
+              class="text-sm text-gray-600 mt-1 min-h-[1.25rem]"
             >
-              <span class="ml-1" v-if="opt.explanation">{{ opt.explanation ?? '' }}</span>
+              <span v-if="opt.explanation" class="ml-1">{{ opt.explanation ?? '' }}</span>
             </div>
           </div>
 

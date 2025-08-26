@@ -17,7 +17,7 @@ function shuffle<T>(arr: T[]): T[] {
  */
 export async function loadQuestions(): Promise<Question[]> {
   // Static import keeps things simple and vite-friendly.
-  const data = (await import('~/data/questions/en/core.json')).default as Question[];
+  const data = (await import('~/server/assets/en/core.json')).default as Question[];
   const bank = validateQuestionBank(data);
 
   // Option-level shuffle, controlled per question

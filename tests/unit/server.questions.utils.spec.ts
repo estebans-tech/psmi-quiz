@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest'
-import { parseFilter, normalizeLang, ALLOWED_CATEGORIES } from '../../../server/utils/questions'
+import { parseFilter, normalizeLang, ALLOWED_CATEGORIES } from '../../server/utils/questions'
 
 describe('questions utils', () => {
   it('normalizeLang: only en; others fallback with warning', () => {

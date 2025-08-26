@@ -4,7 +4,7 @@
       <div class="mx-auto max-w-5xl px-4 py-4 flex items-center justify-between">
         <h1 class="text-lg font-semibold">Scrum PSM I - Results</h1>
         <!-- 🔁 Back to start med reset -->
-        <button @click="backToStart" class="text-sm underline hover:no-underline">
+        <button class="text-sm underline hover:no-underline" @click="backToStart">
           Back to start
         </button>
       </div>

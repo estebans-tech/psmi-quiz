@@ -1,7 +1,6 @@
 import { defineConfig } from 'vitest/config'
-import { fileURLToPath } from 'node:url'
 import vue from '@vitejs/plugin-vue'
-import path from 'node:path'
+const root = __dirname
 
 export default defineConfig({
   plugins: [vue()],
@@ -16,10 +15,9 @@ export default defineConfig({
     }
   },
   resolve: {
-    alias: {
-      '#imports': fileURLToPath(new URL('./tests/shims/nuxt-imports.ts', import.meta.url)),
-      '~': path.resolve(__dirname, './app'),
-      '@': path.resolve(__dirname, './app')
-    }
+    alias: [
+      { find: /^~\//, replacement: `${root}/` },
+      { find: /^@\//, replacement: `${root}/` }
+    ]
   }
 })

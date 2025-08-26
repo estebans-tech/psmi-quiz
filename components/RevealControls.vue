@@ -1,6 +1,6 @@
 
 <script setup lang="ts">
-const props = withDefaults(defineProps<{
+withDefaults(defineProps<{
   canPrev?: boolean
   canNext?: boolean
   canCheck?: boolean
@@ -76,7 +76,8 @@ defineEmits<{
     </button>
 
     <div class="ml-auto">
-      <button class="px-4 py-2 rounded-xl bg-black text-white hover:bg-gray-800"
+      <button
+class="px-4 py-2 rounded-xl bg-black text-white hover:bg-gray-800"
               @click="$emit('finish')">
         Finish
       </button>

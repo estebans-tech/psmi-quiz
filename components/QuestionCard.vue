@@ -71,20 +71,23 @@ const explRegionId = computed(() => props.explanationsId ?? (props.question ? `e
         <span class="text-xs font-medium tabular-nums" aria-hidden="true">
           {{ safeCurrent }}<span class="mx-0.5 text-gray-400">/</span>{{ safeTotal }}</span>
 
-          <div class="relative h-1.5 w-28 rounded-full bg-gray-300"
+          <div
+class="relative h-1.5 w-28 rounded-full bg-gray-300"
             role="progressbar"
             aria-label="Progress"
             :aria-valuemin="1"
             :aria-valuemax="safeTotal"
             :aria-valuenow="ariaNow"
             :aria-valuetext="ariaValueText">
-          <div class="absolute inset-y-0 left-0 rounded-full bg-green-600 transition-[width] duration-300"
+          <div
+class="absolute inset-y-0 left-0 rounded-full bg-green-600 transition-[width] duration-300"
               :style="{ width: progressPct + '%' }"></div>
         </div>
       </div>
     </div>
 
-    <fieldset class="space-y-4"
+    <fieldset
+class="space-y-4"
       :aria-describedby="question?.type === 'multi' ? hintId : undefined">
       <legend class="text-base md:text-md font-medium">
         {{ question?.prompt || 'Question prompt goes here…' }}
@@ -118,7 +121,8 @@ const explRegionId = computed(() => props.explanationsId ?? (props.question ? `e
       <!-- Statusrad (Correct/Incorrect/No selection) -->
       <div class="mt-3">
         <p v-if="checked" class="text-sm">
-          <span v-if="hasSelection"
+          <span
+v-if="hasSelection"
                 class="inline-flex items-center rounded-full px-2 py-0.5"
                 :class="isCurrentCorrect ? 'bg-emerald-100 text-emerald-800' : 'bg-rose-100 text-rose-800'">
             {{ isCurrentCorrect ? 'Correct' : 'Incorrect' }}

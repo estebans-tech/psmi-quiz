@@ -4,7 +4,7 @@ import { resolve } from 'node:path'
 
 function loadQuestions(lang = 'en') {
   // Anpassa stigen om din testsökväg skiljer sig. Här: app/tests/unit → server/data/en/core.json
-  const file = resolve(__dirname, '../../../server/assets', lang, 'core.json')
+  const file = resolve(__dirname, '../../server/assets', lang, 'core.json')
   const json = readFileSync(file, 'utf-8')
   return JSON.parse(json) as any[]
 }
