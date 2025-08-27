@@ -494,6 +494,7 @@
       "correct": ["D"],
       "explanation": "All of these are appropriate considerations when setting Sprint length.",
       "source": "Scrum Guide 2020 — Sprints (length & risk).",
+      "lockOptionOrder": true,
       "version": 1
     },
     {
