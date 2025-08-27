@@ -1,0 +1,1220 @@
+[
+    {
+      "id": "q-test-example-001",
+      "type": "single",
+      "prompt": "What is an Increment? Choose the best answer.",
+      "options": [
+        { "id": "A", "text": "The sum of all Product Backlog items completed during a Sprint" },
+        { "id": "B", "text": "All items in the Sprint Backlog that could be released regardless of whether the Product Owner decides to actually do it" },
+        { "id": "C", "text": "All Done items in the Sprint Backlog" },
+        { "id": "D", "text": "An Increment is a concrete stepping stone toward the Product Goal." }
+      ],
+      "correct": ["D"],
+      "explanation": "Each Increment is additive to all prior Increments and must be usable to provide value.",
+      "source": "Scrum Guide 2020 — Increment.",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-002",
+      "type": "single",
+      "prompt": "Who must conform to the  Definition of Done? Choose the best answer.",
+      "options": [
+        { "id": "A", "text": "The Scrum Team" },
+        { "id": "B", "text": "The Product Owner" },
+        { "id": "C", "text": "The Scrum Master" },
+        { "id": "D", "text": "The Developers" }
+      ],
+      "correct": ["D"],
+      "explanation": "The Developers are required to conform to the Definition of Done.",
+      "source": "Scrum Guide 2020 — Definition of Done; Developers.",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-003",
+      "type": "single",
+      "prompt": "True or False: It is allowed to skip the Daily Scrum if there is nothing interesting to talk about?",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct": ["B"],
+      "explanation": "Each event is a formal opportunity to inspect and adapt; skipping reduces transparency.",
+      "source": "Scrum Guide 2020 — Events; Daily Scrum.",
+      "version": 1,
+      "lockOptionOrder": true
+    },
+    {
+      "id": "q-test-example-004",
+      "type": "single",
+      "prompt": "What belongs solely to the Developers of the Scrum Team? Choose the best answer.",
+      "options": [
+        { "id": "A", "text": "The Definition of Done" },
+        { "id": "B", "text": "The Increment" },
+        { "id": "C", "text": "The Product Backlog" },
+        { "id": "D", "text": "The Sprint Backlog" }
+      ],
+      "correct": ["D"],
+      "explanation": "The Sprint Backlog is a plan by and for the Developers.",
+      "source": "Scrum Guide 2020 — Sprint Backlog.",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-005",
+      "type": "multi",
+      "prompt": "Who participates in the Sprint Review? Select all that apply.",
+      "options": [
+        { "id": "A", "text": "Business Analysts" },
+        { "id": "B", "text": "The Key Stakeholders" },
+        { "id": "C", "text": "The Developers" },
+        { "id": "D", "text": "The Scrum Master" },
+        { "id": "E", "text": "The Product Owner" }
+      ],
+      "correct": ["B", "C", "D", "E"],
+      "explanation": "The Scrum Team and stakeholders collaborate on what was done and what to do next.",
+      "source": "Scrum Guide 2020 — Sprint Review.",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-006",
+      "type": "single",
+      "prompt": "True or False: The Product Owner and the Scrum Master can actively work as Developers?",
+      "options": [
+        { "id": "A", "text": "False" },
+        { "id": "B", "text": "True" }
+      ],
+      "correct": ["B"],
+      "explanation": "They may perform Developer work; if so, they participate as Developers in the Daily Scrum.",
+      "source": "Scrum Guide 2020 — Scrum Team accountabilities.",
+      "version": 1,
+      "lockOptionOrder": true
+    },
+    {
+      "id": "q-test-example-007",
+      "type": "multi",
+      "prompt": "Select the two events in which people outside the Scrum Team are allowed to attend. Choose the best two answers.",
+      "options": [
+        { "id": "A", "text": "The Daily Scrum" },
+        { "id": "B", "text": "The Sprint Retrospective" },
+        { "id": "C", "text": "The Sprint Review" },
+        { "id": "D", "text": "The Sprint Planning" }
+      ],
+      "correct": ["C", "D"],
+      "explanation": "Stakeholders attend Sprint Review; others may be invited to Sprint Planning for advice.",
+      "source": "Scrum Guide 2020 — Sprint Review; Sprint Planning.",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-008",
+      "type": "single",
+      "prompt": "Which of the following is an example of an Increment? Choose the best answer.",
+      "options": [
+        { "id": "A", "text": "A product roll-out plan." },
+        { "id": "B", "text": "A design for the product." },
+        { "id": "C", "text": "A mock-up of the product marketing materials." },
+        { "id": "D", "text": "All answers apply." },
+        { "id": "E", "text": "A plan for the overall product release." },
+        { "id": "F", "text": "A valuable, useful set of product features." }
+      ],
+      "correct": ["F"],
+      "explanation": "Only a valuable, usable set of features that meet the DoD forms an Increment.",
+      "source": "Scrum Guide 2020 — Increment; Definition of Done.",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-009",
+      "type": "single",
+      "prompt": "What is the purpose of the Sprint Review? Choose the best answer.",
+      "options": [
+        { "id": "A", "text": "To create a common understanding of progress toward the Sprint Goal and how progress is trending toward completing the work in the Sprint Backlog." },
+        { "id": "B", "text": "To create a common understanding of what can be delivered in the Increment and how will the work needed to deliver the Increment be achieved." },
+        { "id": "C", "text": "To create a list of improvements that the Scrum Team will implement in the next Sprint." },
+        { "id": "D", "text": "To inspect the outcome of the Sprint and determine future adaptations." }
+      ],
+      "correct": ["D"],
+      "explanation": "Participants inspect the Increment and adapt the Product Backlog for maximizing value.",
+      "source": "Scrum Guide 2020 — Sprint Review (purpose).",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-010",
+      "type": "multi",
+      "prompt": "Which topics are covered during Sprint Planning? Choose the best three answers.",
+      "options": [
+        { "id": "A", "text": "What new technologies could be used to speed up the velocity of the Scrum Team?" },
+        { "id": "B", "text": "What is the size of the Technical Debt and how it could be removed?" },
+        { "id": "C", "text": "How will chosen work get done." },
+        { "id": "D", "text": "What can be done this Sprint?" },
+        { "id": "E", "text": "Why is this Sprint valuable?" }
+      ],
+      "correct": ["C", "D", "E"],
+      "explanation": "Sprint Planning answers Why the Sprint is valuable, What can be done, and How the work will get done.",
+      "source": "Scrum Guide 2020 — Sprint Planning (three topics).",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-011",
+      "type": "single",
+      "prompt": "What is Scrum? Choose the best answer.",
+      "options": [
+        { "id": "A", "text": "A software development methodology which is intended to improve software quality." },
+        { "id": "B", "text": "A sequential design process, used in software development processes, in which progress is seen as flowing steadily downwards." },
+        { "id": "C", "text": "A framework within which people can address complex adaptive problems, while delivering valuable products." }
+      ],
+      "correct": ["C"],
+      "explanation": "Scrum is a lightweight framework to generate value through adaptive solutions to complex problems.",
+      "source": "Scrum Guide 2020 — What is Scrum?",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-012",
+      "type": "single",
+      "prompt": "What enhances the transparency of an Increment? Choose the best answer.",
+      "options": [
+        { "id": "A", "text": "Keeping track of and estimating all undone work to be completed in a \"hardening\" Sprint." },
+        { "id": "B", "text": "Reporting Sprint progress to the stakeholders daily." },
+        { "id": "C", "text": "Updating Sprint tasks properly in the electronic tracking tool." },
+        { "id": "D", "text": "Doing all the work needed to meet the Definition of Done." }
+      ],
+      "correct": ["D"],
+      "explanation": "A shared DoD clarifies what ‘done’ means and makes the Increment transparent.",
+      "source": "Scrum Guide 2020 — Definition of Done; Transparency.",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-013",
+      "type": "single",
+      "prompt": "What is the timebox for a Sprint Planning? Choose the best answer.",
+      "options": [
+        { "id": "A", "text": "As much as it is necessary to make task breakdown and estimates for all items in the Sprint Backlog." },
+        { "id": "B", "text": "3 hours for a one-month Sprint." },
+        { "id": "C", "text": "4 hours for a one-month Sprint." },
+        { "id": "D", "text": "8 hours for a one-month Sprint." }
+      ],
+      "correct": ["D"],
+      "explanation": "Maximum eight hours for a one-month Sprint; shorter Sprints are usually shorter.",
+      "source": "Scrum Guide 2020 — Sprint Planning (timebox).",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-014",
+      "type": "single",
+      "prompt": "True or False: The Daily Scrum timebox depends on the number of Developers on the Scrum Team.",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct": ["B"],
+      "explanation": "Daily Scrum is always 15 minutes.",
+      "source": "Scrum Guide 2020 — Daily Scrum (15 minutes).",
+      "version": 1,
+      "lockOptionOrder": true
+    },
+    {
+      "id": "q-test-example-015",
+      "type": "single",
+      "prompt": "True or False: The Sprint Backlog is created at the Sprint Planning. It is prohibited to add new work into the Sprint Backlog later by the Developers.",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct": ["B"],
+      "explanation": "The Sprint Backlog is updated throughout the Sprint as more is learned.",
+      "source": "Scrum Guide 2020 — Sprint Backlog (emergent plan).",
+      "version": 1,
+      "lockOptionOrder": true
+    },
+    {
+      "id": "q-test-example-016",
+      "type": "multi",
+      "prompt": "What is Product Backlog refinement? Choose the best two answers",
+      "options": [
+        { "id": "A", "text": "Product Backlog refinement initiates the Sprint." },
+        { "id": "B", "text": "Product Backlog refinement is not allowed in Scrum. Everything needs to be clear before the first Sprint can start." },
+        { "id": "C", "text": "An ongoing activity to add details, such as description, order and size to Product Backlog items." },
+        { "id": "D", "text": "The act of breaking down and further defining Product Backlog items." }
+      ],
+      "correct": ["C", "D"],
+      "explanation": "Refinement is ongoing and clarifies PBIs by adding details and breaking them down.",
+      "source": "Scrum Guide 2020 — Product Backlog (refinement).",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-017",
+      "type": "single",
+      "prompt": "Which event initiates the Sprint? Choose the best answer.",
+      "options": [
+        { "id": "A", "text": "Meeting with the PMO (Project Management Office)" },
+        { "id": "B", "text": "Stakeholder Meeting" },
+        { "id": "C", "text": "Sprint Review" },
+        { "id": "D", "text": "Release Planning Meeting" },
+        { "id": "E", "text": "Sprint Retrospective" },
+        { "id": "F", "text": "Sprint Planning" }
+      ],
+      "correct": ["F"],
+      "explanation": "Sprint Planning initiates the Sprint by laying out the work for the Sprint.",
+      "source": "Scrum Guide 2020 — Sprint Planning.",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-018",
+      "type": "multi",
+      "prompt": "What are two characteristics of the Product Owner? Choose the best two answers.",
+      "options": [
+        { "id": "A", "text": "Lead Scrum evangelist in the organization" },
+        { "id": "B", "text": "Facilitator of Scrum events" },
+        { "id": "C", "text": "Lead Facilitator of Key Stakeholder Involvement" },
+        { "id": "D", "text": "Product Marketplace Expert" },
+        { "id": "E", "text": "Product Value Maximizer" }
+      ],
+      "correct": ["D", "E"],
+      "explanation": "PO maximizes value and understands the market for the product.",
+      "source": "Scrum Guide 2020 — Product Owner accountabilities.",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-019",
+      "type": "single",
+      "prompt": "True or False: It is a good practice to have from time to time a special technical Sprint that consists only of tasks removing the technical debt without implementing any new functionality.",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct": ["B"],
+      "explanation": "Each Sprint must produce a usable Increment of value.",
+      "source": "Scrum Guide 2020 — Sprints (purpose); Increment.",
+      "version": 1,
+      "lockOptionOrder": true
+    },
+    {
+      "id": "q-test-example-020",
+      "type": "single",
+      "prompt": "True or False: Other people than the Scrum Team can attend the Sprint Planning in order to provide advice.",
+      "options": [
+        { "id": "A", "text": "False" },
+        { "id": "B", "text": "True" }
+      ],
+      "correct": ["B"],
+      "explanation": "The Scrum Team may invite others to Sprint Planning to provide advice.",
+      "source": "Scrum Guide 2020 — Sprint Planning (attendees).",
+      "version": 1,
+      "lockOptionOrder": true
+    },
+    {
+      "id": "q-test-example-021",
+      "type": "single",
+      "prompt": "True or False: Scrum does not allow additional meetings that are not defined in Scrum.",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct": ["B"],
+      "explanation": "Additional meetings are allowed if they help achieve Scrum Team goals.",
+      "source": "Scrum Guide 2020 — Scrum framework (minimal, may wrap practices).",
+      "version": 1,
+      "lockOptionOrder": true
+    },
+    {
+      "id": "q-test-example-022",
+      "type": "single",
+      "prompt": "Who is responsible for crafting the Sprint Goal at the Sprint Planning? Choose the best answer.",
+      "options": [
+        { "id": "A", "text": "The Key Stakeholders" },
+        { "id": "B", "text": "The Scrum Master" },
+        { "id": "C", "text": "The Product Owner" },
+        { "id": "D", "text": "The Developers" },
+        { "id": "E", "text": "The Scrum Team" }
+      ],
+      "correct": ["E"],
+      "explanation": "The whole Scrum Team collaborates to define the Sprint Goal.",
+      "source": "Scrum Guide 2020 — Sprint Planning (Sprint Goal).",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-023",
+      "type": "single",
+      "prompt": "What is true about the ordering of items in the Product Backlog? Choose the best answer.What is the order of items in the Product Backlog? Choose the best answer.",
+      "options": [
+        { "id": "A", "text": "Alphabetical" },
+        { "id": "B", "text": "The recently added items at the top" },
+        { "id": "C", "text": "The less clear items at the top" },
+        { "id": "D", "text": "Less valuable and most unclear items at the bottom" }
+      ],
+      "correct": ["D"],
+      "explanation": "The PO orders to maximize value; clear, valuable items typically rise to the top.",
+      "source": "Scrum Guide 2020 — Product Backlog (ordered list; PO accountable).",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-024",
+      "type": "multi",
+      "prompt": "How does the Scrum Master serve the Product Owner? Choose the best three answers.",
+      "options": [
+        { "id": "A", "text": "Introducing cutting edge development practices" },
+        { "id": "B", "text": "Leading and coaching the organization in its Scrum adoption" },
+        { "id": "C", "text": "Helping find techniques for effective Product Goal definition and Product Backlog management." },
+        { "id": "D", "text": "Helping the Scrum Team understand the need for clear and concise Product Backlog items." },
+        { "id": "E", "text": "Facilitating stakeholder collaboration as requested or needed." }
+      ],
+      "correct": ["C", "D", "E"],
+      "explanation": "SM supports PO with backlog techniques, PBIs clarity, and stakeholder collaboration.",
+      "source": "Scrum Guide 2020 — Scrum Master service to Product Owner.",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-025",
+      "type": "multi",
+      "prompt": "What are two ways that regulatory compliance issues are dealt with in Scrum? Choose the best two answers.",
+      "options": [
+        { "id": "A", "text": "They are addressed by a separate team. This team is responsible for all compliance issues." },
+        { "id": "B", "text": "They are added to the Product Backlog and addressed in early Sprints, while always requiring at least some business functionality, no matter how small." },
+        { "id": "C", "text": "They are addressed along with functional development of the product." },
+        { "id": "D", "text": "They are discussed, determined, and documented before actual feature development Sprints." }
+      ],
+      "correct": ["B", "C"],
+      "explanation": "Address compliance via PBIs (prefer early) and as part of ongoing development; consider adding to DoD.",
+      "source": "Scrum Guide 2020 — Product Backlog; Definition of Done (quality & criteria).",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-026",
+      "type": "single",
+      "prompt": "What is the purpose of the Sprint Retrospective? Choose the best answer.",
+      "options": [
+        { "id": "A", "text": "To take time to judge the validity of the project." },
+        { "id": "B", "text": "It is a meeting where the Developers on the Scrum Team synchronizes activities and creates a plan for the next 24 hours" },
+        { "id": "C", "text": "It is a meeting to inspect the Increment and adapt the Product Backlog if needed" },
+        { "id": "D", "text": "The purpose of the Sprint Retrospective is to plan ways to increase quality and effectiveness." }
+      ],
+      "correct": ["D"],
+      "explanation": "Retrospective plans improvements to increase quality and effectiveness.",
+      "source": "Scrum Guide 2020 — Sprint Retrospective (purpose).",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-027",
+      "type": "multi",
+      "prompt": "Which three behaviors demonstrate that a Scrum Team is self-managing? Choose the best three answers.",
+      "options": [
+        { "id": "A", "text": "The Scrum Master is no longer needed." },
+        { "id": "B", "text": "The Scrum Team members are working within the boundaries of their functional description and nicely handing off work from analysts to developer to tester to integration." },
+        { "id": "C", "text": "Stakeholders are attending the Daily Scrum to check progress and work with the Scrum Master to optimize the functional scope for the Sprint." },
+        { "id": "D", "text": "The Scrum Team has all the skills needed to create an Increment." },
+        { "id": "E", "text": "Developers collaboratively selecting their own work during the Sprint." },
+        { "id": "F", "text": "The Developers create their own Sprint Backlog, reflecting all work that is part of the Definition of Done." }
+      ],
+      "correct": ["D", "E", "F"],
+      "explanation": "Self-managing teams decide who does what, when and how; they are cross-functional and own their plan.",
+      "source": "Scrum Guide 2020 — Scrum Team (self-managing, cross-functional).",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-028",
+      "type": "single",
+      "prompt": "True or False: Scrum recommends using only those Scrum components which  are most suited for a particular project.",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct": ["B"],
+      "explanation": "Scrum exists only in its entirety; each element serves a specific purpose.",
+      "source": "Scrum Guide 2020 — Scrum is immutable.",
+      "version": 1,
+      "lockOptionOrder": true
+    },
+    {
+      "id": "q-test-example-029",
+      "type": "multi",
+      "prompt": "What does Product Backlog management include? Choose the best three answers.",
+      "options": [
+        { "id": "A", "text": "Moving Product Backlog items into the Sprint Backlog" },
+        { "id": "B", "text": "Presenting Product Backlog items to the Key Stakeholders" },
+        { "id": "C", "text": "Ensuring that the Product Backlog is transparent, visible and understood." },
+        { "id": "D", "text": "Creating and clearly communicating Product Backlog items;" },
+        { "id": "E", "text": "Developing and explicitly communicating the Product Goal" }
+      ],
+      "correct": ["C", "D", "E"],
+      "explanation": "PO develops Product Goal, creates/communicates PBIs, orders them, and ensures transparency.",
+      "source": "Scrum Guide 2020 — Product Owner accountabilities.",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-030",
+      "type": "single",
+      "prompt": "Who is responsible for the monitoring of the remaining work towards the Product Goal? Choose the best answer.",
+      "options": [
+        { "id": "A", "text": "The Scrum Master and The Developers" },
+        { "id": "B", "text": "The Scrum Team" },
+        { "id": "C", "text": "The Developers" },
+        { "id": "D", "text": "The Product Owner and The Developers" },
+        { "id": "E", "text": "The Scrum Master" },
+        { "id": "F", "text": "The Product Owner" }
+      ],
+      "correct": ["F"],
+      "explanation": "The PO monitors progress toward the Product Goal and makes it transparent.",
+      "source": "Scrum Guide 2020 — Product Owner (progress toward Product Goal).",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-031",
+      "type": "multi",
+      "prompt": "What is the purpose of the Sprint Retrospective? Choose the best three answers.",
+      "options": [
+        { "id": "A", "text": "To get technical or domain advice from specialists invited by the Developers or the Scrum Master" },
+        { "id": "B", "text": "To get feedback from the Key Stakeholders invited by the Product Owner" },
+        { "id": "C", "text": "To inspect how the last Sprint went with regards to individuals, interactions, processes and tools." },
+        { "id": "D", "text": "To identify the most impactful improvements to be addressed as soon as possible." },
+        { "id": "E", "text": "To inspect (and if necessary adapt) the Definition of Done." }
+      ],
+      "correct": ["C", "D", "E"],
+      "explanation": "Inspect last Sprint, adapt DoD if needed, and identify changes to improve effectiveness.",
+      "source": "Scrum Guide 2020 — Sprint Retrospective (scope & outcomes).",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-032",
+      "type": "multi",
+      "prompt": "What are two effective ways for the Scrum Team to make non-functional requirements visible? Choose the best two answers.",
+      "options": [
+        { "id": "A", "text": "Put them on a separate list on the Scrum Board, available for all to see." },
+        { "id": "B", "text": "Run the integration and regressions tests before the end of the Sprint, and capture the open work for the Sprint Backlog of the next Sprint." },
+        { "id": "C", "text": "Add them to the Product Backlog to ensure transparency." },
+        { "id": "D", "text": "Add them to the Definition of Done so the work is taken care of every Sprint." }
+      ],
+      "correct": ["C", "D"],
+      "explanation": "Model NFRs as PBIs for transparency and/or include them in the DoD so they are met every Sprint.",
+      "source": "Scrum Guide 2020 — Product Backlog; Definition of Done.",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-033",
+      "type": "multi",
+      "prompt": "Which statements best describe the features of a Product Backlog? Choose the best three answers.",
+      "options": [
+        { "id": "A", "text": "When the final version of a product is rolled out, its Product Backlog is dismissed" },
+        { "id": "B", "text": "A Product Backlog could be closed when it contains no items to include in the next Sprint" },
+        { "id": "C", "text": "It is an emergent and ordered list." },
+        { "id": "D", "text": "It is the single source of work undertaken by the Scrum Team." },
+        { "id": "E", "text": "As long as a product exists, its Product Backlog also exists" }
+      ],
+      "correct": ["C", "D", "E"],
+      "explanation": "The Product Backlog is emergent, ordered, the single source of work, and exists as long as the product exists.",
+      "source": "Scrum Guide 2020 — Product Backlog.",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-034",
+      "type": "single",
+      "prompt": "True or False: Only the Product Owner and the Developers participate in the Sprint Planning. There is nothing to do for the Scrum Master",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct": ["B"],
+      "explanation": "The entire Scrum Team plans the Sprint; the SM ensures the event happens and is productive.",
+      "source": "Scrum Guide 2020 — Sprint Planning; Scrum Master.",
+      "version": 1,
+      "lockOptionOrder": true
+    },
+    {
+      "id": "q-test-example-035",
+      "type": "single",
+      "prompt": "Bring the Scrum events in the right order (sort): - Sprint Planning - Daily Scrum - Sprint Review - Sprint Retrospective",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct": ["A"],
+      "explanation": "Order is Planning → (many) Daily Scrums → Review → Retrospective within a Sprint.",
+      "source": "Scrum Guide 2020 — Events sequence within a Sprint.",
+      "version": 1,
+      "lockOptionOrder": true
+    },
+    {
+      "id": "q-test-example-036",
+      "type": "multi",
+      "prompt": "What are essential components of the Scrum Framework? Choose all that apply.",
+      "options": [
+        { "id": "A", "text": "Reports" },
+        { "id": "B", "text": "Burn-Down Charts" },
+        { "id": "C", "text": "Commitments" },
+        { "id": "D", "text": "Accountabilities" },
+        { "id": "E", "text": "Events" },
+        { "id": "F", "text": "Scrum Team" },
+        { "id": "G", "text": "Artifacts" }
+      ],
+      "correct": ["C", "D", "E", "F", "G"],
+      "explanation": "Scrum consists of Scrum Teams and their accountabilities, events, artifacts, and their commitments.",
+      "source": "Scrum Guide 2020 — Scrum framework components.",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-037",
+      "type": "multi",
+      "prompt": "The Scrum Master does the following regarding the Daily Scrum. Choose all that apply.",
+      "options": [
+        { "id": "A", "text": "The Scrum Master is responsible for conducting the Daily Scrum" },
+        { "id": "B", "text": "The Scrum Master ensures that the Developers have the event" },
+        { "id": "C", "text": "The Scrum Master teaches the Developers to keep the Daily Scrum within the 15-minute time-box" },
+        { "id": "D", "text": "The Scrum Master ensures that only Developers participate in the Daily Scrum" }
+      ],
+      "correct": ["B", "C", "D"],
+      "explanation": "Developers conduct the Daily Scrum; SM ensures it happens, is timeboxed, and is not disrupted.",
+      "source": "Scrum Guide 2020 — Daily Scrum; Scrum Master service to the team.",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-038",
+      "type": "multi",
+      "prompt": "What are the Scrum Artifacts? Choose all that apply.",
+      "options": [
+        { "id": "A", "text": "The list of removed impediments" },
+        { "id": "B", "text": "Sprint Backlog" },
+        { "id": "C", "text": "The Increment" },
+        { "id": "D", "text": "The Sprint Goal" },
+        { "id": "E", "text": "Product Backlog" }
+      ],
+      "correct": ["B", "C", "E"],
+      "explanation": "Artifacts are Product Backlog, Sprint Backlog, and Increment (Sprint Goal is a commitment for Sprint Backlog).",
+      "source": "Scrum Guide 2020 — Artifacts & commitments.",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-039",
+      "type": "single",
+      "prompt": "How frequently should Scrum Users inspect Scrum artifacts and progress toward agreed goals? Choose the best answe",
+      "options": [
+        { "id": "A", "text": "After the Daily Scrum" },
+        { "id": "B", "text": "At the Sprint Review" },
+        { "id": "C", "text": "As frequently as possible" },
+        { "id": "D", "text": "Frequently, but it should not get in the way of the work." }
+      ],
+      "correct": ["D"],
+      "explanation": "Inspect frequently and diligently without undermining delivery.",
+      "source": "Scrum Guide 2020 — Empiricism; Inspection.",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-040",
+      "type": "multi",
+      "prompt": "What are the characteristics of a Scrum Team? Choose the best three answers.",
+      "options": [
+        { "id": "A", "text": "Having at least one test engineer among the Developers." },
+        { "id": "B", "text": "Having the Scrum Master as a part-time Developer in the Scrum Team." },
+        { "id": "C", "text": "A Scrum Team is self-managing, meaning they internally decide who does what, when and how." },
+        { "id": "D", "text": "Scrum Teams are cross-functional, meaning the members have all the skills necessary to create value each Sprint." },
+        { "id": "E", "text": "Within a Scrum Team, there are no sub-teams or hierarchies." }
+      ],
+      "correct": ["C", "D", "E"],
+      "explanation": "Scrum Teams are self-managing, cross-functional, and have no sub-teams/hierarchies.",
+      "source": "Scrum Guide 2020 — Scrum Team.",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-041",
+      "type": "single",
+      "prompt": "True or False: All the Scrum Teams working on the same product should have the same Sprint length.",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct": ["B"],
+      "explanation": "Sprint length is up to each team; alignment may be useful but is not required.",
+      "source": "Scrum Guide 2020 — Sprints.",
+      "version": 1,
+      "lockOptionOrder": true
+    },
+    {
+      "id": "q-test-example-042",
+      "type": "single",
+      "prompt": "True or False: If an item in the Sprint Backlog cannot be finished by the end of the Sprint, the Sprint is cancelled.",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct": ["B"],
+      "explanation": "A Sprint is cancelled only if the Sprint Goal becomes obsolete.",
+      "source": "Scrum Guide 2020 — Cancelling a Sprint.",
+      "version": 1,
+      "lockOptionOrder": true
+    },
+    {
+      "id": "q-test-example-043",
+      "type": "single",
+      "prompt": "Who has the authority to cancel the Sprint? Choose the best answer.",
+      "options": [
+        { "id": "A", "text": "The Product Owner and the Scrum Master" },
+        { "id": "B", "text": "The Key Stakeholders" },
+        { "id": "C", "text": "The Developers" },
+        { "id": "D", "text": "The Scrum Master" },
+        { "id": "E", "text": "The Product Owner" }
+      ],
+      "correct": ["E"],
+      "explanation": "Only the Product Owner can cancel the Sprint.",
+      "source": "Scrum Guide 2020 — Cancelling a Sprint (authority).",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-044",
+      "type": "multi",
+      "prompt": "What happens during the Sprint? Select the best three answers.",
+      "options": [
+        { "id": "A", "text": "The Sprint Goal is changed frequently to reflect the status of the remaining work" },
+        { "id": "B", "text": "Sprint scope is defined at the Sprint Planning and cannot be changed" },
+        { "id": "C", "text": "Scope may be clarified and renegotiated with the Product Owner as more is learned" },
+        { "id": "D", "text": "No changes are made that would endanger the Sprint Goal" },
+        { "id": "E", "text": "Quality does not decrease." }
+      ],
+      "correct": ["C", "D", "E"],
+      "explanation": "No changes that endanger the Sprint Goal; quality does not decrease; scope may be clarified/re-negotiated with PO.",
+      "source": "Scrum Guide 2020 — During the Sprint.",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-045",
+      "type": "single",
+      "prompt": "True or False: It is a good practice to have at least two Product Owners on big projects.",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct": ["B"],
+      "explanation": "The Product Owner is one person, not a committee.",
+      "source": "Scrum Guide 2020 — Product Owner.",
+      "version": 1,
+      "lockOptionOrder": true
+    },
+    {
+      "id": "q-test-example-046",
+      "type": "single",
+      "prompt": "Who must participate in the Daily Scrum? Choose the best answer.",
+      "options": [
+        { "id": "A", "text": "The Developers and the Scrum Master." },
+        { "id": "B", "text": "The Scrum Team" },
+        { "id": "C", "text": "The Developers and the Product Owner." },
+        { "id": "D", "text": "The Scrum Master and the Product Owner." },
+        { "id": "E", "text": "The Developers." }
+      ],
+      "correct": ["E"],
+      "explanation": "The Daily Scrum is for the Developers.",
+      "source": "Scrum Guide 2020 — Daily Scrum.",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-047",
+      "type": "multi",
+      "prompt": "Scrum is founded on…Choose the best two answers.",
+      "options": [
+        { "id": "A", "text": "Kanban System" },
+        { "id": "B", "text": "Empirical criticism" },
+        { "id": "C", "text": "Common Sense" },
+        { "id": "D", "text": "Lean Thinking" },
+        { "id": "E", "text": "Empiricism" }
+      ],
+      "correct": ["D", "E"],
+      "explanation": "Scrum is founded on empiricism and lean thinking.",
+      "source": "Scrum Guide 2020 — Scrum Theory.",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-048",
+      "type": "single",
+      "prompt": "A Product Owner wants advice from the Scrum Master about estimating work in Scrum. What guidance should a Scrum Master give? Choose the best answer.",
+      "options": [
+        { "id": "A", "text": "Product Backlog items must be estimated in story points." },
+        { "id": "B", "text": "Estimates must be in relative units." },
+        { "id": "C", "text": "Scrum forbids estimates." },
+        { "id": "D", "text": "Estimates are made by the Product Owner, but are best checked with the Developers." },
+        { "id": "E", "text": "Estimates are made by the people doing the work." }
+      ],
+      "correct": ["E"],
+      "explanation": "The people who will do the work provide the estimates.",
+      "source": "Scrum Guide 2020 — Developers (responsible for sizing/forecast).",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-049",
+      "type": "single",
+      "prompt": "True or False: The Scrum Master is focused primarily on the Scrum Team and usually does not care about those outside the Scrum Team.",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct": ["B"],
+      "explanation": "Scrum Masters serve the Scrum Team and the larger organization.",
+      "source": "Scrum Guide 2020 — Scrum Master (service to organization).",
+      "version": 1,
+      "lockOptionOrder": true
+    },
+    {
+      "id": "q-test-example-050",
+      "type": "single",
+      "prompt": "True or False: All Scrum Teams working on the same Product should use the same Product Backlog.",
+      "options": [
+        { "id": "A", "text": "False" },
+        { "id": "B", "text": "True" }
+      ],
+      "correct": ["B"],
+      "explanation": "One Product Backlog per product.",
+      "source": "Scrum Guide 2020 — Product Backlog (single source of work).",
+      "version": 1,
+      "lockOptionOrder": true
+    },
+    {
+      "id": "q-test-example-051",
+      "type": "single",
+      "prompt": "True or False: During each Sprint Retrospective the Scrum Team reviews the Definition of Done and changes it if necessary.",
+      "options": [
+        { "id": "A", "text": "False" },
+        { "id": "B", "text": "True" }
+      ],
+      "correct": ["B"],
+      "explanation": "The team may adapt the DoD during the Retrospective.",
+      "source": "Scrum Guide 2020 — Sprint Retrospective; Definition of Done.",
+      "version": 1,
+      "lockOptionOrder": true
+    },
+    {
+      "id": "q-test-example-052",
+      "type": "multi",
+      "prompt": "Which of the following are topics for the Developers to discuss at the Daily Scrum as they inspect their progress toward the Sprint Goal? Choose the best three answers.",
+      "options": [
+        { "id": "A", "text": "Will today's work negatively impact our ability to meet the Sprint Goal for the Sprint following this one?" },
+        { "id": "B", "text": "Why are you late?" },
+        { "id": "C", "text": "What will I be working on tomorrow?" },
+        { "id": "D", "text": "Are there any impediments blocking progress toward the Sprint Goal?" },
+        { "id": "E", "text": "Are there any decisions that need to be made to maintain progress toward the Sprint Goal?" },
+        { "id": "F", "text": "What have we learned since yesterday, and how should we modify our plan to increase our ability to meet the Sprint Goal?" }
+      ],
+      "correct": ["D", "E", "F"],
+      "explanation": "Daily Scrum focuses on progress toward the Sprint Goal and adapting the plan for the next 24 hours.",
+      "source": "Scrum Guide 2020 — Daily Scrum (focus).",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-053",
+      "type": "multi",
+      "prompt": "Who can make changes to the Product Backlog? Choose the best two answers.",
+      "options": [
+        { "id": "A", "text": "The Product Owner" },
+        { "id": "B", "text": "Anyone" },
+        { "id": "C", "text": "The Key Stakeholders" },
+        { "id": "D", "text": "The Developers, when the responsibility has been delegated to them by the Product Owner" }
+      ],
+      "correct": ["A", "D"],
+      "explanation": "The PO manages the Product Backlog and may delegate work; others can change it only under PO’s authority.",
+      "source": "Scrum Guide 2020 — Product Owner (backlog management, delegation).",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-054",
+      "type": "multi",
+      "prompt": "Who participates in the Sprint Planning? Choose all the apply.",
+      "options": [
+        { "id": "A", "text": "The Team Manager" },
+        { "id": "B", "text": "The Key Stakeholders" },
+        { "id": "C", "text": "The Developers" },
+        { "id": "D", "text": "The Scrum Master" },
+        { "id": "E", "text": "The Product Owner" }
+      ],
+      "correct": ["C", "D", "E"],
+      "explanation": "The Scrum Team plans the Sprint together.",
+      "source": "Scrum Guide 2020 — Sprint Planning (attendees).",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-055",
+      "type": "multi",
+      "prompt": "How does the Scrum Master serve the Scrum Team? Choose the best three answers.",
+      "options": [
+        { "id": "A", "text": "Adding or removing developers from the Scrum Team in accordance with team velocity changes" },
+        { "id": "B", "text": "Helping the Developers as the team leader" },
+        { "id": "C", "text": "Coaching the team members in self-management and cross-functionality." },
+        { "id": "D", "text": "Causing the removing of impediments to the Scrum Team's progress." },
+        { "id": "E", "text": "Ensuring that all Scrum events take place and are positive, productive, and kept within the timebox." }
+      ],
+      "correct": ["C", "D", "E"],
+      "explanation": "Coach self-management/cross-functionality, remove impediments, and ensure events happen and are healthy.",
+      "source": "Scrum Guide 2020 — Scrum Master (service to team).",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-056",
+      "type": "multi",
+      "prompt": "How does the Scrum Master serve the organization? Choose the best three answers.",
+      "options": [
+        { "id": "A", "text": "Mixing experienced developers and junior specialists across different Scrum Teams in the organization to speed up Scrum adoption" },
+        { "id": "B", "text": "Planning and advising Scrum implementation within the organization" },
+        { "id": "C", "text": "Making sure the key stakeholders are invited on all Scrum Reviews within the organization" },
+        { "id": "D", "text": "Removing barriers between stakeholders and Scrum Teams." },
+        { "id": "E", "text": "Leading , training and coaching the organization in its Scrum adoption." }
+      ],
+      "correct": ["B", "D", "E"],
+      "explanation": "SM leads/trains/coaches, plans/advises Scrum implementations, and removes barriers between stakeholders and teams.",
+      "source": "Scrum Guide 2020 — Scrum Master (service to organization).",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-057",
+      "type": "single",
+      "prompt": "What is the Sprint Backlog composed of? Choose the best answer.",
+      "options": [
+        { "id": "A", "text": "The Product Backlog items selected for this Sprint" },
+        { "id": "B", "text": "The Product Backlog items selected for this Sprint plus a set of internal tasks identified by the Developers." },
+        { "id": "C", "text": "The Product Backlog items selected for this Sprint, the plan for delivering them and the Sprint Goal." }
+      ],
+      "correct": ["C"],
+      "explanation": "Sprint Goal (why), selected PBIs (what), and plan for delivering the Increment (how).",
+      "source": "Scrum Guide 2020 — Sprint Backlog (composition).",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-058",
+      "type": "multi",
+      "prompt": "The Product Owner is not collaborating with the Developers during the Sprint. What are two valuable actions for a Scrum Master to take? Choose the best two answers.",
+      "options": [
+        { "id": "A", "text": "Inform the Product Owner's functional manager." },
+        { "id": "B", "text": "Nominate a proxy Product Owner." },
+        { "id": "C", "text": "Stop the Sprint and send the Product Owner to a course and restart." },
+        { "id": "D", "text": "Bring up the problem at the Sprint Retrospective." },
+        { "id": "E", "text": "Coach the Product Owner in the values of Scrum and incremental delivery." }
+      ],
+      "correct": ["D", "E"],
+      "explanation": "Surface the issue at Retrospective and coach the PO to restore collaboration and transparency.",
+      "source": "Scrum Guide 2020 — Scrum Master service to PO & team.",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-059",
+      "type": "multi",
+      "prompt": "The Developers select a set of Product Backlog items for a Sprint Backlog with the intent to get the selected items done by the end of the Sprint. Which three phrases best describe the purpose of a Definition of Done? Choose the best three answers.",
+      "options": [
+        { "id": "A", "text": "It tracks the percentage complete of a Product Backlog item." },
+        { "id": "B", "text": "It controls whether the Developers have performed their tasks." },
+        { "id": "C", "text": "It provides a template for elements the need to be included in the documentation." },
+        { "id": "D", "text": "It creates transparency over the work inspected at the Sprint Review." },
+        { "id": "E", "text": "It defines what it takes for an Increment to be ready for release." },
+        { "id": "F", "text": "It guides the Developers in creating a forecast at the Sprint Planning." }
+      ],
+      "correct": ["D", "E", "F"],
+      "explanation": "DoD defines ‘done’ (releasable), guides forecasting in planning, and makes inspected work transparent.",
+      "source": "Scrum Guide 2020 — Definition of Done.",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-060",
+      "type": "single",
+      "prompt": "What could be the single source of work for any changes to be made to the product? Choose the best answer.",
+      "options": [
+        { "id": "A", "text": "The Key Stakeholders" },
+        { "id": "B", "text": "The CEO of the Organization" },
+        { "id": "C", "text": "The Product Backlog" }
+      ],
+      "correct": ["C"],
+      "explanation": "Product Backlog is the single source of work undertaken by the Scrum Team.",
+      "source": "Scrum Guide 2020 — Product Backlog.",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-061",
+      "type": "single",
+      "prompt": "If one or more aspects of a process deviate outside acceptable limits when must an adjustment be made? Choose the best answer.",
+      "options": [
+        { "id": "A", "text": "After Scrum Master approval" },
+        { "id": "B", "text": "The deviations should be discussed at the Daily Scrum and then an adjustment must be made" },
+        { "id": "C", "text": "After clarifying all the details with the Product Owner" },
+        { "id": "D", "text": "As soon as possible to minimize further deviation" }
+      ],
+      "correct": ["D"],
+      "explanation": "When a process or product is outside acceptable limits, adjust as soon as possible.",
+      "source": "Scrum Guide 2020 — Empiricism; Adaptation.",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-062",
+      "type": "single",
+      "prompt": "In which event are the Key Stakeholders allowed to participate? Choose the best answers.In which meeting are the Key Stakeholders allowed to participate? Choose the best answer.",
+      "options": [
+        { "id": "A", "text": "The Daily Scrum" },
+        { "id": "B", "text": "The Sprint Retrospective" },
+        { "id": "C", "text": "The Sprint Planning" },
+        { "id": "D", "text": "The Sprint Review" }
+      ],
+      "correct": ["D"],
+      "explanation": "Stakeholders participate in the Sprint Review.",
+      "source": "Scrum Guide 2020 — Sprint Review (attendees).",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-063",
+      "type": "multi",
+      "prompt": "What are the three pillars of empiricism that uphold Scrum? Choose the best three answers.",
+      "options": [
+        { "id": "A", "text": "Cross-functionality" },
+        { "id": "B", "text": "Agility" },
+        { "id": "C", "text": "Self-Organization" },
+        { "id": "D", "text": "Adaptation" },
+        { "id": "E", "text": "Inspection" },
+        { "id": "F", "text": "Transparency" }
+      ],
+      "correct": ["D", "E", "F"],
+      "explanation": "Transparency, inspection, and adaptation uphold empiricism.",
+      "source": "Scrum Guide 2020 — Scrum Theory (pillars).",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-064",
+      "type": "single",
+      "prompt": "Please select the correct timebox for each Scrum event.",
+      "options": [
+        { "id": "A", "text": "Sprint Review , 3 hours or less, Daily Scrum, 15 minutes, Sprint Retrospective, 4 hours or less, Sprint Planning, 8 hours or less" },
+        { "id": "B", "text": "Sprint Review , 8 hours or less, Daily Scrum, 15 minutes, Sprint Retrospective, 3 hours or less, Sprint Planning, 4 hours or less" },
+        { "id": "C", "text": "Sprint Review , 4 hours or less, Daily Scrum, 15 minutes, Sprint Retrospective, 3 hours or less, Sprint Planning, 8 hours or less" }
+      ],
+      "correct": ["C"],
+      "explanation": "Review ≤4h, Daily 15m, Retrospective ≤3h, Planning ≤8h (for a one-month Sprint).",
+      "source": "Scrum Guide 2020 — Event timeboxes.",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-065",
+      "type": "single",
+      "prompt": "What does a burndown chart show? Choose the best answer.",
+      "options": [
+        { "id": "A", "text": "Hierarchy of tasks that comprise a project" },
+        { "id": "B", "text": "Work remaining across time." },
+        { "id": "C", "text": "The evolution of the amount of uncertainty during a project" },
+        { "id": "D", "text": "Dependencies, start times and stop times for project tasks" }
+      ],
+      "correct": ["B"],
+      "explanation": "Burndown charts visualize remaining work over time.",
+      "source": "Common Scrum practice; not prescribed by the Guide.",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-066",
+      "type": "single",
+      "prompt": "True or False: It is normal to have a 'Hardening Sprint' to remove all Technical Debt and prepare the Product for upcoming release.",
+      "options": [
+        { "id": "A", "text": "True " },
+        { "id": "B", "text": "False" }
+      ],
+      "correct": ["B"],
+      "explanation": "Each Sprint should produce a Done, usable Increment; ‘hardening Sprints’ indicate lack of built-in quality.",
+      "source": "Scrum Guide 2020 — Increment; Definition of Done.",
+      "version": 1,
+      "lockOptionOrder": true
+    },
+    {
+      "id": "q-test-example-067",
+      "type": "multi",
+      "prompt": "What are the formal Scrum events for inspection and adaptation? Choose all the apply.",
+      "options": [
+        { "id": "A", "text": "Product Backlog Refinement" },
+        { "id": "B", "text": "Stakeholder Collaboration" },
+        { "id": "C", "text": "The Sprint Retrospective" },
+        { "id": "D", "text": "The Daily Scrum" },
+        { "id": "E", "text": "The Sprint Planning" },
+        { "id": "F", "text": "The Sprint Review" }
+      ],
+      "correct": ["C", "D", "E", "F"],
+      "explanation": "Planning, Daily Scrums, Review, and Retrospective are the four formal inspect-and-adapt events (inside the Sprint).",
+      "source": "Scrum Guide 2020 — Events.",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-068",
+      "type": "multi",
+      "prompt": "What should be taken into account for the Definition of Done? Choose the best two answers.",
+      "options": [
+        { "id": "A", "text": "Advice of the Scrum Master" },
+        { "id": "B", "text": "Definition of Done of other Scrum Teams working on other products" },
+        { "id": "C", "text": "Experience of the Product Owner" },
+        { "id": "D", "text": "Standards of the organization" },
+        { "id": "E", "text": "Definition of Done of other Scrum Teams working on the same product" }
+      ],
+      "correct": ["D", "E"],
+      "explanation": "Use organizational standards as a minimum; share a DoD across teams working on the same product.",
+      "source": "Scrum Guide 2020 — Definition of Done (organization & multi-team).",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-069",
+      "type": "single",
+      "prompt": "Could the Sprint Planning be finished if only work planned for the first days of the Sprint is decomposed to units of one day or less? Choose the best answer.",
+      "options": [
+        { "id": "A", "text": "No, all items in the Sprint Backlog should be decomposed to units of one day or less by the end of the Sprint Planning" },
+        { "id": "B", "text": "Yes, if the remaining work is also estimated, maybe in bigger units" }
+      ],
+      "correct": ["B"],
+      "explanation": "Decompose enough to start; remaining details emerge during the Sprint.",
+      "source": "Scrum Guide 2020 — Sprint Planning; Sprint Backlog (emergent).",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-070",
+      "type": "multi",
+      "prompt": "What are the two essential features a Scrum Team should possess? Choose the best two answers.",
+      "options": [
+        { "id": "A", "text": "It should use tools, processes and techniques approved by the Organization" },
+        { "id": "B", "text": "It should be flexible enough to complete all the work planned for the Sprint even if some team members are on vacation" },
+        { "id": "C", "text": "A Scrum Team is self-managing, meaning members internally decide who does what, when, and how." },
+        { "id": "D", "text": "A Scrum Team is cross-functional, meaning the members have all the skills necessary to create value each Sprint." }
+      ],
+      "correct": ["C", "D"],
+      "explanation": "Self-managing and cross-functional are core characteristics of Scrum Teams.",
+      "source": "Scrum Guide 2020 — Scrum Team.",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-071",
+      "type": "multi",
+      "prompt": "A Scrum Team is a cohesive unit of professionals that consists of which of the following? Choose all that apply.",
+      "options": [
+        { "id": "A", "text": "The CEO" },
+        { "id": "B", "text": "Business Analysts" },
+        { "id": "C", "text": "The Key Stakeholders" },
+        { "id": "D", "text": "One Scrum Master" },
+        { "id": "E", "text": "One Product Owner" },
+        { "id": "F", "text": "Developers" }
+      ],
+      "correct": ["D", "E", "F"],
+      "explanation": "One Scrum Master, one Product Owner, and Developers.",
+      "source": "Scrum Guide 2020 — Scrum Team (composition).",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-072",
+      "type": "single",
+      "prompt": "True or False: The Definition of Done is created during the first Sprint and remains unchanged until the Product release.",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct": ["B"],
+      "explanation": "The DoD may be adapted (e.g., during Retrospectives) as the team improves.",
+      "source": "Scrum Guide 2020 — Definition of Done; Sprint Retrospective.",
+      "version": 1,
+      "lockOptionOrder": true
+    },
+    {
+      "id": "q-test-example-073",
+      "type": "single",
+      "prompt": "True or False: Scrum does not describe agile processes and techniques.",
+      "options": [
+        { "id": "A", "text": "False" },
+        { "id": "B", "text": "True" }
+      ],
+      "correct": ["B"],
+      "explanation": "Scrum is not a process or technique; it is a framework that can contain practices.",
+      "source": "Scrum Guide 2020 — Scrum framework (purposefully incomplete).",
+      "version": 1,
+      "lockOptionOrder": true
+    },
+    {
+      "id": "q-test-example-074",
+      "type": "single",
+      "prompt": "Who is responsible for tracking the total work remaining in the Sprint Backlog to project the likelihood of achieving the Sprint Goal? Choose the best answer.",
+      "options": [
+        { "id": "A", "text": "The Product Owner and the Developers" },
+        { "id": "B", "text": "The Scrum Team" },
+        { "id": "C", "text": "The Scrum Master" },
+        { "id": "D", "text": "The Product Owner" },
+        { "id": "E", "text": "The Developers" }
+      ],
+      "correct": ["E"],
+      "explanation": "Developers inspect progress toward the Sprint Goal and adapt the plan at the Daily Scrum.",
+      "source": "Scrum Guide 2020 — Daily Scrum; Developers.",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-075",
+      "type": "single",
+      "prompt": "What happens when a Sprint is cancelled? Choose the best answer.",
+      "options": [
+        { "id": "A", "text": "At the Sprint Retrospective the Scrum Master determines who among the Developers is responsible for cancelling the Sprint." },
+        { "id": "B", "text": "Several top Product Backlog Items are taken into the Sprint Backlog to replace the obsolete items." },
+        { "id": "C", "text": "Product Backlog Items that do not meet the Definition of Done are returned to the Product Backlog for future consideration." }
+      ],
+      "correct": ["C"],
+      "explanation": "Done items may be reviewed; undone items return to the Product Backlog.",
+      "source": "Scrum Guide 2020 — Cancelling a Sprint (outcomes).",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-076",
+      "type": "multi",
+      "prompt": "Which of the following are no timeboxed events in Scrum? Choose the best two answers.",
+      "options": [
+        { "id": "A", "text": "Product Backlog Refinement" },
+        { "id": "B", "text": "Release Planning Meeting" },
+        { "id": "C", "text": "Sprint Retrospective" },
+        { "id": "D", "text": "Sprint Review" },
+        { "id": "E", "text": "Daily Scrum" }
+      ],
+      "correct": ["A", "B"],
+      "explanation": "Refinement is ongoing (not an event). Release Planning is optional and not prescribed in the Guide.",
+      "source": "Scrum Guide 2020 — Events; Refinement (ongoing activity).",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-077",
+      "type": "single",
+      "prompt": "What does a Cone of Uncertainty show? Choose the best answer.",
+      "options": [
+        { "id": "A", "text": "Hierarchy of tasks that comprise a project" },
+        { "id": "B", "text": "Dependencies, start times and stop times for project tasks" },
+        { "id": "C", "text": "How much work remains till the end of the Sprint" },
+        { "id": "D", "text": "How much is known about the Product over time" }
+      ],
+      "correct": ["D"],
+      "explanation": "It visualizes uncertainty decreasing (knowledge increasing) over time.",
+      "source": "Agile planning concept (not Scrum-Guide specific).",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-078",
+      "type": "single",
+      "prompt": "True or False: The Sprint Goal is a commitment by the Developers.",
+      "options": [
+        { "id": "A", "text": "False" },
+        { "id": "B", "text": "True" }
+      ],
+      "correct": ["B"],
+      "explanation": "The Sprint Goal is the commitment for the Sprint Backlog, owned by the Developers.",
+      "source": "Scrum Guide 2020 — Commitments (Sprint Goal).",
+      "version": 1,
+      "lockOptionOrder": true
+    },
+    {
+      "id": "q-test-example-079",
+      "type": "single",
+      "prompt": "Who is allowed to change the Sprint Backlog during the Sprint? Choose the best answer.",
+      "options": [
+        { "id": "A", "text": "The Product Owner" },
+        { "id": "B", "text": "The Scrum Team" },
+        { "id": "C", "text": "The Developers and the Product Owner" },
+        { "id": "D", "text": "The Scrum Master" },
+        { "id": "E", "text": "The Developers" }
+      ],
+      "correct": ["E"],
+      "explanation": "The Sprint Backlog is a plan by and for the Developers; they update it throughout the Sprint.",
+      "source": "Scrum Guide 2020 — Sprint Backlog (ownership).",
+      "version": 1
+    },
+    {
+      "id": "q-test-example-080",
+      "type": "single",
+      "prompt": "Who is accountable for managing the Product Backlog? Choose the best answer.",
+      "options": [
+        { "id": "A", "text": "The Key Stakeholder" },
+        { "id": "B", "text": "The Developers" },
+        { "id": "C", "text": "The Scrum Master" },
+        { "id": "D", "text": "The Product Owner" }
+      ],
+      "correct": ["D"],
+      "explanation": "The Product Owner is the single person accountable for Product Backlog management.",
+      "source": "Scrum Guide 2020 — Product Owner (backlog management).",
+      "version": 1
+    }
+  ]
+  
