@@ -304,6 +304,7 @@
       "correct": ["D"],
       "explanation": "Without a common Scrum vocabulary, transparency suffers and change may not happen.",
       "source": "Scrum Guide 2020 — Transparency; Scrum is immutable.",
+      "lockOptionOrder": true,
       "version": 1
     },
     {
