@@ -1,1 +1,308 @@
-[]
+[
+    {
+      "id": "q-artifacts-001",
+      "type": "single",
+      "prompt": "Who has the last say on the order of the Product Backlog? Choose the best answer.",
+      "options": [
+        { "id": "A", "text": "The Stakeholders." },
+        { "id": "B", "text": "The CEO." },
+        { "id": "C", "text": "The Developers." },
+        { "id": "D", "text": "The Scrum Master." },
+        { "id": "E", "text": "The Product Owner." }
+      ],
+      "correct": ["E"],
+      "explanation": "The Product Owner is accountable for effective Product Backlog management. This includes its content, availability, and ordering.",
+      "source": "Scrum Guide 2020 — Product Backlog; Product Owner accountabilities.",
+      "version": 1
+    },
+    {
+      "id": "q-artifacts-002",
+      "type": "single",
+      "prompt": "Who is required to conform to the Definition of Done? Choose the best answer.",
+      "options": [
+        { "id": "A", "text": "The QA department" },
+        { "id": "B", "text": "The Product Owner" },
+        { "id": "C", "text": "The Scrum Team" },
+        { "id": "D", "text": "The Developers" }
+      ],
+      "correct": ["D"],
+      "explanation": "The Developers are required to conform to the Definition of Done.",
+      "source": "Scrum Guide 2020 — Definition of Done; Developers’ accountability.",
+      "version": 1
+    },
+    {
+      "id": "q-artifacts-003",
+      "type": "single",
+      "prompt": "True or False: It is important that the product increment is released to production or shipped to customers at the end of each Sprint.",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct": ["B"],
+      "explanation": "The Increment must be usable, but Scrum does not require releasing at the end of every Sprint. The moment a Product Backlog item meets the Definition of Done, an Increment is born.",
+      "source": "Scrum Guide 2020 — Increment (releasable at any time; DoD).",
+      "version": 1,
+      "lockOptionOrder": true
+    },
+    {
+      "id": "q-artifacts-004",
+      "type": "multi",
+      "prompt": "A Product Goal is… Choose the best two answers.",
+      "options": [
+        { "id": "A", "text": "…placed in the Sprint Backlog." },
+        { "id": "B", "text": "…an optional artifact in Scrum." },
+        { "id": "C", "text": "…forbidden in Scrum." },
+        { "id": "D", "text": "…the long-term objective for the Scrum Team." },
+        { "id": "E", "text": "...in the Product Backlog." }
+      ],
+      "correct": ["D", "E"],
+      "explanation": "The Product Goal is the long-term objective for the Scrum Team and lives in the Product Backlog.",
+      "source": "Scrum Guide 2020 — Product Goal; Product Backlog.",
+      "version": 1
+    },
+    {
+      "id": "q-artifacts-005",
+      "type": "single",
+      "prompt": "While under development, the environment in which a product will be used changes and emerges. What is the effect on the Product Backlog? Choose the best answer",
+      "options": [
+        { "id": "A", "text": "It is converted into a requirements specification to ensure stability." },
+        { "id": "B", "text": "It is archived and a new Product Backlog is created to take its place." },
+        { "id": "C", "text": "There is no effect, because it has to stay the same until the end of the project." },
+        { "id": "D", "text": "It evolves to reflect what the product needs to be most valuable." }
+      ],
+      "correct": ["D"],
+      "explanation": "The Product Backlog is a living, emergent artifact that evolves to maximize product value.",
+      "source": "Scrum Guide 2020 — Product Backlog (emergent, dynamic).",
+      "version": 1
+    },
+    {
+      "id": "q-artifacts-006",
+      "type": "single",
+      "prompt": "Which of the following statements about the Product Backlog is NOT true? Choose the best answer.",
+      "options": [
+        { "id": "A", "text": "The Product Backlog is dynamic." },
+        { "id": "B", "text": "The Product Backlog constantly changes to identify what the product needs to be." },
+        { "id": "C", "text": "The Product Backlog evolves as the product and the environment in which it will be used evolves." },
+        { "id": "D", "text": "The Product Backlog is complete when the final product Increment is considered Done." }
+      ],
+      "correct": ["D"],
+      "explanation": "A Product Backlog is never complete; it remains an emergent list as long as the product exists.",
+      "source": "Scrum Guide 2020 — Product Backlog (emergent, never complete).",
+      "version": 1
+    },
+    {
+      "id": "q-artifacts-007",
+      "type": "single",
+      "prompt": "During a Sprint, when is new work or further decomposition of work added to the Sprint Backlog? Choose the best answer.",
+      "options": [
+        { "id": "A", "text": "When the Scrum Master has time to enter them." },
+        { "id": "B", "text": "During the Daily Scrum after the Developers approve them." },
+        { "id": "C", "text": "When the Product Owner identifies a new work." },
+        { "id": "D", "text": "As soon as possible after they are identified." }
+      ],
+      "correct": ["D"],
+      "explanation": "The Sprint Backlog is updated throughout the Sprint as more is learned.",
+      "source": "Scrum Guide 2020 — Sprint Backlog (emerges and is updated during the Sprint).",
+      "version": 1
+    },
+    {
+      "id": "q-artifacts-008",
+      "type": "multi",
+      "prompt": "If quality assurance work does not occur as part of the development work within a Sprint, which benefits are lost? Choose all that apply.",
+      "options": [
+        { "id": "A", "text": "The Product Backlog burndown is not transparent" },
+        { "id": "B", "text": "The project manager cannot effectively update the plan" },
+        { "id": "C", "text": "The next Sprint will probably be interrupted with bugs that are being found" },
+        { "id": "D", "text": "The increment is probably not usable." }
+      ],
+      "correct": ["C", "D"],
+      "explanation": "Without built-in quality, the Increment may not be usable and future Sprints risk interruption due to defects.",
+      "source": "Scrum Guide 2020 — Increment; Definition of Done; built-in quality.",
+      "version": 1
+    },
+    {
+      "id": "q-artifacts-009",
+      "type": "single",
+      "prompt": "What are some consequences if a Scrum Team does not have a consistent Definition of Done from Sprint to Sprint? Choose the best answer.",
+      "options": [
+        { "id": "A", "text": "The Product Owner may be unable to gauge the progress toward his/her goals." },
+        { "id": "B", "text": "The Developers may not know how many Product Backlog items they can complete in a Sprint" },
+        { "id": "C", "text": "The Scrum Team and the stakeholders may not know what they are inspecting at the Sprint Review" },
+        { "id": "D", "text": "The Developers may not know what work is entailed in completing selected." },
+        { "id": "E", "text": "All answers apply." }
+      ],
+      "correct": ["E"],
+      "explanation": "A shared Definition of Done ensures transparency of what 'done' means, enabling planning, inspection, and progress tracking.",
+      "source": "Scrum Guide 2020 — Definition of Done (shared understanding, transparency).",
+      "version": 1
+    },
+    {
+      "id": "q-artifacts-010",
+      "type": "single",
+      "prompt": "Which statement best describes the Sprint Backlog as an outcome of the Sprint Planning? Choose the best answer.",
+      "options": [
+        { "id": "A", "text": "Each task is estimated in hours." },
+        { "id": "B", "text": "It is a complete list of all work to be done in a Sprint." },
+        { "id": "C", "text": "Every item has a designated owner." },
+        { "id": "D", "text": "It is ordered by the Product Owner." },
+        { "id": "E", "text": "It is a plan by and for the Developers." }
+      ],
+      "correct": ["E"],
+      "explanation": "The Sprint Backlog is a plan by and for the Developers—a real-time picture of work to achieve the Sprint Goal.",
+      "source": "Scrum Guide 2020 — Sprint Backlog (plan by and for the Developers).",
+      "version": 1
+    },
+    {
+      "id": "q-artifacts-011",
+      "type": "single",
+      "prompt": "After a Sprint Retrospective there are several high priority improvements identified by the Scrum Team. What would be the next course of action? Choose the best answer.",
+      "options": [
+        { "id": "A", "text": "Add at least one high priority item into the Product Backlog." },
+        { "id": "B", "text": "Add the highest priority item into the Product Backlog." },
+        { "id": "C", "text": "Hand the list of high priority items over to the HR-Department and have them deal with them." },
+        { "id": "D", "text": "Aim for the highest priority item(s) to be addressed as soon as possible." }
+      ],
+      "correct": ["D"],
+      "explanation": "The most impactful improvements are addressed as soon as possible; they may even be added to the next Sprint Backlog.",
+      "source": "Scrum Guide 2020 — Sprint Retrospective (plan improvements).",
+      "version": 1
+    },
+    {
+      "id": "q-artifacts-012",
+      "type": "single",
+      "prompt": "Please select which statement is the MOST accurate. Choose the best answer.",
+      "options": [
+        { "id": "A", "text": "Refinement is a full-time activity during a Sprint for the Scrum Team." },
+        { "id": "B", "text": "Refinement is a full-time activity during a Sprint between the Product Owner and the Developers." },
+        { "id": "C", "text": "Refinement is a part-time activity during a Sprint between the Product Owner and the Scrum Master." },
+        { "id": "D", "text": "Product Backlog refinement is the act of breaking down and further defining Product Backlog items into smaller more precise items." }
+      ],
+      "correct": ["D"],
+      "explanation": "Refinement is the ongoing act of breaking down and clarifying Product Backlog items.",
+      "source": "Scrum Guide 2020 — Product Backlog (refinement).",
+      "version": 1
+    },
+    {
+      "id": "q-artifacts-013",
+      "type": "single",
+      "prompt": "Is the Sprint Backlog frozen after the Sprint Planning? Choose the best answer.",
+      "options": [
+        { "id": "A", "text": "Yes, but only during working hours." },
+        { "id": "B", "text": "No, the Scrum Master can make changes to it." },
+        { "id": "C", "text": "Yes." },
+        { "id": "D", "text": "No." }
+      ],
+      "correct": ["D"],
+      "explanation": "The Sprint Backlog is updated throughout the Sprint as more is learned.",
+      "source": "Scrum Guide 2020 — Sprint Backlog (emerges during the Sprint).",
+      "version": 1
+    },
+    {
+      "id": "q-artifacts-014",
+      "type": "single",
+      "prompt": "How much of the Sprint Backlog must be defined during the Sprint Planning? Choose the best answer.",
+      "options": [
+        { "id": "A", "text": "Just enough tasks for the Scrum Master to be confident in the Scrum Team’s understanding of the Sprint" },
+        { "id": "B", "text": "Just enough to understand design and architectural implications" },
+        { "id": "C", "text": "All of the potential work. The Sprint Planning meeting isn’t over until 100% of the work is identified and estimated" },
+        { "id": "D", "text": "Enough so the Developers can create their best forecast of what they can do, and to start the first days of the Sprint" }
+      ],
+      "correct": ["D"],
+      "explanation": "Developers plan enough work to forecast and begin; details emerge during the Sprint.",
+      "source": "Scrum Guide 2020 — Sprint Planning; Sprint Backlog (emergent plan).",
+      "version": 1
+    },
+    {
+      "id": "q-artifacts-015",
+      "type": "multi",
+      "prompt": "Who can change the Product Backlog? Choose the best two answers.",
+      "options": [
+        { "id": "A", "text": "The Developers" },
+        { "id": "B", "text": "The Stakeholders, alone." },
+        { "id": "C", "text": "The Scrum Master." },
+        { "id": "D", "text": "The Developers but with the permission of the Product Owner." },
+        { "id": "E", "text": "The Product Owner." }
+      ],
+      "correct": ["D", "E"],
+      "explanation": "The Product Owner is accountable for Product Backlog management and may delegate work; changes by others occur under the PO’s authority.",
+      "source": "Scrum Guide 2020 — Product Backlog management (PO accountable; delegation possible).",
+      "version": 1
+    },
+    {
+      "id": "q-artifacts-016",
+      "type": "single",
+      "prompt": "The Sprint Backlog is composed of… Choose the best answer.",
+      "options": [
+        { "id": "A", "text": "The Product Backlog items selected for this Sprint plus the Team Backlog items." },
+        { "id": "B", "text": "The Product Backlog items selected for this Sprint." },
+        { "id": "C", "text": "The plan for delivering Product Backlog items." },
+        { "id": "D", "text": "The Product Backlog items selected for the Sprint, the plan for delivering them, and the Sprint Goal." }
+      ],
+      "correct": ["D"],
+      "explanation": "Sprint Backlog = Sprint Goal (why), selected PBIs (what), and the plan for delivering the Increment (how).",
+      "source": "Scrum Guide 2020 — Sprint Backlog (composition).",
+      "version": 1
+    },
+    {
+      "id": "q-artifacts-017",
+      "type": "multi",
+      "prompt": "What happens if a Product Backlog item does not meet the Definition of Done? Choose the best three answers.",
+      "options": [
+        { "id": "A", "text": "The stakeholders decide what to do with the item." },
+        { "id": "B", "text": "The Done parts of the item are added to the Increment." },
+        { "id": "C", "text": "It returns to the Product Backlog." },
+        { "id": "D", "text": "It cannot be released." },
+        { "id": "E", "text": "It is not presented at the Sprint Review." }
+      ],
+      "correct": ["C", "D", "E"],
+      "explanation": "Work that doesn’t meet the Definition of Done is not part of the Increment; it goes back to the Product Backlog and isn’t shown or released.",
+      "source": "Scrum Guide 2020 — Definition of Done; Increment (only Done work).",
+      "version": 1
+    },
+    {
+      "id": "q-artifacts-018",
+      "type": "single",
+      "prompt": "When many Scrum teams are working on the same product, should all of their increments be integrated every Sprint? Choose the best answer.",
+      "options": [
+        { "id": "A", "text": "No, that is far too hard." },
+        { "id": "B", "text": "No, each Scrum team stands alone." },
+        { "id": "C", "text": "Yes, but only for Scrum teams whose work has dependencies." },
+        { "id": "D", "text": "Yes, otherwise the Product Owner (and stakeholders) may not be able to accurately inspect what is done." }
+      ],
+      "correct": ["D"],
+      "explanation": "A done, integrated Increment must be available at least at the end of each Sprint for effective inspection.",
+      "source": "Scrum Guide 2020 — Increment (every Sprint results in a Done Increment).",
+      "version": 1
+    },
+    {
+      "id": "q-artifacts-019",
+      "type": "single",
+      "prompt": "What is the single source of work undertaken by the Scrum Team? Choose the best answer.",
+      "options": [
+        { "id": "A", "text": "The Key Stakeholders." },
+        { "id": "B", "text": "The Project Plan." },
+        { "id": "C", "text": "The CEO of the organization." },
+        { "id": "D", "text": "The Product Backlog." }
+      ],
+      "correct": ["D"],
+      "explanation": "The Product Backlog is the single source of work undertaken by the Scrum Team.",
+      "source": "Scrum Guide 2020 — Product Backlog (single source of work).",
+      "version": 1
+    },
+    {
+      "id": "q-artifacts-020",
+      "type": "single",
+      "prompt": "When multiple Scrum Teams are working together on a product, what best describes the Definition of Done? Choose the best answer.",
+      "options": [
+        { "id": "A", "text": "Each Scrum Team uses its own but must make their definition clear to all other Teams so the differences are known." },
+        { "id": "B", "text": "Each Scrum Team defines and uses its own. The differences are discussed and reconciled during a Hardening Sprint." },
+        { "id": "C", "text": "It depends." },
+        { "id": "D", "text": "Multiple Scrum Teams working together on a product must mutually define and comply with the same Definition of Done." }
+      ],
+      "correct": ["D"],
+      "explanation": "When multiple teams work on one product, they must share and adhere to a common Definition of Done.",
+      "source": "Scrum Guide 2020 — Definition of Done (product-level DoD across teams).",
+      "version": 1
+    }
+  ]
+  
