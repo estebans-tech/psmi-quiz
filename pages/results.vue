@@ -69,12 +69,18 @@
           <ResultsList :questions="questions" :selections="selections" :filter="filter" />
         </div>
 
-        <div class="mt-8">
-          <button class="underline" @click="backToStart">Back to start</button>
-        </div>
       </template>
     </section>
   </main>
+    <footer class="bg-white border-t">
+    <div class="mx-auto max-w-5xl px-4 py-4 flex items-center justify-between">
+      <BuyMeCoffeeButton :slug="app.bmcSlug" variant="subtle" label="Buy me a coffee" />
+
+      <button class="text-sm underline hover:no-underline" @click="backToStart">
+        Back to start
+      </button>
+    </div>
+  </footer>
 </template>
 
 <script setup lang="ts">
@@ -82,7 +88,9 @@ import { useRouter } from 'nuxt/app'
 import { ref, computed } from 'vue'
 import { useQuizStore } from '~/stores/quiz'
 import type { Question } from '~/types/question'
+import { useAppConfig } from 'nuxt/app'
 
+const app = useAppConfig()
 type Filter = 'all' | 'correct' | 'incorrect'
 const filter = ref<Filter>('all')
 

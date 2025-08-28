@@ -8,7 +8,9 @@ import RevealControls from '~/components/RevealControls.vue'
 import ConfirmDialog from '~/components/ConfirmDialog.vue'
 
 import { DEFAULT_MAX, DEFAULT_MODE } from '~/constants/quiz'
+import { useAppConfig } from 'nuxt/app'
 
+const app = useAppConfig()
 const router = useRouter()
 const route = useRoute()
 const store = useQuizStore()
@@ -191,12 +193,11 @@ function finishAndGoResults() {
     <!-- FOOTER -->
     <footer class="bg-white border-t">
       <div class="mx-auto max-w-5xl px-4 py-4 flex items-center justify-between">
+        <BuyMeCoffeeButton :slug="app.bmcSlug" variant="subtle" label="Buy me a coffee" class="hidden" />
+
         <span class="text-xs text-gray-500">
           {{ total }} question{{ total === 1 ? '' : 's' }} loaded
         </span>
-        <button class="text-sm underline hover:no-underline" @click="requestBackToStart">
-          Back to start
-        </button>
       </div>
     </footer>
 

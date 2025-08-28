@@ -4,6 +4,9 @@ import { useRouter } from 'vue-router'
 import { useQuizStore } from '~/stores/quiz'
 import { ALLOWED_CATEGORIES, type Category, isCategory } from '~/constants/categories'
 import { MAX_OPTIONS, DEFAULT_MAX, type MaxOption, MAX_SET } from '~/constants/quiz'
+import { useAppConfig } from 'nuxt/app'
+
+const app = useAppConfig()
 
 const router = useRouter()
 const store = useQuizStore()
@@ -136,4 +139,10 @@ function start() {
       </button>
     </div>
   </main>
+
+  <footer class="bg-white border-t">
+    <div class="mx-auto max-w-5xl px-4 py-4 flex items-center justify-center hidden">
+      <BuyMeCoffeeButton :slug="app.bmcSlug as string" variant="subtle" label="Buy me a coffee" />
+    </div>
+  </footer>
 </template>
