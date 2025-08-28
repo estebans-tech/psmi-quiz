@@ -967,9 +967,9 @@
       "type": "single",
       "prompt": "Please select the correct timebox for each Scrum event.",
       "options": [
-        { "id": "A", "text": "Sprint Review , 3 hours or less, Daily Scrum, 15 minutes, Sprint Retrospective, 4 hours or less, Sprint Planning, 8 hours or less" },
-        { "id": "B", "text": "Sprint Review , 8 hours or less, Daily Scrum, 15 minutes, Sprint Retrospective, 3 hours or less, Sprint Planning, 4 hours or less" },
-        { "id": "C", "text": "Sprint Review , 4 hours or less, Daily Scrum, 15 minutes, Sprint Retrospective, 3 hours or less, Sprint Planning, 8 hours or less" }
+        { "id": "A", "text": "Sprint Review, 3 hours or less, Daily Scrum, 15 minutes, Sprint Retrospective, 4 hours or less, Sprint Planning, 8 hours or less" },
+        { "id": "B", "text": "Sprint Review, 8 hours or less, Daily Scrum, 15 minutes, Sprint Retrospective, 3 hours or less, Sprint Planning, 4 hours or less" },
+        { "id": "C", "text": "Sprint Review, 4 hours or less, Daily Scrum, 15 minutes, Sprint Retrospective, 3 hours or less, Sprint Planning, 8 hours or less" }
       ],
       "correct": ["C"],
       "explanation": "Review ≤4h, Daily 15m, Retrospective ≤3h, Planning ≤8h (for a one-month Sprint).",
