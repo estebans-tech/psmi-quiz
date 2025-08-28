@@ -517,7 +517,7 @@
     },
     {
       "id": "q-test-example-035",
-      "type": "multi",
+      "type": "single",
       "prompt": "Bring the Scrum events in the right order (sort):",
       "options": [
         { "id": "A", "text": "Sprint Planning, Daily Scrum, Sprint Review, Sprint Retrospective" },
