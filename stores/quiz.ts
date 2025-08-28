@@ -1,24 +1,41 @@
 // stores/quiz.ts
 import { $fetch } from 'ofetch'
 import { defineStore } from 'pinia'
+import { useRoute } from 'vue-router'
 import type { Question } from '~/types/question'
 import { mulberry32, shuffle } from '~/utils/rng'
 import { isExactMatch } from '~/utils/scoring'
 import { orderOptions } from '~/utils/options'
-import { DEFAULT_MAX, normalizeMax } from '~/constants/quiz'
+
+// ✅ delade konstanter/guards
+import {
+  DEFAULT_MAX,
+  normalizeMax,
+  DEFAULT_MODE,
+  normalizeMode,
+  type Mode
+} from '~/constants/quiz'
 
 type Selections = Record<string, string[]>
 type FlagMap = Record<string, boolean>
 type AnswersMap = Record<string, string[]>
 
 type StartConfig = {
-  lang?: string        // e.g. 'en'
-  filter?: string      // e.g. 'all' eller 'events,roles'
-  max?: number         // "upp till" detta antal
+  lang?: string
+  filter?: string
+  max?: number | string
   seed?: number | string
+  mode?: Mode
 }
-type Prefs = { lang: string; filter: string; max: number; seed?: string | number }
+
 const PREFS_KEY = 'quiz.prefs'
+type Prefs = {
+  lang: string
+  filter: string
+  max: number
+  seed?: string | number
+  mode?: Mode
+}
 
 export const useQuizStore = defineStore('quiz', {
   state: () => ({
@@ -32,8 +49,14 @@ export const useQuizStore = defineStore('quiz', {
     error: null as string | null,
     answersById: {} as AnswersMap,
 
-    // 🔎 Nytt: för /quiz-headern och felsökning
-    lastConfig: null as null | { lang: string; filter: string; max: number; seed?: string | number },
+    // ✅ nu med komplett typ (inkl. mode)
+    lastConfig: null as null | {
+      lang: string
+      filter: string
+      max: number
+      seed?: string | number
+      mode: Mode
+    },
   }),
 
   getters: {
@@ -43,7 +66,7 @@ export const useQuizStore = defineStore('quiz', {
     getSelectedByQuestionId: (state) => (qid: string): string[] =>
       state.answersById[qid] ?? [],
 
-    // ✅ används fortfarande av äldre vyer; Results-sidan räknar numera själv
+    // (behålls för ev. KPI i UI; Results räknar själv ändå)
     summary(state) {
       const total = state.questions.length
       const correctIds: string[] = []
@@ -67,77 +90,89 @@ export const useQuizStore = defineStore('quiz', {
   },
 
   actions: {
+    // ---- prefs (client only) ----
     readPrefs(): Prefs | null {
       if (typeof localStorage === 'undefined') return null
       try {
         const raw = localStorage.getItem(PREFS_KEY)
         if (!raw) return null
-        const p = JSON.parse(raw) as Prefs
+        const p = JSON.parse(raw) as Prefs | null
         if (!p || typeof p !== 'object') return null
-        if (!p.lang || !p.filter || typeof p.max !== 'number') return null
-        return p
-      } catch { return null }
+
+        // Normalisera säkert
+        const lang = (p.lang || 'en').toLowerCase()
+        const filter = (p.filter || 'all')
+        const max = normalizeMax(p.max ?? DEFAULT_MAX)
+        const mode = normalizeMode(p.mode ?? DEFAULT_MODE)
+        const seed = p.seed
+
+        return { lang, filter, max, seed, mode }
+      } catch {
+        return null
+      }
     },
-    // ✅ Nytt: spara prefs
     savePrefs(p: Prefs) {
       if (typeof localStorage === 'undefined') return
-      try { localStorage.setItem(PREFS_KEY, JSON.stringify(p)) } catch {}
+      try {
+        localStorage.setItem(PREFS_KEY, JSON.stringify(p))
+      } catch {}
     },
-    /**
-     * Starta session baserat på query-parametrar i /quiz:
-     *   /quiz?lang=en&filter=all&max=60&seed=123
-     */
+
+    // ---- session start via URL ----
     async startSessionFromRoute() {
       const route = useRoute()
       const lang   = ((route.query.lang as string)   || 'en').toLowerCase()
       const filter = (route.query.filter as string)  || 'all'
-      const max    = Number(route.query.max ?? 60)   || 60
+      const max    = normalizeMax(route.query.max ?? DEFAULT_MAX)
       const seedQ  = route.query.seed as string | undefined
+      const mode   = normalizeMode(route.query.mode ?? DEFAULT_MODE)
 
-      await this.startSession({
-        lang,
-        filter,
-        max,
-        seed: (seedQ !== undefined && String(seedQ).trim() !== '') ? seedQ : undefined
-      })
+      await this.startSession({ lang, filter, max, seed: seedQ, mode })
     },
 
-    /**
-     * Huvudstart: server filtrerar på lang/filter, klient skär ner "upp till max".
-     * Shuffle sker alltid; orderOptions respekterar lockOptionOrder.
-     */
+    // ---- huvudstart ----
     async startSession(opts?: StartConfig) {
       this.loading = true
       this.error = null
       try {
         const lang   = (opts?.lang || 'en').toLowerCase()
         const filter = (opts?.filter ?? 'all')
-        const max = normalizeMax(opts?.max ?? DEFAULT_MAX)
-  
-        const raw = await $fetch<Question[]>('/api/questions', { params: { lang, filter } })
-  
+        const max    = normalizeMax(opts?.max ?? DEFAULT_MAX)
+        const mode   = normalizeMode(opts?.mode ?? DEFAULT_MODE)
+        const seedIn = opts?.seed
+
+        // Hämta (server filtrerar på lang/filter)
+        const raw = await $fetch<Question[]>('/api/questions', {
+          params: { lang, filter }
+        })
+
+        // RNG (seeded om finns)
         let rng = Math.random
-        if (opts?.seed !== undefined && String(opts.seed).trim() !== '') {
-          rng = mulberry32(opts.seed!)
+        if (seedIn !== undefined && String(seedIn).trim() !== '') {
+          rng = mulberry32(seedIn)
         }
-  
+
+        // Shuffle & ordna options (respektera lockOptionOrder)
         const shuffled = shuffle(raw, rng).map(q => ({
           ...q,
           options: orderOptions(q, rng)
         }))
-  
+
+        // Upp till max
         const take = Math.min(shuffled.length, max)
         this.questions = shuffled.slice(0, take)
-  
+
+        // Reset interaktions-state
         this.index = 0
         this.selections = {}
         this.checked = {}
         this.revealed = {}
         this.finished = false
-  
-        this.lastConfig = { lang, filter, max, seed: opts?.seed }
-  
-        // ✅ Spara prefs för Repeat/Start
+
+        // ✅ lastConfig komplett & normaliserad
+        this.lastConfig = { lang, filter, max, seed: seedIn, mode }
+
+        // ✅ spara prefs
         this.savePrefs(this.lastConfig)
       } catch (e: any) {
         console.error('Failed to start session:', e)
@@ -149,6 +184,7 @@ export const useQuizStore = defineStore('quiz', {
       }
     },
 
+    // ---- answers API (om du använder det) ----
     setAnswer(qid: string, optionIds: string[]) {
       const unique = Array.from(new Set(optionIds))
       this.answersById[qid] = unique
@@ -157,25 +193,21 @@ export const useQuizStore = defineStore('quiz', {
       this.answersById = {}
     },
 
-    next() {
-      if (this.index < this.questions.length - 1) this.index++
-    },
-    prev() {
-      if (this.index > 0) this.index--
-    },
+    // ---- navigation ----
+    next() { if (this.index < this.questions.length - 1) this.index++ },
+    prev() { if (this.index > 0) this.index-- },
 
+    // ---- selection/check/reveal ----
     selectOption(qId: string, optionId: string) {
       const q = this.questions.find(x => x.id === qId)
       if (!q) return
-
       const prev = this.selections[qId] ?? []
       this.selections[qId] = q.type === 'single'
         ? [optionId]
         : (prev.includes(optionId) ? prev.filter(x => x !== optionId) : [...prev, optionId])
 
-      // Nollställ status vid ändring
       this.checked[qId] = false
-      // this.revealed[qId] = false // Behåll nuvarande policy: revealed oförändrat
+      // this.revealed[qId] = false // behåll policy: lämna oförändrat
     },
 
     check(qId: string) {

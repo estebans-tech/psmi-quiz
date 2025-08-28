@@ -9,3 +9,20 @@ export function normalizeMax(input: unknown, fallback: MaxOption = DEFAULT_MAX):
   const n = typeof input === 'string' ? Number(input) : typeof input === 'number' ? input : NaN
   return (Number.isFinite(n) && MAX_SET.has(n)) ? (n as MaxOption) : fallback
 }
+
+export const MODES = ['study', 'exam'] as const
+export type Mode = (typeof MODES)[number]
+
+export const DEFAULT_MODE: Mode = 'study'
+
+export function isMode(x: unknown): x is Mode {
+  return typeof x === 'string' && (MODES as readonly string[]).includes(x.toLowerCase() as any)
+}
+
+export function normalizeMode(x: unknown, fallback: Mode = DEFAULT_MODE): Mode {
+  if (typeof x === 'string') {
+    const v = x.toLowerCase()
+    if ((MODES as readonly string[]).includes(v)) return v as Mode
+  }
+  return fallback
+}

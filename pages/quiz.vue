@@ -104,10 +104,13 @@ function finishAndGoResults() {
           <h1 class="text-lg font-semibold">Scrum PSMI - Quiz</h1>
           <p v-if="store.lastConfig" class="text-xs text-gray-500 mt-1">
             Using:
-            <span class="font-medium capitalize">{{ store.lastConfig.filter }}</span>
+            <span class="font-medium capitalize">{{ store.lastConfig.filter }}</span> ·
             <!-- ,
             max <span class="font-medium">{{ store.lastConfig.max }}</span> -->
             <span v-if="store.lastConfig.seed"> · seed {{ store.lastConfig.seed }}</span>
+            Mode: <span class="font-medium capitalize">{{ store.lastConfig.mode || 'study' }}</span>
+            <span v-if="store.lastConfig.seed"> · seed {{ store.lastConfig.seed }}</span>
+
           </p>
         </div>
         <button
