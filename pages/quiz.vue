@@ -123,10 +123,10 @@ function finishAndGoResults() {
         <div>
           <h1 class="text-lg font-semibold">Scrum PSMI - Quiz</h1>
           <p v-if="store.lastConfig" class="text-xs text-gray-500 mt-1">
-            Mode: <span class="font-medium">{{ store.lastConfig.mode || 'study' }}</span> ·
-            Using: <span class="font-medium">{{ store.lastConfig.filter }}</span>,
-            max <span class="font-medium">{{ store.lastConfig.max }}</span>
-            <span v-if="store.lastConfig.seed"> · seed {{ store.lastConfig.seed }}</span>
+            <!-- Mode: <span class="font-medium">{{ store.lastConfig.mode || 'study' }}</span> · -->
+            Using: <span class="font-medium">{{ store.lastConfig.filter }}</span>
+            <!-- max <span class="font-medium">{{ store.lastConfig.max }}</span> -->
+            <!-- <span v-if="store.lastConfig.seed"> · seed {{ store.lastConfig.seed }}</span> -->
           </p>
           <!-- 🔊 SR-annons när sista frågan nås -->
           <p v-if="srStatus" class="sr-only" role="status" aria-live="polite">{{ srStatus }}</p>
