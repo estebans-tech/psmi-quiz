@@ -79,8 +79,8 @@
       "type": "single",
       "prompt": "True or False: The Product Owner and the Scrum Master can actively work as Developers?",
       "options": [
-        { "id": "A", "text": "False" },
-        { "id": "B", "text": "True" }
+        { "id": "B", "text": "True" },
+        { "id": "A", "text": "False" }
       ],
       "correct": ["B"],
       "explanation": "They may perform Developer work; if so, they participate as Developers in the Daily Scrum.",
@@ -290,8 +290,8 @@
       "type": "single",
       "prompt": "True or False: Other people than the Scrum Team can attend the Sprint Planning in order to provide advice.",
       "options": [
-        { "id": "A", "text": "False" },
-        { "id": "B", "text": "True" }
+        { "id": "B", "text": "True" },
+        { "id": "A", "text": "False" }
       ],
       "correct": ["B"],
       "explanation": "The Scrum Team may invite others to Sprint Planning to provide advice.",
@@ -517,17 +517,18 @@
     },
     {
       "id": "q-test-example-035",
-      "type": "single",
-      "prompt": "Bring the Scrum events in the right order (sort): - Sprint Planning - Daily Scrum - Sprint Review - Sprint Retrospective",
+      "type": "multi",
+      "prompt": "Bring the Scrum events in the right order (sort):",
       "options": [
-        { "id": "A", "text": "True" },
-        { "id": "B", "text": "False" }
+        { "id": "A", "text": "Sprint Planning, Daily Scrum, Sprint Review, Sprint Retrospective" },
+        { "id": "B", "text": "Sprint Retrospective, Sprint Planning, Daily Scrum, Sprint Review" },
+        { "id": "C", "text": "Sprint Retrospective, Daily Scrum, Sprint Review, Sprint Planning" },
+        { "id": "D", "text": "Daily Scrum, Sprint Review, Sprint Retrospective, Stakeholder Meeting, Sprint Planning" }
       ],
       "correct": ["A"],
       "explanation": "Order is Planning → (many) Daily Scrums → Review → Retrospective within a Sprint.",
       "source": "Scrum Guide 2020 — Events sequence within a Sprint.",
-      "version": 1,
-      "lockOptionOrder": true
+      "version": 1
     },
     {
       "id": "q-test-example-036",
@@ -750,8 +751,8 @@
       "type": "single",
       "prompt": "True or False: All Scrum Teams working on the same Product should use the same Product Backlog.",
       "options": [
-        { "id": "A", "text": "False" },
-        { "id": "B", "text": "True" }
+          { "id": "B", "text": "True" },
+          { "id": "A", "text": "False" }
       ],
       "correct": ["B"],
       "explanation": "One Product Backlog per product.",
@@ -764,8 +765,8 @@
       "type": "single",
       "prompt": "True or False: During each Sprint Retrospective the Scrum Team reviews the Definition of Done and changes it if necessary.",
       "options": [
-        { "id": "A", "text": "False" },
-        { "id": "B", "text": "True" }
+        { "id": "B", "text": "True" },
+        { "id": "A", "text": "False" }
       ],
       "correct": ["B"],
       "explanation": "The team may adapt the DoD during the Retrospective.",
@@ -995,7 +996,7 @@
       "type": "single",
       "prompt": "True or False: It is normal to have a 'Hardening Sprint' to remove all Technical Debt and prepare the Product for upcoming release.",
       "options": [
-        { "id": "A", "text": "True " },
+        { "id": "A", "text": "True" },
         { "id": "B", "text": "False" }
       ],
       "correct": ["B"],
@@ -1101,8 +1102,8 @@
       "type": "single",
       "prompt": "True or False: Scrum does not describe agile processes and techniques.",
       "options": [
-        { "id": "A", "text": "False" },
-        { "id": "B", "text": "True" }
+        { "id": "B", "text": "True" },
+        { "id": "A", "text": "False" }
       ],
       "correct": ["B"],
       "explanation": "Scrum is not a process or technique; it is a framework that can contain practices.",
@@ -1176,8 +1177,8 @@
       "type": "single",
       "prompt": "True or False: The Sprint Goal is a commitment by the Developers.",
       "options": [
-        { "id": "A", "text": "False" },
-        { "id": "B", "text": "True" }
+        { "id": "B", "text": "True" },
+        { "id": "A", "text": "False" }
       ],
       "correct": ["B"],
       "explanation": "The Sprint Goal is the commitment for the Sprint Backlog, owned by the Developers.",
