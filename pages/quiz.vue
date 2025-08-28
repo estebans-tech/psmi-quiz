@@ -7,6 +7,8 @@ import QuestionCard from '~/components/QuestionCard.vue'
 import RevealControls from '~/components/RevealControls.vue'
 import ConfirmDialog from '~/components/ConfirmDialog.vue'
 
+import { DEFAULT_MAX, DEFAULT_MODE } from '~/constants/quiz'
+
 const router = useRouter()
 const route = useRoute()
 const store = useQuizStore()
@@ -18,9 +20,10 @@ async function loadFromQuery() {
   } else {
     const lang   = (route.query.lang as string)   || 'en'
     const filter = (route.query.filter as string) || 'all'
-    const max    = Number(route.query.max ?? 60)  || 60
+    const max    = Number(route.query.max ?? DEFAULT_MAX) || DEFAULT_MAX
     const seed   = route.query.seed as string | undefined
-    await store.startSession({ lang, filter, max, seed })
+    const mode   = (route.query.mode as string) || DEFAULT_MODE
+    await store.startSession({ lang, filter, max, seed, mode: mode as any })
   }
 }
 watch(() => route.fullPath, () => { void loadFromQuery() }, { immediate: true })
@@ -47,19 +50,38 @@ const hasAnyAnswer = computed(() =>
   Object.values(store.selections).some(arr => (arr?.length ?? 0) > 0)
 )
 
-// ----- ConfirmDialog state -----
-const showConfirm = ref(false)
-const backBtnRef = ref<HTMLButtonElement | null>(null)
+// ----- SR-status när sista frågan nås -----
+const srStatus = ref('')
+watch([idx, total], ([i, t], [pi, pt]) => {
+  if (t > 0 && i === t - 1 && (pi !== i || pt !== t)) {
+    srStatus.value = 'Last question. Next is disabled. Use Finish to see results.'
+  } else {
+    srStatus.value = ''
+  }
+})
+
+// ----- ConfirmDialog: Back & Restart -----
+const showConfirmBack = ref(false)
+const showConfirmRestart = ref(false)
 
 function requestBackToStart() {
-  // Visa dialog bara om det finns “meningsfull” session
   const shouldConfirm = hasAnyAnswer.value || store.index > 0
   if (!shouldConfirm) return doBackToStart()
-  showConfirm.value = true
+  showConfirmBack.value = true
 }
 function doBackToStart() {
   if (typeof store.$reset === 'function') store.$reset()
   router.push('/')
+}
+
+function requestRestart() {
+  const shouldConfirm = hasAnyAnswer.value || store.index > 0
+  if (!shouldConfirm) return doRestart()
+  showConfirmRestart.value = true
+}
+async function doRestart() {
+  const cfg = store.lastConfig ?? { lang: 'en', filter: 'all', max: DEFAULT_MAX, mode: DEFAULT_MODE }
+  await store.startSession(cfg as any)
 }
 
 // ----- handlers -----
@@ -72,7 +94,6 @@ function onCheck() {
   if ((store.selections[q.value.id] ?? []).length === 0) return
   store.check(q.value.id)
 }
-
 async function onReveal() {
   if (!q.value) return
   const wasOpen = !!store.revealed[q.value.id]
@@ -81,18 +102,15 @@ async function onReveal() {
   if (nowOpen) {
     await nextTick()
     const id = `explanations-${q.value.id}`
-    const el = document.getElementById(id) as HTMLElement | null
-    el?.focus()
+    document.getElementById(id)?.focus()
   }
 }
-
 function goPrev() { store.prev() }
 function goNext() { store.next() }
 function finishAndGoResults() {
   store.finish()
   router.push('/results')
 }
-
 </script>
 
 <template>
@@ -103,22 +121,22 @@ function finishAndGoResults() {
         <div>
           <h1 class="text-lg font-semibold">Scrum PSMI - Quiz</h1>
           <p v-if="store.lastConfig" class="text-xs text-gray-500 mt-1">
-            Using:
-            <span class="font-medium capitalize">{{ store.lastConfig.filter }}</span> ·
-            <!-- ,
-            max <span class="font-medium">{{ store.lastConfig.max }}</span> -->
+            Mode: <span class="font-medium">{{ store.lastConfig.mode || 'study' }}</span> ·
+            Using: <span class="font-medium">{{ store.lastConfig.filter }}</span>,
+            max <span class="font-medium">{{ store.lastConfig.max }}</span>
             <span v-if="store.lastConfig.seed"> · seed {{ store.lastConfig.seed }}</span>
-            Mode: <span class="font-medium capitalize">{{ store.lastConfig.mode || 'study' }}</span>
-            <span v-if="store.lastConfig.seed"> · seed {{ store.lastConfig.seed }}</span>
-
           </p>
+          <!-- 🔊 SR-annons när sista frågan nås -->
+          <p v-if="srStatus" class="sr-only" role="status" aria-live="polite">{{ srStatus }}</p>
         </div>
-        <button
-          ref="backBtnRef"
-          class="text-sm underline hover:no-underline"
-          @click="requestBackToStart">
-          Back to start
-        </button>
+        <div class="flex items-center gap-3">
+          <button class="text-sm underline hover:no-underline" @click="requestRestart">
+            Restart
+          </button>
+          <button class="text-sm underline hover:no-underline" @click="requestBackToStart">
+            Back to start
+          </button>
+        </div>
       </div>
     </header>
 
@@ -173,7 +191,6 @@ function finishAndGoResults() {
     <!-- FOOTER -->
     <footer class="bg-white border-t">
       <div class="mx-auto max-w-5xl px-4 py-4 flex items-center justify-between">
-        
         <span class="text-xs text-gray-500">
           {{ total }} question{{ total === 1 ? '' : 's' }} loaded
         </span>
@@ -183,16 +200,24 @@ function finishAndGoResults() {
       </div>
     </footer>
 
-    <!-- Confirm Dialog -->
+    <!-- Confirm Dialogs -->
     <ConfirmDialog
-      v-model:open="showConfirm"
-      title="Reset session?"
+      v-model:open="showConfirmBack"
+      title="Leave quiz and reset?"
       message="This will reset your current session and take you back to the start page."
       confirm-text="Reset & Go Back"
       cancel-text="Cancel"
       :destructive="true"
       @confirm="doBackToStart"
-      @cancel="() => backBtnRef?.focus()"
+    />
+    <ConfirmDialog
+      v-model:open="showConfirmRestart"
+      title="Restart quiz?"
+      message="This will reset your current progress and start this quiz over with the same settings."
+      confirm-text="Restart"
+      cancel-text="Cancel"
+      :destructive="true"
+      @confirm="doRestart"
     />
   </main>
 </template>
