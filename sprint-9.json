@@ -1,0 +1,29 @@
+{
+    "sprintName": "Sprint 9",
+    "stories": [
+      {
+        "key": "RESULTS-ARIA",
+        "title": "Resultatlistan: ARIA + Correct/Incorrect-rubrik",
+        "body": "Som kandidat vill jag ha en tillgänglig resultatlista med tydlig rubrik.",
+        "labels": ["type:story","area:frontend","priority:P2"],
+        "points": 3,
+        "tasks": [
+          { "title": "ARIA: listbox/option + aria-selected + aria-describedby", "labels": ["type:task","area:frontend"], "points": 1 },
+          { "title": "Flytta ✓ till höger och centrera", "labels": ["type:task","area:frontend"], "points": 1 },
+          { "title": "Correct!/Incorrect-box på frågenivå", "labels": ["type:task","area:frontend"], "points": 1 }
+        ]
+      },
+      {
+        "key": "SUMMARY-FIX",
+        "title": "Summering: Incorrect = Total − Correct",
+        "body": "Som kandidat vill jag att obesvarade räknas som fel i summeringen.",
+        "labels": ["type:story","area:frontend","priority:P1"],
+        "points": 2,
+        "tasks": [
+          { "title": "Beräkna summering i results.vue", "labels": ["type:task"], "points": 1 },
+          { "title": "Testfall: 3 svarade av 15", "labels": ["type:task"], "points": 1 }
+        ]
+      }
+    ]
+  }
+  
