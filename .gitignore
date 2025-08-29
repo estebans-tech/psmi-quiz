@@ -32,3 +32,9 @@ node_modules/
 
 # Local Netlify folder
 .netlify
+
+# Playwright
+test-results/
+playwright-report/
+blob-report/
+*.zip # t.ex. trace.zip om du exporterar manuellt
