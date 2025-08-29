@@ -15,7 +15,9 @@
     "postinstall": "nuxt prepare",
     "test": "vitest --run",
     "test:ui": "vitest",
-    "test:watch": "vitest --watch"
+    "test:watch": "vitest --watch",
+    "test:e2e": "playwright test",
+    "test:e2e:remote": "PLAYWRIGHT_BASE_URL=$URL playwright test"
   },
   "dependencies": {
     "@nuxtjs/tailwindcss": "6.14.0",

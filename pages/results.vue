@@ -29,20 +29,22 @@
       </div>
 
       <template v-else>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
-          <div class="rounded-2xl bg-white shadow p-4">
-            <div class="text-2xl font-semibold text-emerald-600">{{ correctCount }}</div>
-            <div class="text-sm text-gray-500">Correct</div>
+        <section aria-label="Summary" data-testid="kpi-summary">
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+            <div class="rounded-2xl bg-white shadow p-4">
+              <div data-testid="kpi-correct" class="text-2xl font-semibold text-emerald-600">{{ correctCount }}</div>
+              <div class="text-sm text-gray-500">Correct</div>
+            </div>
+            <div class="rounded-2xl bg-white shadow p-4">
+              <div data-testid="kpi-incorrect" class="text-2xl font-semibold text-rose-600">{{ incorrectCount }}</div>
+              <div class="text-sm text-gray-500">Incorrect</div>
+            </div>
+            <div class="rounded-2xl bg-white shadow p-4">
+              <div data-testid="kpi-total" class="text-2xl font-semibold">{{ totalCount }}</div>
+              <div class="text-sm text-gray-500">Total</div>
+            </div>
           </div>
-          <div class="rounded-2xl bg-white shadow p-4">
-            <div class="text-2xl font-semibold text-rose-600">{{ incorrectCount }}</div>
-            <div class="text-sm text-gray-500">Incorrect</div>
-          </div>
-          <div class="rounded-2xl bg-white shadow p-4">
-            <div class="text-2xl font-semibold">{{ totalCount }}</div>
-            <div class="text-sm text-gray-500">Total</div>
-          </div>
-        </div>
+        </section>
 
         <div class="mt-6 flex items-center gap-2">
           <button

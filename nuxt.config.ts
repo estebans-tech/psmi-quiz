@@ -13,5 +13,10 @@ export default defineNuxtConfig({
   //   ]
   // },
   // devtools: { enabled: true },
+  // runtimeConfig: {
+  //   public: {
+  //     bmcSlug: process.env.NUXT_PUBLIC_BMC_SLUG
+  //   }
+  // },
   modules: ['@nuxtjs/tailwindcss', '@pinia/nuxt']
 })
