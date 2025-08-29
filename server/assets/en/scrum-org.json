@@ -78,18 +78,18 @@
     },
     {
       "id": "q-scrum-org-006",
-      "type": "single",
-      "prompt": "Which of the following are examples of a Scrum Team practicing Scrum poorly or not exhibiting traits of a self-managing Scrum Team? (choose the best answer)",
+      "type": "multi",
+      "prompt": "Which of the following are examples of a Scrum Team practicing Scrum poorly or not exhibiting traits of a self-managing Scrum Team? (choose the best three answers)",
       "options": [
-        { "id": "A", "text": "The Developers invite external stakeholders to the Sprint Planning to ask them how to turn a Product Backlog item into an Increment via a complete and detailed Sprint Backlog." },
-        { "id": "B", "text": "The Developers have all the skills they need to create a valuable, useful Increment." },
+        { "id": "A", "text": "The Developers are collaboratively selecting their own work during the Sprint." },
+        { "id": "B", "text": "The Developers invite external stakeholders to the Sprint Planning to ask them how to turn a Product Backlog item into an Increment via a complete and detailed Sprint Backlog." },
         { "id": "C", "text": "The Developers create their own Sprint Backlog, reflecting all work that is required to meet the Definition of Done." },
-        { "id": "D", "text": "Stakeholders attend the Daily Scrum to check on the Scrum Team’s progress." },
-        { "id": "E", "text": "The Developers are working within the boundaries of their organization's functional description and nicely handing off work from analyst to developer to tester to integration." },
-        { "id": "F", "text": "The Developers are collaboratively selecting their own work during the Sprint." }
+        { "id": "D", "text": "The Developers are working within the boundaries of their organization's functional description and nicely handing off work from analyst to developer to tester to integration." },
+        { "id": "E", "text": "The Developers have all the skills they need to create a valuable, useful Increment." },
+        { "id": "F", "text": "Stakeholders attend the Daily Scrum to check on the Scrum Team’s progress." }
       ],
-      "correct": ["A"],
-      "explanation": "The plan (Sprint Backlog) is by and for the Developers and emerges during the Sprint; letting stakeholders drive a complete, detailed Sprint Backlog undermines self-management and empiricism.",
+      "correct": ["B", "D", "F"],
+      "explanation": "- The Daily Scrum is for the Developers. It should not be used by external stakeholders to check progress. - During Sprint Planning the Scrum Team should be crafting the Sprint Goal based on the set of Product Backlog items selected for the Sprint. The Developers identify the necessary work to meet the Sprint Goal. - Scrum Team members do not have titles, and no sub-teams; such as testing, architecture, or operations are recognized. Accountability belongs with the Scrum Team as a whole, regardless of whether team members have specialized skills.",
       "source": "Scrum Guide 2020 — Sprint Planning; Sprint Backlog (emerges).",
       "version": 1
     },
