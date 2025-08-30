@@ -121,7 +121,10 @@ function finishAndGoResults() {
     <header class="bg-white border-b">
       <div class="mx-auto max-w-5xl px-4 py-4 flex items-center justify-between">
         <div>
-          <h1 class="text-lg font-semibold">Scrum PSMI - Quiz</h1>
+          <NuxtLink to="/" class="text-lg font-semibold hover:underline">
+            Scrum PSM I - Quiz
+          </NuxtLink>
+          <!-- <h1 class="text-lg font-semibold">Scrum PSMI - Quiz</h1> -->
           <p v-if="store.lastConfig" class="text-xs text-gray-500 mt-1">
             <!-- Mode: <span class="font-medium">{{ store.lastConfig.mode || 'study' }}</span> · -->
             Using: <span class="font-medium">{{ store.lastConfig.filter }}</span>
