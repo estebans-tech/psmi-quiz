@@ -141,15 +141,19 @@ export const useQuizStore = defineStore('quiz', {
         const mode   = normalizeMode(opts?.mode ?? DEFAULT_MODE)
         const seedIn = opts?.seed
 
+        // ✅ Make relative URL absolute during SSR (reload/Netlify)
+        const baseURL = import.meta.server ? useRequestURL().origin : undefined
+    
         // Hämta (server filtrerar på lang/filter)
         const raw = await $fetch<Question[]>('/api/questions', {
-          params: { lang, filter }
+          params: { lang, filter },
+          baseURL                      // <— fix to break on page reload 
         })
-
+    
         // RNG (seeded om finns)
         let rng = Math.random
         if (seedIn !== undefined && String(seedIn).trim() !== '') {
-          rng = mulberry32(seedIn)
+          rng = mulberry32(Number(seedIn))
         }
 
         // Shuffle & ordna options (respektera lockOptionOrder)
